@@ -2,3 +2,5 @@
 .cache
 node_modules
 .vscode
+Maildir
+logs
