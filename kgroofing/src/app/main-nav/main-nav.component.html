@@ -1,58 +1,111 @@
+<!-- Icon info: https://material.io/resources/icons/?search=dark&icon=art_track&style=baseline
+-->
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" position="end" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar color="primary">
       {{title}}
     </mat-toolbar>
     <mat-nav-list>
       <span>
         <a mat-list-item routerLinkActive="active" [routerLink]="[ '/home' ]">
-        <mat-icon>home</mat-icon>
-        <span> &nbsp; &nbsp; Home</span>
+          <mat-icon>home</mat-icon>
+          <span> &nbsp; &nbsp; Home</span>
         </a>
       </span>
       <span>
         <a mat-list-item routerLinkActive="active" [routerLink]="[ '/about' ]">
-        <mat-icon>home</mat-icon>
-        <span> &nbsp; &nbsp; About Us</span>
+          <mat-icon>assignment</mat-icon>
+          <span> &nbsp; &nbsp; About Us</span>
         </a>
       </span>
       <span>
         <a mat-list-item routerLinkActive="active" [routerLink]="[ '/projects' ]">
-        <mat-icon>home</mat-icon>
-        <span> &nbsp; &nbsp; View Our Work</span>
+          <mat-icon>business</mat-icon>
+          <span> &nbsp; &nbsp; View Our Work</span>
         </a>
       </span>
       <span>
         <a mat-list-item routerLinkActive="active" [routerLink]="[ '/contact' ]">
-        <mat-icon>home</mat-icon>
-        <span> &nbsp; &nbsp; Contact Us</span>
+          <mat-icon>call</mat-icon>
+          <span> &nbsp; &nbsp; Contact Us</span>
+        </a>
+      </span>
+      <span>
+        <a mat-list-item routerLinkActive="active" [routerLink]="[ '/blogs' ]">
+          <mat-icon>art_track</mat-icon>
+          <span> &nbsp; &nbsp; Blog</span>
         </a>
       </span>
       <span>
         <a mat-list-item routerLinkActive="active" [routerLink]="[ '/financing' ]">
-        <mat-icon>home</mat-icon>
-        <span> &nbsp; &nbsp; Financing</span>
+          <mat-icon>credit_card</mat-icon>
+          <span> &nbsp; &nbsp; Financing</span>
         </a>
       </span>
+      <span>
+        <a mat-list-item routerLinkActive="active" [routerLink]="[ '/members' ]">
+          <mat-icon>vpn_key</mat-icon>
+          <span> &nbsp; &nbsp; Members</span>
+        </a>
+      </span>
+      <!-- ng flex box reference: 
+      https://alligator.io/angular/flex-layout/ -->
+      <!--another nav list item-->
+      
+      <div mat-list-item-content>
+        <!--flex containter-->
+        <div class="flex-container" fxLayout="row">
+          <!--flex item, 1st child of container row, should be 50% width of parent row-->
+          <div fxFlex="50%" >
+            <!--items should display in row-->
+            <a mat-list-item>
+              <mat-icon>
+                settings_brightness
+              </mat-icon>
+              <span>&nbsp; &nbsp; Theme &nbsp; &nbsp; 
+              </span>
+            </a>
+          </div>
+          <!--flex item, 2nd child of container row-->
+          <div fxFlex="50%" class="custom-list-item">
+            <a mat-list-item>
+            <!--column container-->
+            <div fxLayout="column" fxLayoutAlign="center" fxFlex="100%" >
+              <!--first child of column-->
+                <!--display switch and icons in a row-->
+                <div fxLayout="row" fxLayoutAlign="space-between center" >
+                  <div fxFlex="100%" fxLayoutGap="8px" fxFlexAlign="center">
+                  <mat-icon>
+                    brightness_3
+                  </mat-icon>
+                  <!--git hub on Material theme toggling-->
+                  <mat-slide-toggle [checked]="isLightTheme | async" labelPosition="after" (change)="toggleLightTheme($event.checked)">
+                  </mat-slide-toggle>
+                  <mat-icon>
+                    brightness_5
+                  </mat-icon>
+                  </div>
+                </div>
+              <!--the next column element under-->
+              <div fxFlex fxFlexAlign="center">
+                <h5>dark or light</h5>
+              </div>
+            </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
       <span>{{ title }}</span>
       <span class="spacer"></span>
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon"
-        position="end">menu</mat-icon>
+        <mat-icon aria-label="Side nav toggle icon" position="end">menu</mat-icon>
       </button>
-
     </mat-toolbar>
     <!-- Add Content Here -->
   </mat-sidenav-content>

@@ -1,6 +1,6 @@
-import { BrowserModule, Title } from '@angular/platform-browser';
+import { BrowserModule, Title, HammerModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { CoreModule } from '../core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,17 +14,21 @@ import {MatCardModule} from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { AboutComponent } from './about/about.component';
 import { FinancingComponent } from './financing/financing.component';
 import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { FooterComponent } from './footer/footer.component';
 import { BlogComponent } from './blog/blog.component';
 import { BlogsComponent } from './blogs/blogs.component';
+import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 import { HeroSliderComponent } from './hero-slider/hero-slider.component';
-import { ProjectComponent } from './project/project.component';
+import { MembersComponent } from './members/members.component';
 import { ProductsComponent } from './products/products.component';
+import { ProjectComponent } from './project/project.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
    declarations: [
@@ -40,20 +44,31 @@ import { ProductsComponent } from './products/products.component';
     BlogsComponent,
     HeroSliderComponent,
     ProjectComponent,
-    ProductsComponent
+    ProductsComponent,
+    MembersComponent
    ],
    imports: [
     BrowserModule,
+    HammerModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    CoreModule,
+  // PWA info
+  // https://dev.to/negue/service-worker-registered-yet-354d
+    ServiceWorkerModule.register('./ngsw-worker.js', {
+      enabled: environment.production,
+      registrationStrategy: 'registerImmediately'
+    }),
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatSlideToggleModule,
+    FlexLayoutModule,
+    FormsModule
   ],
   providers: [
     Title
