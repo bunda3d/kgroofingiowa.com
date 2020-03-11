@@ -1,10 +1,12 @@
 <!-- Icon info: https://material.io/resources/icons/?search=dark&icon=art_track&style=baseline
 -->
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" position="end" fixedInViewport
+  <mat-sidenav #drawer class="sidenav" position="end" fixedInViewport 
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar color="primary">
-      {{title}}
+      <a mat-list-item routerLinkActive="active" [routerLink]="[ '/home' ]">
+        <span>{{title}}</span>
+      </a>
     </mat-toolbar>
     <mat-nav-list>
       <span>
