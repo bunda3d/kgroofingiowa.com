@@ -1,21 +1,13 @@
-<!-- Toolbar / Navbar-->
-<app-main-nav></app-main-nav>
-
-  <!-- Highlight Card -->
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Quick Links: </mat-card-title>
-    </mat-card-header>
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>Hi There, this is an Angular site in the making</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
-  </mat-card>
-  
-
-<router-outlet></router-outlet>
+<!--Mat Theme Wrapper, for toggling light-mode-->
+<div [ngClass]="{'kg-light-theme': isLightTheme | async}">
+  <!--Mat theme wrapper, for background coloring-->
+  <div class="mat-app-background">
+    <!-- Toolbar / Navbar-->
+    <app-main-nav></app-main-nav>
+      <!--wrap content for margin-->
+      <div class="content">
+        <!--all router-outlet content shows here-->
+        <router-outlet></router-outlet>
+      </div>
+  </div>
+</div>

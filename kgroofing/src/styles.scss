@@ -28,17 +28,20 @@ $kgroofing-theme: mat-dark-theme($kgroofing-primary, $kgroofing-accent, $kgroofi
 // that you are using.
 @include angular-material-theme($kgroofing-theme);
 
-// Alternate light theme.
-$kglight-accent:  mat-palette($mat-amber, A200, A100, A400);
-$kglight-warn:    mat-palette($mat-red);
-$kglight-theme:   mat-light-theme($kgroofing-primary, $kglight-accent, $kglight-warn);
 
 // Include the alternative theme styles inside of a block with a CSS class. You can make this
 // CSS class whatever you want. In this example, any component inside of an element with
 // `.kg-light-theme` will be affected by this alternate light theme instead of the default theme.
 .kg-light-theme {
+  // Alternate light theme.
+  $kglight-accent:  mat-palette($mat-amber, A200, A100, A400);
+  $kglight-warn:    mat-palette($mat-red);
+  $kglight-theme:   mat-light-theme($kgroofing-primary, $kglight-accent, $kglight-warn); 
+  
   @include angular-material-theme($kglight-theme);
 }
+// for more on dark mode switch
+// https://github.com/eTallang/theme-demo
 
 /* You can add global styles to this file, and also import other style files */
 

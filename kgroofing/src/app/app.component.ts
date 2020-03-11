@@ -1,13 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+// theme toggle subscription idea from:  https://medium.com/grensesnittet/dynamic-themes-in-angular-material-b6dc0c88dfd7
+import { Observable } from 'rxjs';
+import { ThemeService } from '../core/services/theme.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
-}) export class AppComponent {
-
+}) export class AppComponent implements OnInit {
   title = 'KG Roofing';
+  isLightTheme: Observable<boolean>;
 
+  constructor(private themeService: ThemeService) { }
+
+  ngOnInit() {
+    this.isLightTheme = this.themeService.isLightTheme;
+  }
 }
 
 /**
