@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { CoreModule } from '../core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {OverlayContainer, FullscreenOverlayContainer} from '@angular/cdk/overlay';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
@@ -68,13 +70,19 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatSlideToggleModule,
     FlexLayoutModule,
+    MatGridListModule,
     FormsModule
   ],
   providers: [
-    Title
+    Title,
+    {provide: OverlayContainer, useClass: FullscreenOverlayContainer}
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(overlayContainer: OverlayContainer) {
+    overlayContainer.getContainerElement().classList.add('kglight-theme');
+  }
+ }
 
 // View icons here: https://material.io/resources/icons/?icon=settings&style=baseline

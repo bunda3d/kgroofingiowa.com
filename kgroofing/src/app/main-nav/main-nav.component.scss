@@ -1,5 +1,12 @@
+//variables
+$nav-logo-max-ht:88px;
+
 .sidenav-container {
-  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .sidenav {
@@ -14,7 +21,7 @@
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 11;
 }
 
 .spacer {
@@ -26,7 +33,7 @@
   margin: 0 2rem;
   color: accent;
 }
-
+// small type in theme switch toggle in nav drawer
 .custom-list-item h5 {
   margin: 0;
   padding: 0;
@@ -34,4 +41,21 @@
 
 .custom-list-span {
   margin-top: 8px; 
+}
+
+.overlay {
+  z-index: 10;
+  background-color: primary;
+}
+
+
+.content {
+  padding: 2rem 1rem;
+  display: flex;
+}
+
+.nav-logo { 
+  transform: translateY(22%);
+  height: $nav-logo-max-ht;
+  z-index: 8;
 }

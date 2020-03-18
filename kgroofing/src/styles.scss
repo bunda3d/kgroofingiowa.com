@@ -4,6 +4,7 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
+// @import './component-themes';
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -27,6 +28,7 @@ $kgroofing-theme: mat-dark-theme($kgroofing-primary, $kgroofing-accent, $kgroofi
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($kgroofing-theme);
+//@include component-themes($kgroofing-theme);
 
 
 // Include the alternative theme styles inside of a block with a CSS class. You can make this
@@ -39,11 +41,23 @@ $kgroofing-theme: mat-dark-theme($kgroofing-primary, $kgroofing-accent, $kgroofi
   $kglight-theme:   mat-light-theme($kgroofing-primary, $kglight-accent, $kglight-warn); 
   
   @include angular-material-theme($kglight-theme);
+  // @include component-themes($kglight-theme);
 }
 // for more on dark mode switch
 // https://github.com/eTallang/theme-demo
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { height: 100vh; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+app-routing {
+  flex: 1;
+}
+
