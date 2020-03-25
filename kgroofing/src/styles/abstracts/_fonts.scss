@@ -1,0 +1,172 @@
+//-----------
+// Fonts
+//-----------
+// Fonts from assets folder for @fontface application
+
+// Material Icons Font import
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+// Local Fonts from assets folder for @fontface application
+@font-face {
+  font-family: "Roboto Condensed";
+  font-weight: bold;
+  font-style: normal;
+  src: local("Roboto Condensed Bold"), 
+    local("RobotoCondensed-Bold"),
+    url("/../../assets/fonts/700/hinted-RobotoCondensed-Bold.woff2") format("woff2"),
+    url("/../../assets/fonts/700/hinted-RobotoCondensed-Bold.woff") format("woff");
+}
+
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-style: normal;
+  src: local("Roboto Medium"), local("Roboto-Medium"),
+      url("/../../assets/fonts/500/hinted-Roboto-Medium.woff2") format("woff2"),
+      url("/../../assets/fonts/500/hinted-Roboto-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: local("Roboto Condensed"), local("RobotoCondensed-Regular"),
+      url("/../../assets/fonts/400/hinted-RobotoCondensed-Regular.woff2") format("woff2"),
+      url("/../../assets/fonts/400/hinted-RobotoCondensed-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: local("Roboto Condensed Bold Italic"), local("RobotoCondensed-BoldItalic"),
+      url("/../../assets/fonts/700/hinted-RobotoCondensed-BoldItalic.woff2") format("woff2"),
+      url("/../../assets/fonts/700/hinted-RobotoCondensed-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Thin Italic"), local("Roboto-ThinItalic"),
+      url("/../../assets/fonts/100/hinted-Roboto-ThinItalic.woff2") format("woff2"),
+      url("/../../assets/fonts/100/hinted-Roboto-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Italic"), local("Roboto-Italic"),
+      url("/../../assets/fonts/400/hinted-Roboto-Italic.woff2") format("woff2"),
+      url("/../../assets/fonts/400/hinted-Roboto-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Thin"), local("Roboto-Thin"),
+      url("/../../assets/fonts/100/hinted-Roboto-Thin.woff2") format("woff2"),
+      url("/../../assets/fonts/100/hinted-Roboto-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold"), local("Roboto-Bold"),
+      url("/../../assets/fonts/700/hinted-Roboto-Bold.woff2") format("woff2"),
+      url("/../../assets/fonts/700/hinted-Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Light"), local("Roboto-Light"),
+      url("/../../assets/fonts/300/hinted-Roboto-Light.woff2") format("woff2"),
+      url("/../../assets/fonts/300/hinted-Roboto-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Black Italic"), local("Roboto-BlackItalic"),
+      url("/../../assets/fonts/900/hinted-Roboto-BlackItalic.woff2") format("woff2"),
+      url("/../../assets/fonts/900/hinted-Roboto-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: local("Roboto Condensed Light Italic"), local("RobotoCondensed-LightItalic"),
+      url("/../../assets/fonts/300/hinted-RobotoCondensed-LightItalic.woff2") format("woff2"),
+      url("/../../assets/fonts/300/hinted-RobotoCondensed-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: local("Roboto Condensed Italic"), local("RobotoCondensed-Italic"),
+      url("/../../assets/fonts/400/hinted-RobotoCondensed-Italic.woff2") format("woff2"),
+      url("/../../assets/fonts/400/hinted-RobotoCondensed-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Medium Italic"), local("Roboto-MediumItalic"),
+      url("/../../assets/fonts/500/hinted-Roboto-MediumItalic.woff2") format("woff2"),
+      url("/../../assets/fonts/500/hinted-Roboto-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto Condensed";
+  src: local("Roboto Condensed Light"), local("RobotoCondensed-Light"),
+      url("/../../assets/fonts/300/hinted-RobotoCondensed-Light.woff2") format("woff2"),
+      url("/../../assets/fonts/300/hinted-RobotoCondensed-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), local("Roboto-Regular"),
+      url("/../../assets/fonts/400/hinted-Roboto-Regular.woff2") format("woff2"),
+      url("/../../assets/fonts/400/hinted-Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Black"), local("Roboto-Black"),
+      url("/../../assets/fonts/900/hinted-Roboto-Black.woff2") format("woff2"),
+      url("/../../assets/fonts/900/hinted-Roboto-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Bold Italic"), local("Roboto-BoldItalic"),
+      url("/../../assets/fonts/700/hinted-Roboto-BoldItalic.woff2") format("woff2"),
+      url("/../../assets/fonts/700/hinted-Roboto-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto Light Italic"), local("Roboto-LightItalic"),
+      url("/../../assets/fonts/300/hinted-Roboto-LightItalic.woff2") format("woff2"),
+      url("/../../assets/fonts/300/hinted-Roboto-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+}

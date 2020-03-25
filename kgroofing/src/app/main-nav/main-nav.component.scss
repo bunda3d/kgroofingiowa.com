@@ -1,5 +1,6 @@
+@import '../../../src/styles.scss';
 //variables
-$nav-logo-max-ht:88px;
+$nav-logo-max-ht:80px;
 
 .sidenav-container {
   position: absolute;
@@ -11,7 +12,7 @@ $nav-logo-max-ht:88px;
 
 .sidenav {
   width: 300px;
-  box-shadow: .5rem 0 1rem
+  box-shadow: .5rem 0 1rem;
 }
 
 .sidenav .mat-toolbar {
@@ -21,7 +22,7 @@ $nav-logo-max-ht:88px;
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
-  z-index: 11;
+  z-index: 8;
 }
 
 .spacer {
@@ -44,10 +45,9 @@ $nav-logo-max-ht:88px;
 }
 
 .overlay {
-  z-index: 10;
+  z-index: 7;
   background-color: primary;
 }
-
 
 .content {
   padding: 2rem 1rem;
@@ -55,7 +55,25 @@ $nav-logo-max-ht:88px;
 }
 
 .nav-logo { 
-  transform: translateY(22%);
+  transform: translateY(25%);
   height: $nav-logo-max-ht;
-  z-index: 8;
+  z-index: 9;
+}
+#nav-logo-link {
+  padding-left: 0;
+  margin-left: 0;
+}
+// nav bar flex items
+%nav-msg {
+  font-size: $h3;
+  color: orange;  
+  margin: 0;
+  padding: 0;
+}
+#nav-phone {
+  @extend %nav-msg;
+}
+#nav-slogan {
+  @extend %nav-msg;
+  font-size: $h6;
 }

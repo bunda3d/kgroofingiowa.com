@@ -1,0 +1,48 @@
+/**
+ * THEMES and THEME SWITCHING
+ */
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// @import './component-themes';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$kgroofing-primary: mat-palette($mat-indigo);
+$kgroofing-accent: mat-palette($mat-orange, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$kgroofing-warn: mat-palette($mat-pink);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$kgroofing-theme: mat-dark-theme($kgroofing-primary, $kgroofing-accent, $kgroofing-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($kgroofing-theme);
+//@include component-themes($kgroofing-theme);
+
+
+// Include the alternative theme styles inside of a block with a CSS class. You can make this
+// CSS class whatever you want. In this example, any component inside of an element with
+// `.kg-light-theme` will be affected by this alternate light theme instead of the default theme.
+.kg-light-theme {
+  // Alternate light theme.
+  $kglight-accent: mat-palette($mat-amber, A200, A100, A400);
+  $kglight-warn: mat-palette($mat-red);
+  $kglight-theme: mat-light-theme($kgroofing-primary, $kglight-accent, $kglight-warn); 
+  
+  @include angular-material-theme($kglight-theme);
+  // @include component-themes($kglight-theme);
+}
+// for more on dark mode switch
+// https://github.com/eTallang/theme-demo
