@@ -12,7 +12,7 @@ $nav-logo-max-ht:80px;
 
 .sidenav {
   width: 300px;
-  box-shadow: .5rem 0 1rem;
+  box-shadow: 0.5rem 0 1rem;
 }
 
 .sidenav .mat-toolbar {
@@ -47,7 +47,7 @@ $nav-logo-max-ht:80px;
 }
 
 .custom-list-span {
-  margin-top: 8px; 
+  margin-top: 8px;
 }
 
 .overlay {
@@ -60,11 +60,12 @@ $nav-logo-max-ht:80px;
   display: flex;
 }
 
-.nav-logo { 
+.nav-logo {
   transform: translateY(25%);
   height: $nav-logo-max-ht;
   z-index: 9;
 }
+
 #nav-logo-link {
   padding-left: 0;
   margin-left: 0;
@@ -72,15 +73,18 @@ $nav-logo-max-ht:80px;
 // nav bar flex items
 %nav-msg {
   font-size: 1em; //$h5; //$h3;
-  color: white; //$accent;  
+  color: white; //$accent;
   margin: 0;
   padding: 0;
-  line-height: 1em/ //$h5;
+  line-height: 1em; //$h5;
 }
+
 #nav-phone {
   @extend %nav-msg;
 }
+
 #nav-slogan {
   @extend %nav-msg;
-  font-size: .5em; //$h5
+
+  font-size: 0.5em; //$h5
 }
