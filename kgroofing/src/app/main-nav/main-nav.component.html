@@ -2,16 +2,13 @@
 -->
 
 <mat-sidenav-container class="sidenav-container" hasBackdrop="true">
-  <mat-sidenav 
-    #drawer 
-    class="sidenav" 
-    position="end" 
+  <mat-sidenav #drawer class="sidenav" position="end" 
     fixedInViewport="true" 
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" 
     [mode]="(isHandset$ | async) ? 'over' : 'side'" 
     [opened]="(isHandset$ | async) === false" 
     (click)="drawer.toggle()">
-    <mat-toolbar [class.mat-elevation-z20]>
+    <mat-toolbar [class.mat-elevation-z80]>
       {{title}}
     </mat-toolbar>
     <mat-divider></mat-divider>
@@ -120,8 +117,6 @@
       <mat-icon aria-label="Side nav toggle icon" position="end">menu</mat-icon>
     </button>
   </mat-toolbar>
-    <!-- Add Content Here -->
-
       <!--wrap content for margin-->
       <div class="content">
         <!--all router-outlet content shows here-->

@@ -1,0 +1,86 @@
+
+//variables
+$nav-logo-max-ht:80px;
+
+.sidenav-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.sidenav {
+  width: 300px;
+  box-shadow: .5rem 0 1rem;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 8;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar a {
+  display: inline-block;
+  margin: 0 2rem;
+  color: accent;
+}
+// Navigation highlights
+.active-link {
+  color: mat-color($hugofire-app-primary, 500) !important;
+  font-weight: bold !important;
+}
+
+// small type in theme switch toggle in nav drawer
+.custom-list-item h5 {
+  margin: 0;
+  padding: 0;
+}
+
+.custom-list-span {
+  margin-top: 8px; 
+}
+
+.overlay {
+  z-index: 7;
+  background-color: primary;
+}
+
+.content {
+  padding: 2rem 1rem;
+  display: flex;
+}
+
+.nav-logo { 
+  transform: translateY(25%);
+  height: $nav-logo-max-ht;
+  z-index: 9;
+}
+#nav-logo-link {
+  padding-left: 0;
+  margin-left: 0;
+}
+// nav bar flex items
+%nav-msg {
+  font-size: 1em; //$h5; //$h3;
+  color: white; //$accent;  
+  margin: 0;
+  padding: 0;
+  line-height: 1em/ //$h5;
+}
+#nav-phone {
+  @extend %nav-msg;
+}
+#nav-slogan {
+  @extend %nav-msg;
+  font-size: .5em; //$h5
+}
