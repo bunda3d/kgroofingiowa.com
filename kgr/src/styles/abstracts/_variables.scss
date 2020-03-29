@@ -1,0 +1,55 @@
+/**
+ **** VARIABLES ****
+ * FONTS / TYPOGRAPHY
+ */
+
+// primary fonts
+$primary-font: 'Roboto';
+$title-font: 'Roboto Condensed';
+
+// line heights
+$root-size: 16px;
+$primary-line-ht: 1.5;
+$title-line-ht: 1.2;
+
+// font-weight
+$thin:100;
+$light:300;
+$regular:400;
+$medium:500;
+$bold:700;
+$black:900;
+
+// Font size
+$font-xs: 0.5em;
+$font-sm: 0.75em;
+$primary-fs: 1em;
+$font-md: 1.25em;
+$font-lg: 1.5em;
+$fine-print: 0.375em;
+
+// Heading size
+$h1:2.5em;
+$h2:2em;
+$h3:1.75em;
+$h4:1.5em;
+$h5:0.875em;
+$h6:0.625em;
+
+// Spacing
+$pad:1rem;
+
+// Colors
+$bg-dark: #121212;
+$red: #b91d47;
+$white: #fff;
+$blue: #1976d2;
+
+// Breakpoints
+// $smallBreakpoint : 600px;
+// $largeBreakpoint : 1080px;
+
+/**
+ * THEME (MATERIAL FOR ANGULAR)
+ * and THEME TOGGLING
+ */
