@@ -1,2 +1,14 @@
-<!--nav component with router outlet-->
-<app-sidenav></app-sidenav>
+<!--Mat Theme Wrapper, for toggling light-mode
+<div [ngClass]="{'kg-light-theme': isLightTheme | async}">-->
+<!--Mat theme wrapper, for background coloring-->
+<div class="mat-app-background">
+  <!-- Toolbar / Navbar (with ROUTER OUTLET inside)-->
+  <app-sidenav></app-sidenav>
+
+  <!--delete
+  </app-main-nav>[openedSubject]="openedSubject">
+</app-main-nav>
+-->
+
+</div>
+<!-- </div>  -->

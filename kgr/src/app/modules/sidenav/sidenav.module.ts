@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SidenavComponent } from './sidenav.component';
-import { MatSidenavModule, MatSlideToggleModule } from '@angular/material';
+import { MatSidenavModule, MatSlideToggleModule, MatListModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -17,6 +17,7 @@ import { RouterModule } from '@angular/router';
     MatIconModule,
     MatButtonModule, 
     MatToolbarModule,
+    MatListModule,
     MatSlideToggleModule,
     RouterModule
 

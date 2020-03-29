@@ -6,7 +6,7 @@
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="(isHandset$ | async) === false">
     <mat-toolbar [class.mat-elevation-z80]>
-      {{ businessName }}
+      {{ Page }}
     </mat-toolbar>
     <mat-divider></mat-divider>
     <mat-nav-list>
@@ -152,7 +152,7 @@
         <mat-icon aria-label="Side nav toggle icon" position="end">menu</mat-icon>
       </button>
       <span fxFlex>
-        <a class="home-link" routerLink=".">{{ businessName }}</a>
+        <a class="home-link" routerLink=".">{{ Page }}</a>
       </span>
     </mat-toolbar>
     <!--wrap content for margin-->

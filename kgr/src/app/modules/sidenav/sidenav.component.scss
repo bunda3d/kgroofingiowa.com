@@ -1,5 +1,6 @@
+@import '../../../styles/styles';
 
-//variables
+// variables
 $nav-logo-max-ht:80px;
 
 .sidenav-container {
@@ -38,7 +39,7 @@ $nav-logo-max-ht:80px;
 }
 // Navigation highlights
 .active-link {
- color: mat-color(primary, 500) !important;
+ color: mat-color($blue, 500) !important;
  font-weight: bold !important;
 }
 
