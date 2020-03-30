@@ -4,30 +4,28 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
 import { SidenavModule } from './modules/sidenav/sidenav.module';
-import { SidenavComponent } from './modules/sidenav/sidenav.component';
-import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
+import { OverlayContainer } from '@angular/cdk/overlay/overlay-container';
 
 @NgModule({
   declarations: [
     AppComponent
-    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SidenavComponent,
-    SidenavModule,
-    LayoutModule,
-    MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule
+    MatSliderModule,
+    SidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(overlayContainer: OverlayContainer) {
+    overlayContainer
+      .getContainerElement()
+      .classList.add('angular-material-router-app-theme');
+  }
+}

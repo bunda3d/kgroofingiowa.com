@@ -1,100 +1,100 @@
 @import '../../../styles/styles';
 
 // import wraps up with main sheet import
-// @import '../../../styles/layouts/angular-material-router-theme.scss';
+@import '../../../styles/layouts/angular-material-router-theme.scss';
 
 // variables
 $nav-logo-max-ht:80px;
 
 .sidenav-container {
- position: absolute;
- top: 0;
- bottom: 0;
- left: 0;
- right: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .sidenav {
- width: 300px;
- box-shadow: 0.5rem 0 1rem;
+  width: 300px;
+  box-shadow: 0.5rem 0 1rem;
 }
 
 .sidenav .mat-toolbar {
- background: inherit;
+  background: inherit;
 }
 
 .mat-toolbar.mat-primary {
- position: -webkit-sticky;
- position: sticky;
- top: 0;
- z-index: 8;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 8;
 }
 
 .spacer {
- -webkit-box-flex: 1;
- flex: 1 1 auto;
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
 }
 
 .mat-toolbar a {
- display: inline-block;
- margin: 0 2rem;
- color: accent;
+  display: inline-block;
+  margin: 0 2rem;
+  color: accent;
 }
 // Navigation highlights
 .active-link {
- color: mat-color($blue, 500) !important;
- font-weight: bold !important;
+  color: mat-color($blue, 500) !important;
+  font-weight: bold !important;
 }
 
 // small type in theme switch toggle in nav drawer
 .custom-list-item h5 {
- margin: 0;
- padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .custom-list-span {
- margin-top: 8px;
+  margin-top: 8px;
 }
 
 .overlay {
- z-index: 7;
- background-color: primary;
+  z-index: 7;
+  background-color: primary;
 }
 
 .content {
- padding: 2rem 1rem;
- display: -webkit-box;
- display: flex;
+  padding: 2rem 1rem;
+  display: -webkit-box;
+  display: flex;
 }
 
 .nav-logo {
- -webkit-transform: translateY(25%);
- transform: translateY(25%);
- height: $nav-logo-max-ht;
- z-index: 9;
+  -webkit-transform: translateY(25%);
+  transform: translateY(25%);
+  height: $nav-logo-max-ht;
+  z-index: 9;
 }
 
 #nav-logo-link {
- padding-left: 0;
- margin-left: 0;
+  padding-left: 0;
+  margin-left: 0;
 }
 // nav bar flex items
 %nav-msg {
- font-size: 1em; //$h5; //$h3;
- color: white; //$accent;
- margin: 0;
- padding: 0;
- line-height: 1em; //$h5;
+  font-size: 1em; //$h5; //$h3;
+  color: white; //$accent;
+  margin: 0;
+  padding: 0;
+  line-height: 1em; //$h5;
 }
 
 #nav-phone {
- @extend %nav-msg;
+  @extend %nav-msg;
 }
 
 #nav-slogan {
- @extend %nav-msg;
+  @extend %nav-msg;
 
- font-size: 0.5em; //$h5
+  font-size: 0.5em; //$h5
 }
 
 // color picker styles
@@ -110,54 +110,71 @@ $nav-logo-max-ht:80px;
 .color-swatch-primary {
   background-color: mat-color($angular-material-router-app-primary, 500);
 }
+
 .color-swatch-primary:hover {
-  background-color: mat-color(
-    $angular-material-router-app-primary,
-    500
-  ) !important;
+  background-color:
+    mat-color(
+      $angular-material-router-app-primary,
+      500
+    ) !important;
 }
+
 .color-swatch-green {
   background-color: mat-color($angular-material-router-app-green, 500);
 }
+
 .color-swatch-green:hover {
-  background-color: mat-color(
-    $angular-material-router-app-green,
-    500
-  ) !important;
+  background-color:
+    mat-color(
+      $angular-material-router-app-green,
+      500
+    ) !important;
 }
+
 .color-swatch-pink {
   background-color: mat-color($angular-material-router-app-pink, 500);
 }
+
 .color-swatch-pink:hover {
-  background-color: mat-color(
-    $angular-material-router-app-pink,
-    500
-  ) !important;
+  background-color:
+    mat-color(
+      $angular-material-router-app-pink,
+      500
+    ) !important;
 }
+
 .color-swatch-purple {
   background-color: mat-color($angular-material-router-app-purple, 500);
 }
+
 .color-swatch-purple:hover {
-  background-color: mat-color(
-    $angular-material-router-app-purple,
-    500
-  ) !important;
+  background-color:
+    mat-color(
+      $angular-material-router-app-purple,
+      500
+    ) !important;
 }
+
 .color-swatch-yellow {
   background-color: mat-color($angular-material-router-app-yellow, 500);
 }
+
 .color-swatch-yellow:hover {
-  background-color: mat-color(
-    $angular-material-router-app-yellow,
-    500
-  ) !important;
+  background-color:
+    mat-color(
+      $angular-material-router-app-yellow,
+      500
+    ) !important;
 }
+
 .color-swatch-warn {
   background-color: mat-color($angular-material-router-app-warn, 500);
 }
+
 .color-swatch-warn:hover {
-  background-color: mat-color(
-    $angular-material-router-app-warn,
-    500
-  ) !important;
+  background-color:
+    mat-color(
+      $angular-material-router-app-warn,
+      500
+    ) !important;
 }
