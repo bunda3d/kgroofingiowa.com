@@ -1,10 +1,10 @@
 // Footer Styles
 footer {
- background: $blue;
- color: $red;
- padding: $pad * 2;
+  background: $blue;
+  color: $red;
+  padding: $pad * 2;
 
- div {
-  @extend .container;
- }
+  div {
+    @extend .container;
+  }
 }

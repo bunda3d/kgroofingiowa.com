@@ -4,8 +4,8 @@ html,
 body { height: 100%; }
 
 body {
- margin: 0;
- font-family: Roboto, 'Helvetica Neue', sans-serif;
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
 /**
@@ -15,17 +15,17 @@ body {
 
 @charset "UTF-8";
 //Fonts
-@import "./../assets/fonts/_fonts";
+@import "../assets/fonts/_fonts";
 //Vendors
-@import "./vendor/__vendor-dir";
+@import "vendor/__vendor-dir";
 //Abstracts
-@import "./abstracts/__abstracts-dir";
+@import "abstracts/__abstracts-dir";
 //Base Styles
-@import "./base/__base-dir";
+@import "base/__base-dir";
 //Components
-@import "./components/__components-dir";
+@import "components/__components-dir";
 //Layout
-@import "./layouts/__layouts-dir";
+@import "layouts/__layouts-dir";
 
 /**
 scss/                         # Import all ‘-dir.scss’ files

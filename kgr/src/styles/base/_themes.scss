@@ -35,13 +35,13 @@ $kgroofing-theme: mat-dark-theme($kgroofing-primary, $kgroofing-accent, $kgroofi
 // CSS class whatever you want. In this example, any component inside of an element with
 // `.kg-light-theme` will be affected by this alternate light theme instead of the default theme.
 .kg-light-theme {
- // Alternate light theme.
- $kglight-accent: mat-palette($mat-amber, A200, A100, A400);
- $kglight-warn: mat-palette($mat-red);
- $kglight-theme: mat-light-theme($kgroofing-primary, $kglight-accent, $kglight-warn);
+  // Alternate light theme.
+  $kglight-accent: mat-palette($mat-amber, A200, A100, A400);
+  $kglight-warn: mat-palette($mat-red);
+  $kglight-theme: mat-light-theme($kgroofing-primary, $kglight-accent, $kglight-warn);
 
- @include angular-material-theme($kglight-theme);
- // @include component-themes($kglight-theme);
+  @include angular-material-theme($kglight-theme);
+  // @include component-themes($kglight-theme);
 }
 // for more on dark mode switch
 // https://github.com/eTallang/theme-demo

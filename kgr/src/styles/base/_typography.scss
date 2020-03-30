@@ -4,22 +4,22 @@
 
 // font stacks
 %primary-font-fam {
- font-family: $primary-font, "Helvetica Neue", sans-serif;
+  font-family: $primary-font, "Helvetica Neue", sans-serif;
 }
 %title-font-fam {
- font-family: $title-font, Impact, "Franklin Gothic Bold", sans-serif;
+  font-family: $title-font, Impact, "Franklin Gothic Bold", sans-serif;
 }
 
 // font styles for main elements
 body {
- @extend %primary-font-fam;
+  @extend %primary-font-fam;
 
- font-size: $primary-fs;
- font-weight: $regular;
+  font-size: $primary-fs;
+  font-weight: $regular;
 }
 
 p {
- margin-bottom: $pad;
+  margin-bottom: $pad;
 }
 
 // Header Styles
@@ -29,16 +29,16 @@ h3,
 h4,
 h5,
 h6 {
- @extend %title-font-fam;
+  @extend %title-font-fam;
 
- font-weight: $bold;
- margin: 0;
- margin-bottom: $pad/2;
- line-height: $title-line-ht;
+  font-weight: $bold;
+  margin: 0;
+  margin-bottom: $pad/2;
+  line-height: $title-line-ht;
 
- a {
-  font-weight: inherit;
- }
+  a {
+    font-weight: inherit;
+  }
 }
 
 // Text Styles

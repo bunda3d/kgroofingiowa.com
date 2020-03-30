@@ -43,7 +43,7 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": false,
+              "sourceMap": true,
               "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
@@ -71,6 +71,9 @@
           },
           "configurations": {
             "production": {
+              "sourceMap": {
+                "scripts": true
+              },
               "browserTarget": "kgr:build:production"
             }
           }
