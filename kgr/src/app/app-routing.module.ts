@@ -7,6 +7,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)
   },
   {
+    path: 'kitchensink',
+    loadChildren: () => import('./modules/kitchensink/kitchensink.module').then(m => m.KitchensinkModule)
+  },
+  {
     path: 'projects',
     loadChildren: () => import('./modules/projects/projects.module').then(m => m.ProjectsModule)
   },

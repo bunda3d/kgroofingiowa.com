@@ -1,8 +1,5 @@
 @import '../../../styles/styles';
 
-// import wraps up with main sheet import
-@import '../../../styles/layouts/angular-material-router-theme.scss';
-
 // variables
 $nav-logo-max-ht:80px;
 
@@ -39,11 +36,6 @@ $nav-logo-max-ht:80px;
   display: inline-block;
   margin: 0 2rem;
   color: accent;
-}
-// Navigation highlights
-.active-link {
-  color: mat-color($angular-material-router-app-yellow) !important;
-  font-weight: bold !important;
 }
 
 // small type in theme switch toggle in nav drawer

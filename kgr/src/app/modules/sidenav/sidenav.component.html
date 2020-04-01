@@ -12,52 +12,22 @@
 		[mode]="(isHandset$ | async) ? 'over' : 'side'"
 		[opened]="(isHandset$ | async) === false"
 	>
-		<mat-toolbar [class.mat-elevation-z80]>
-			{{ Page }}
-		</mat-toolbar>
+		<mat-toolbar [class.mat-elevation-z80]> </mat-toolbar>
 		<mat-divider></mat-divider>
 		<mat-nav-list>
-			<a
-				mat-list-item
-				[routerLinkActiveOptions]="{ exact: true }"
-				routerLinkActive="active"
-				[routerLink]="['/home']"
-			>
-				<mat-icon>home</mat-icon>
-				<span> &nbsp; &nbsp; Home</span>
-			</a>
-			<a mat-list-item routerLinkActive="active" [routerLink]="['/about']">
-				<mat-icon>assignment</mat-icon>
-				<span> &nbsp; &nbsp; About Us</span>
-			</a>
-			<a mat-list-item routerLinkActive="active" [routerLink]="['/projects']">
-				<mat-icon>business</mat-icon>
-				<span> &nbsp; &nbsp; View Our Work</span>
-			</a>
-			<a mat-list-item routerLinkActive="active" [routerLink]="['/contact']">
-				<mat-icon>call</mat-icon>
-				<span> &nbsp; &nbsp; Contact Us</span>
-			</a>
-			<a mat-list-item routerLinkActive="active" [routerLink]="['/blogs']">
-				<mat-icon>art_track</mat-icon>
-				<span> &nbsp; &nbsp; Blog</span>
-			</a>
-			<a mat-list-item routerLinkActive="active" [routerLink]="['/financing']">
-				<mat-icon>credit_card</mat-icon>
-				<span> &nbsp; &nbsp; Financing</span>
-			</a>
-			<a mat-list-item routerLinkActive="active" [routerLink]="['/members']">
-				<mat-icon>vpn_key</mat-icon>
-				<span> &nbsp; &nbsp; Members</span>
-			</a>
-		</mat-nav-list>
-
-		<mat-divider></mat-divider>
-
-		<mat-nav-list>
+			<mat-divider></mat-divider>
 			<a mat-list-item routerLinkActive="active" [routerLink]="['/home']">
 				<mat-icon>home</mat-icon>
 				<span> &nbsp; &nbsp; Home</span>
+			</a>
+			<a
+				mat-list-item
+				routerLinkActive="active"
+				[routerLink]="['/kitchensink']"
+				[routerLinkActiveOptions]="{ exact: true }"
+			>
+				<mat-icon>apps</mat-icon>
+				<span> &nbsp; &nbsp; Kitchen Sink</span>
 			</a>
 			<a mat-list-item routerLinkActive="active" [routerLink]="['/about']">
 				<mat-icon>assignment</mat-icon>
@@ -135,13 +105,13 @@
 			<a id="nav-logo-link" [routerLink]="['/home']">
 				<img class="nav-logo" src="../../assets/branding/branding.svg" />
 			</a>
-			<div fxLayout="column" fxFlexAlign="space-around center">
+			<div fxLayout="column" fxFlexAlign="space-around center" fxHide.lt-sm="true">
 				<div fxFlex>
-					<h3 id="nav-phone">Call: 515-955-2061</h3>
+					<h3 id="nav-phone">515-955-2061</h3>
 				</div>
 				<div fxFlex>
-					<h6 id="nav-slogan">The experts you can trust,</h6>
-					<h6 id="nav-slogan">The quality you can count on!</h6>
+					<h5 class="custom-list-item" id="nav-slogan">The experts you can trust,</h5>
+					<h5 class="custom-list-item" id="nav-slogan">The quality you can count on!</h5>
 				</div>
 			</div>
 			<span class="spacer"></span>
@@ -160,6 +130,37 @@
 				<a routerLinkActive="active" [routerLink]="['/members']" mat-button>Members</a>
 			</div>
 
+			<!--color picker theme 
+			<span fxFlex>
+				<a class="home-link" routerLink=".">{{ Page }}</a>
+			</span>switcher-->
+			<span fxFlex="nogrow">
+				<button mat-icon-button [matMenuTriggerFor]="menu">
+					<mat-icon>format_color_fill</mat-icon>
+				</button>
+				<mat-menu #menu="matMenu">
+					<button mat-menu-item (click)="pickColor('')">
+						<div class="color-swatch color-swatch-primary" mat-menu-item></div>
+					</button>
+					<button mat-menu-item (click)="pickColor('green')">
+						<div class="color-swatch color-swatch-green" mat-menu-item></div>
+					</button>
+					<button mat-menu-item (click)="pickColor('pink')">
+						<div class="color-swatch color-swatch-pink" mat-menu-item></div>
+					</button>
+					<button mat-menu-item (click)="pickColor('purple')">
+						<div class="color-swatch color-swatch-purple" mat-menu-item></div>
+					</button>
+					<button mat-menu-item (click)="pickColor('yellow')">
+						<div class="color-swatch color-swatch-yellow" mat-menu-item></div>
+					</button>
+					<button mat-menu-item (click)="pickColor('warn')">
+						<div class="color-swatch color-swatch-warn" mat-menu-item></div>
+					</button>
+				</mat-menu>
+			</span>
+
+			<!--sidenav toggle-->
 			<button
 				type="button"
 				aria-label="Toggle sidenav"
@@ -168,42 +169,12 @@
 				*ngIf="isHandset$ | async"
 			>
 				<mat-icon aria-label="Side nav toggle icon" position="end">menu</mat-icon>
-      </button>
-      <!--title 
+			</button>
+			<!--title 
 			<span fxFlex>
 				<a class="home-link" routerLink=".">{{ Page }}</a>
       </span>
       -->
-<!--color picker theme switcher-->
-<span fxFlex>
-  <a class="home-link" routerLink=".">{{ title }}</a>
-</span>
-<span fxFlex="nogrow">
-  <button mat-icon-button [matMenuTriggerFor]="menu">
-    <mat-icon>format_color_fill</mat-icon>
-  </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item (click)="pickColor('')">
-      <div class="color-swatch color-swatch-primary" mat-menu-item></div>
-    </button>
-    <button mat-menu-item (click)="pickColor('green')">
-      <div class="color-swatch color-swatch-green" mat-menu-item></div>
-    </button>
-    <button mat-menu-item (click)="pickColor('pink')">
-      <div class="color-swatch color-swatch-pink" mat-menu-item></div>
-    </button>
-    <button mat-menu-item (click)="pickColor('purple')">
-      <div class="color-swatch color-swatch-purple" mat-menu-item></div>
-    </button>
-    <button mat-menu-item (click)="pickColor('yellow')">
-      <div class="color-swatch color-swatch-yellow" mat-menu-item></div>
-    </button>
-    <button mat-menu-item (click)="pickColor('warn')">
-      <div class="color-swatch color-swatch-warn" mat-menu-item></div>
-    </button>
-  </mat-menu>
-</span>
-
 		</mat-toolbar>
 		<!--wrap content for margin-->
 		<div class="content">

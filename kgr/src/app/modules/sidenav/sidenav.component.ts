@@ -29,7 +29,7 @@ export class SidenavComponent implements OnInit, OnDestroy {
   ) { }
   routerSub: Subscription;
   @ViewChild('snav') public sidenav: MatSidenav;
-  title = '{{Page}}';
+  // title = `$Page`;
   ngOnDestroy() {
     this.routerSub.unsubscribe();
   }
