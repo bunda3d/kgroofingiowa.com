@@ -8,10 +8,14 @@ import { MatSliderModule } from '@angular/material/slider';
 
 import { environment } from 'src/environments/environment';
 import { SidenavModule } from './modules/sidenav/sidenav.module';
+import { AboutComponent } from './modules/about/about.component';
+import { ContactComponent } from './modules/contact/contact.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

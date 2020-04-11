@@ -15,8 +15,12 @@
 		<mat-toolbar [class.mat-elevation-z80]> </mat-toolbar>
 		<mat-divider></mat-divider>
 		<mat-nav-list>
-			<mat-divider></mat-divider>
-			<a mat-list-item routerLinkActive="active" [routerLink]="['/home']">
+			<a
+				mat-list-item
+				routerLinkActive="active"
+				[routerLink]="['/home']"
+				[routerLinkActiveOptions]="{ exact: true }"
+			>
 				<mat-icon>home</mat-icon>
 				<span> &nbsp; &nbsp; Home</span>
 			</a>
@@ -29,27 +33,57 @@
 				<mat-icon>apps</mat-icon>
 				<span> &nbsp; &nbsp; Kitchen Sink</span>
 			</a>
-			<a mat-list-item routerLinkActive="active" [routerLink]="['/about']">
+			<a
+				mat-list-item
+				routerLinkActive="active"
+				[routerLink]="['/about']"
+				[routerLinkActiveOptions]="{ exact: true }"
+			>
 				<mat-icon>assignment</mat-icon>
 				<span> &nbsp; &nbsp; About Us</span>
 			</a>
-			<a mat-list-item routerLinkActive="active" [routerLink]="['/projects']">
+			<a
+				mat-list-item
+				routerLinkActive="active"
+				[routerLink]="['/projects']"
+				[routerLinkActiveOptions]="{ exact: true }"
+			>
 				<mat-icon>business</mat-icon>
 				<span> &nbsp; &nbsp; View Our Work</span>
 			</a>
-			<a mat-list-item routerLinkActive="active" [routerLink]="['/contact']">
+			<a
+				mat-list-item
+				routerLinkActive="active"
+				[routerLink]="['/contact']"
+				[routerLinkActiveOptions]="{ exact: true }"
+			>
 				<mat-icon>call</mat-icon>
 				<span> &nbsp; &nbsp; Contact Us</span>
 			</a>
-			<a mat-list-item routerLinkActive="active" [routerLink]="['/blogs']">
+			<a
+				mat-list-item
+				routerLinkActive="active"
+				[routerLink]="['/blogs']"
+				[routerLinkActiveOptions]="{ exact: true }"
+			>
 				<mat-icon>art_track</mat-icon>
 				<span> &nbsp; &nbsp; Blog</span>
 			</a>
-			<a mat-list-item routerLinkActive="active" [routerLink]="['/financing']">
+			<a
+				mat-list-item
+				routerLinkActive="active"
+				[routerLink]="['/financing']"
+				[routerLinkActiveOptions]="{ exact: true }"
+			>
 				<mat-icon>credit_card</mat-icon>
 				<span> &nbsp; &nbsp; Financing</span>
 			</a>
-			<a mat-list-item routerLinkActive="active" [routerLink]="['/members']">
+			<a
+				mat-list-item
+				routerLinkActive="active"
+				[routerLink]="['/members']"
+				[routerLinkActiveOptions]="{ exact: true }"
+			>
 				<mat-icon>vpn_key</mat-icon>
 				<span> &nbsp; &nbsp; Members</span>
 			</a>
