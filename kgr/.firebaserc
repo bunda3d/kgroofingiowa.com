@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kgroofingiowa": {
+      "hosting": {
+        "kgr": [
+          "kgroofingiowa"
+        ]
+      }
+    }
+  }
+}

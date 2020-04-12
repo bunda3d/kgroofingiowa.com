@@ -9,6 +9,13 @@
 	<!--delete
   </app-main-nav>[openedSubject]="openedSubject">
 </app-main-nav>
---></div>
+-->
+	<!--testing firebase example-->
+	<ul>
+		<li class="text" *ngFor="let item of items | async">
+			{{ item.name }}
+		</li>
+	</ul>
+</div>
 <!--</div>
  </div>  -->

@@ -2,8 +2,7 @@ import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 import { NavigationEnd, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { ColorPickerService } from 'src/app/core/services/color-picker.service';
 import { MatSidenav } from '@angular/material/sidenav';
