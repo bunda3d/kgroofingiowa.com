@@ -23,6 +23,7 @@ import { SidenavModule } from './modules/sidenav/sidenav.module';
     BrowserAnimationsModule,
     MatSliderModule,
     SidenavModule, 
+    // sets key to initialize firebase:
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule, 
     AngularFirestoreModule

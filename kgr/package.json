@@ -1,18 +1,4 @@
 {
-  "name": "kgr",
-  "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "fix-code": "prettier-eslint --write 'src/**/*.{js,jsx}'",
-    "fix-styles": "prettier-stylelint --write 'src/**/*.{css,scss}'",
-    "postinstall": "ngcc"
-  },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~9.1.0",
     "@angular/cdk": "^9.2.0",
@@ -38,6 +24,7 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
+    "@angular-devkit/architect": "~0.900",
     "@angular-devkit/build-angular": "~0.901.0",
     "@angular/cli": "~9.1.0",
     "@angular/compiler-cli": "~9.1.0",
@@ -49,6 +36,10 @@
     "codelyzer": "^5.1.2",
     "css-loader": "^3.4.2",
     "eslint": "^6.8.0",
+    "firebase-tools": "^7.12.1",
+    "fuzzy": "^0.1.3",
+    "inquirer": "^6.2.2",
+    "inquirer-autocomplete-prompt": "^1.0.1",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
@@ -69,11 +60,20 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.8.3",
-    "webpack": "^4.42.1",
-    "@angular-devkit/architect": "~0.900",
-    "firebase-tools": "^7.12.1",
-    "fuzzy": "^0.1.3",
-    "inquirer": "^6.2.2",
-    "inquirer-autocomplete-prompt": "^1.0.1"
-  }
+    "webpack": "^4.42.1"
+  },
+  "name": "kgr",
+  "private": true,
+  "scripts": {
+    "build": "ng build",
+    "e2e": "ng e2e",
+    "fix-code": "prettier-eslint --write 'src/**/*.{js,jsx}'",
+    "fix-styles": "prettier-stylelint --write 'src/**/*.{css,scss}'",
+    "lint": "ng lint",
+    "ng": "ng",
+    "postinstall": "ngcc",
+    "start": "ng serve",
+    "test": "ng test"
+  },
+  "version": "0.0.0"
 }
