@@ -8,6 +8,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 import { environment } from 'src/environments/environment';
 import { SidenavModule } from './modules/sidenav/sidenav.module';
@@ -26,7 +27,8 @@ import { SidenavModule } from './modules/sidenav/sidenav.module';
     // sets key to initialize firebase:
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAnalyticsModule, 
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

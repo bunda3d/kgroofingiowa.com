@@ -1,1 +1,19 @@
 <p>project-tree works!</p>
+<mat-tree [dataSource]="dataSource" [treeControl]="treeControl"="treeControl">
+  <mat-tree-node *matTreeNodeDef="let node; when: hasChild" matTreeNodePadding>
+    <button 
+    mat-icon-button
+    [lattr.aria-label]="'toggle ' + node.filename" matTreeNodeToggle
+    >
+    <mat-icon class="mat-icon-rtl-mirror">
+      {{ treeControl.isExpanded(node) ? "expand_more" : 'chevron_right'}}
+    </mat-icon>
+    </button>
+    {{ node.item }}
+    <mat-progress-bar>
+      *ngIf="node.isLoading"
+      node="indeterminate"
+      class="example-tree-progress-bar"
+    </mat-progress-bar>
+  </mat-tree-node>
+</mat-tree>
