@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 // import { AuthService } from 'src/app/core/services/auth.service';
 
 
@@ -12,6 +13,9 @@ export class HomeComponent implements OnInit {
   // notification$;
   constructor(/* public auth: AuthService */) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+
+    
+  }
 
 }

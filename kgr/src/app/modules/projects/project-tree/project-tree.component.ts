@@ -3,7 +3,7 @@ import { FirestoreService } from './../../../core/services/firestore.service';
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { CollectionViewer, SelectionChange } from '@angular/cdk/collections';
 import { ActivatedRoute, Router } from '@angular/router';
-import { BehaviorSubject, merge, Obervable, Subscription } from 'rxjs';
+import { BehaviorSubject, merge, Observable, Subscription } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Projects } from 'src/app/core/models/projects';
 import { Project } from 'src/app/core/models/project';
