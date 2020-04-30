@@ -1,60 +1,69 @@
-import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { AfterContentInit, Component, Input, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-
 import { NavigationEnd, Router } from '@angular/router';
-import { Observable, Subscription } from 'rxjs';
+import { Observable, Subscription, Subject } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-import { ColorPickerService } from 'src/app/core/services/color-picker.service';
-import { MatSidenav } from '@angular/material/sidenav';
+import { ThemeService } from '../../core/services/theme.service';
 
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss']
 })
-export class SidenavComponent implements OnInit, OnDestroy {
+export class SidenavComponent implements OnInit, AfterContentInit {
   Page = "KG Roofing";
+  isLightTheme: Observable<boolean>;
+  events: string[] = [];
+  opened: boolean;
 
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(map(result => result.matches), shareReplay()
+    );
+
+  @Input() openedSubject: Subject<boolean>;
+  @ViewChild('drawer') drawer: SidenavComponent;
+
+  /**
+  navHeader = {
+    <a routerlink="/">
+    <img src="../../../src/assets/branding/KG_Roofing_logo.svg" />
+    </a> 
+  };
+ */
+  /**
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
       shareReplay()
     );
+    */
 
   constructor(
-    private router: Router,
     private breakpointObserver: BreakpointObserver,
-    private colorPicker: ColorPickerService
+    private themeService: ThemeService
   ) { }
-  routerSub: Subscription;
-  @ViewChild('snav') public sidenav: MatSidenav;
-  // title = `$Page`;
-  ngOnDestroy() {
-    this.routerSub.unsubscribe();
+
+  ngOnInit() {
+    this.isLightTheme = this.themeService.isLightTheme;
   }
 
-  // this will be used for closing the sidenav drawer and scrolling to the top of the screen
-  ngOnInit() {
-    this.routerSub = this.router.events.subscribe(event => {
-      if (this.sidenav && event instanceof NavigationEnd) {
-        this.sidenav.close();
-      } if (!(event instanceof NavigationEnd)) {
-        return;
-      }
-      window.scrollTo(0, 0);
-    });
+  ngAfterContentInit() {
+    this.openedSubject.subscribe(
+      keepOpen => this.drawer[keepOpen ? 'open' : 'close']()
+    );
   }
-  openThemeMenu() { }
-    pickColor(color: string) {
-      let colorTheme = '';
-      if (color !== '') {
-        colorTheme = `-${color}`;
-      }
-      this.colorPicker.setColorClass(
-        `angular-material-router-app-theme${colorTheme}`
-      );
-    }
-  snavToggle(snav){
-    snav.toggle();
+
+  /**
+  close() {
+    this.sidenav.close();
+  }
+  */
+
+  toggleLightTheme(checked: boolean) {
+    this.themeService.setLightTheme(checked);
+  }
+
+  toggle() {
+    this.openedSubject.next(!this.drawer.opened);
   }
 }

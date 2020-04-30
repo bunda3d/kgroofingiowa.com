@@ -4,7 +4,6 @@
 <mat-sidenav-container class="sidenav-container">
 	<mat-sidenav
 		#drawer
-		#snav
 		class="sidenav"
 		position="end"
 		fixedInViewport
@@ -87,49 +86,52 @@
 				<mat-icon>vpn_key</mat-icon>
 				<span> &nbsp; &nbsp; Members</span>
 			</a> -->
-
-			<!--			<div mat-list-item-content>
-				<!--flex containter-->
-			<div class="flex-container" fxLayout="row">
-				<!--flex item, 1st child of container row, should be 50% width of parent row-->
-				<div fxFlex="50%">
-					<!--items should display in row-->
-					<a mat-list-item>
-						<mat-icon>
-							settings_brightness
-						</mat-icon>
-						<span>&nbsp; &nbsp; Theme &nbsp; &nbsp; </span>
-					</a>
-				</div>
-				<!--flex item, 2nd child of container row-->
-				<div fxFlex="50%" class="custom-list-item">
-					<a mat-list-item>
-						<!--column container-->
-						<div fxLayout="column" fxLayoutAlign="center" fxFlex="100%">
-							<!--first child of column-->
-							<!--display switch and icons in a row-->
-							<div fxLayout="row" fxLayoutAlign="space-between center">
-								<div fxFlex="100%" fxLayoutGap="8px" fxFlexAlign="center">
-									<mat-icon>
-										brightness_3
-									</mat-icon>
-									<!--git hub on Material theme toggling
-                      <mat-slide-toggle [checked]="isLightTheme | async" labelPosition="after"
-                        (change)="toggleLightTheme($event.checked)">
-                      </mat-slide-toggle>-->
-									<mat-icon>
-										brightness_5
-									</mat-icon>
+			<div mat-list-item-content>
+				<!--flex container-->
+				<div class="flex-container" fxLayout="row">
+					<!--flex item, 1st child of container row, should be 50% width of parent row-->
+					<div fxFlex="50%">
+						<!--items should display in row-->
+						<a mat-list-item>
+							<mat-icon>
+								settings_brightness
+							</mat-icon>
+							<span>&nbsp; &nbsp; Theme &nbsp; &nbsp; </span>
+						</a>
+					</div>
+					<!--flex item, 2nd child of container row-->
+					<div fxFlex="50%" class="custom-list-item">
+						<a mat-list-item>
+							<!--column container-->
+							<div fxLayout="column" fxLayoutAlign="center" fxFlex="100%">
+								<!--first child of column-->
+								<!--display switch and icons in a row-->
+								<div fxLayout="row" fxLayoutAlign="space-between center">
+									<div fxFlex="100%" fxLayoutGap="8px" fxFlexAlign="center">
+										<mat-icon>
+											brightness_3
+										</mat-icon>
+										<!-- git hub on Material theme toggling -->
+										<mat-slide-toggle
+											[checked]="isLightTheme | async"
+											labelPosition="after"
+											(change)="toggleLightTheme($event.checked)"
+										>
+										</mat-slide-toggle>
+										<mat-icon>
+											brightness_5
+										</mat-icon>
+									</div>
+								</div>
+								<!--the next column element under-->
+								<div fxFlex fxFlexAlign="center">
+									<h5>dark or light</h5>
 								</div>
 							</div>
-							<!--the next column element under-->
-							<div fxFlex fxFlexAlign="center">
-								<h5>dark or light</h5>
-							</div>
-						</div>
-					</a>
+						</a>
+					</div>
 				</div>
-			</div>-->
+			</div>
 		</mat-nav-list>
 	</mat-sidenav>
 	<!--start top toolbar-->
@@ -158,39 +160,8 @@
 				<a routerLinkActive="active" [routerLink]="['/contact']" mat-button>Contact Us</a>
 				<!-- 		<a routerLinkActive="active" [routerLink]="['/blogs']" mat-button>Blog</a>
 				<a routerLinkActive="active" [routerLink]="['/financing']" mat-button>Financing</a>
-				<a routerLinkActive="active" [routerLink]="['/members']" mat-button>Members</a> 
--->
+				<a routerLinkActive="active" [routerLink]="['/members']" mat-button>Members</a> -->
 			</div>
-
-			<!--color picker theme 
-			<span fxFlex>
-				<a class="home-link" routerLink=".">{{ Page }}</a>
-			</span>switcher-->
-			<!-- 			<span fxFlex="nogrow">
-				<button mat-icon-button [matMenuTriggerFor]="menu">
-					<mat-icon>format_color_fill</mat-icon>
-				</button>
-				<mat-menu #menu="matMenu">
-					<button mat-menu-item (click)="pickColor('')">
-						<div class="color-swatch color-swatch-primary" mat-menu-item></div>
-					</button>
-					<button mat-menu-item (click)="pickColor('green')">
-						<div class="color-swatch color-swatch-green" mat-menu-item></div>
-					</button>
-					<button mat-menu-item (click)="pickColor('pink')">
-						<div class="color-swatch color-swatch-pink" mat-menu-item></div>
-					</button>
-					<button mat-menu-item (click)="pickColor('purple')">
-						<div class="color-swatch color-swatch-purple" mat-menu-item></div>
-					</button>
-					<button mat-menu-item (click)="pickColor('yellow')">
-						<div class="color-swatch color-swatch-yellow" mat-menu-item></div>
-					</button>
-					<button mat-menu-item (click)="pickColor('warn')">
-						<div class="color-swatch color-swatch-warn" mat-menu-item></div>
-					</button>
-				</mat-menu>
-			</span> -->
 
 			<!--sidenav toggle-->
 			<button

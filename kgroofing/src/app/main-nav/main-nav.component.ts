@@ -1,8 +1,9 @@
 import { AfterContentInit, Component, Input, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { ThemeService } from '../../core/services/theme.service';
-import { Subject, Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
+import { Subject, Observable } from 'rxjs';
+import { ThemeService } from '../../core/services/theme.service';
+
 
 @Component({
   selector: 'app-main-nav',
@@ -39,7 +40,8 @@ export class MainNavComponent implements OnInit, AfterContentInit {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private themeService: ThemeService) { }
+    private themeService: ThemeService
+  ) { }
 
   ngOnInit() {
     this.isLightTheme = this.themeService.isLightTheme;

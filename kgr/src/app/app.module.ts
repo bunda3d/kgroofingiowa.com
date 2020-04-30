@@ -1,16 +1,18 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { OverlayContainer } from '@angular/cdk/overlay';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { BrowserModule, HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { environment } from 'src/environments/environment';
+import { LayoutModule } from '@angular/cdk/layout';
 import { MatSliderModule } from '@angular/material/slider';
+import { NgModule } from '@angular/core';
+import { OverlayContainer, FullscreenOverlayContainer } from '@angular/cdk/overlay';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 
-import { environment } from 'src/environments/environment';
+import { AppComponent } from './app.component';
 import { SidenavModule } from './modules/sidenav/sidenav.module';
 
 
@@ -19,9 +21,11 @@ import { SidenavModule } from './modules/sidenav/sidenav.module';
     AppComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
+    BrowserModule,
     BrowserAnimationsModule,
+    HammerModule,
+    LayoutModule,
     MatSliderModule,
     SidenavModule, 
     // sets key to initialize firebase:
@@ -30,13 +34,13 @@ import { SidenavModule } from './modules/sidenav/sidenav.module';
     AngularFirestoreModule,
     AngularFireStorageModule
   ],
-  providers: [],
+  providers: [
+    {provide: OverlayContainer, useClass: FullscreenOverlayContainer}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
   constructor(overlayContainer: OverlayContainer) {
-    overlayContainer
-      .getContainerElement()
-      .classList.add('angular-material-router-app-theme');
+    overlayContainer.getContainerElement().classList.add('kg-light-theme');
   }
 }

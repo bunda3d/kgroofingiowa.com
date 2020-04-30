@@ -15,7 +15,9 @@ import { Subject } from 'rxjs';
 
 
 
-  constructor(private themeService: ThemeService) { }
+  constructor(
+    private themeService: ThemeService
+  ) { }
 
   ngOnInit() {
     this.isLightTheme = this.themeService.isLightTheme;
