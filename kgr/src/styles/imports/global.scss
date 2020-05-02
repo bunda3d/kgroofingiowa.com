@@ -1,0 +1,31 @@
+html,
+body {
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	box-sizing: border-box;
+
+	* {
+		box-sizing: inherit;
+	}
+}
+
+app-root {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+app-routing {
+	flex: 1;
+}
+
+// button large radius
+@mixin angular-button-large-radius {
+	.mat-raised-button,
+	.mat-stroked-button,
+	.mat-flat-button {
+		border-radius: 45px;
+	}
+}

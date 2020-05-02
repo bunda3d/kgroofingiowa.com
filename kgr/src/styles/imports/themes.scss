@@ -1,0 +1,34 @@
+// https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+// Material Design palettes available in palette.scss
+// https://material.io/design/color/
+$dark-primary: mat-palette($mat-indigo);
+$dark-accent: mat-palette($mat-orange, A100, A200, A400);
+$dark-warn: mat-palette($mat-pink);
+// Create the theme object (Sass map containing all palettes).
+$dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+// Include theme styles for core and each component used in your app.
+// Alternatively, import and @include mixins for each component.
+.dark-theme {
+	@include angular-material-theme($dark-theme);
+}
+// Include the alternative theme styles inside block with CSS class.
+// any component inside of an element with `.light-theme` will be affected by this alternate light theme instead of the default theme.
+$light-accent: mat-palette($mat-amber, A200, A100, A400);
+$light-warn: mat-palette($mat-red);
+$light-theme: mat-light-theme($dark-primary, $light-accent, $light-warn);
+.light-theme {
+	@include angular-material-theme($light-theme);
+}
+// for more on dark mode switch
+// https://github.com/eTallang/theme-demo
+
+// Default colors
+$my-app-primary: mat-palette($mat-teal, 700, 100, 800);
+$my-app-accent: mat-palette($mat-teal, 700, 100, 800);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent);
+.my-app-theme {
+	@include angular-material-theme($my-app-theme);
+}

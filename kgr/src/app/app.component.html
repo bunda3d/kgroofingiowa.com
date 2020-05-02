@@ -1,7 +1,7 @@
-<!--Mat theme wrapper, for background coloring-->
-<div class="mat-app-background">
-	<!--Mat Theme Wrapper, for toggling light-mode-->
-	<div [ngClass]="{ 'kg-light-theme': isLightTheme | async }">
+<!--Mat Theme Wrapper, for toggling light-mode-->
+<div [ngClass]="{ 'kg-light-theme': isLightTheme | async }">
+	<!--Mat theme wrapper, for background coloring-->
+	<div class="mat-app-background">
 		<!-- Toolbar / Navbar (with ROUTER OUTLET inside)-->
 		<app-sidenav> [openedSubject]="openedSubject"> </app-sidenav>
 		<!--testing firebase example
