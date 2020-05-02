@@ -24,7 +24,7 @@ $nav-logo-max-ht:80px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 8;
+  z-index: 80;
 }
 
 .spacer {
@@ -35,7 +35,7 @@ $nav-logo-max-ht:80px;
 .mat-toolbar a {
   display: inline-block;
   margin: 0 2rem;
-  color: accent;
+  color: primary;
 }
 
 // small type in theme switch toggle in nav drawer

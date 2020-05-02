@@ -30,7 +30,6 @@ import { SidenavComponent } from './sidenav.component';
     MatSlideToggleModule,
     MatToolbarModule,
     RouterModule
-
   ],
   exports: [
     SidenavComponent
