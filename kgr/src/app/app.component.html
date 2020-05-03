@@ -1,9 +1,9 @@
 <!--Mat Theme Wrapper, for toggling light-mode-->
-<div [ngClass]="{ 'kg-light-theme': isLightTheme | async }">
+<div [ngClass]="{ 'light-theme': isLightTheme | async }">
 	<!--Mat theme wrapper, for background coloring-->
-	<div class="mat-app-background">
-		<!-- Toolbar / Navbar (with ROUTER OUTLET inside)-->
-		<app-sidenav> [openedSubject]="openedSubject"> </app-sidenav>
+	<div class="">
+		<!-- Toolbar / Navbar (with ROUTER OUTLET inside)[openedSubject]="openedSubject"-->
+		<app-sidenav> </app-sidenav>
 		<!--testing firebase example
 			<ul>
 				<li class="text" *ngFor="let item of items | async">
