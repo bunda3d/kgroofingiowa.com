@@ -8,6 +8,17 @@
   max-width: 1080px;
 }
 
+// Mat-Card Styles
+.mcard {
+  max-width: 400px;
+}
+
+.mcard-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+
 // Footer Styles
 footer {
   background: $blue;

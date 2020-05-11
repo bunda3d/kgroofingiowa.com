@@ -4,13 +4,14 @@
 <mat-sidenav-container class="sidenav-container">
 	<mat-sidenav
 		#drawer
+		fixedInViewport
 		class="sidenav"
 		position="end"
-		fixedInViewport
 		[attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
 		[mode]="(isHandset$ | async) ? 'over' : 'side'"
-		[opened]="(isHandset$ | async) === false"
+		[opened]="(isHandset$ | async) ? 'false' : 'false'"
 	>
+		<!--" ? 'false':'false' " >> keeps side drawer closed both on small and large viewports (else it opens as sidenav on tablet+ size screens). To leave open on large screens, change back to " === 'false' " or maybe " ? 'false' : 'true' " -->
 		<mat-toolbar [class.mat-elevation-z80]>Menu</mat-toolbar>
 		<mat-divider></mat-divider>
 		<mat-nav-list>
@@ -112,19 +113,24 @@
 											brightness_3
 										</mat-icon>
 										<!-- git hub on Material theme toggling -->
-										<mat-slide-toggle
-											[checked]="isLightTheme | async"
+										<!-- <mat-slide-toggle
+											[checked]="light | async"
 											labelPosition="after"
-											(change)="toggleLightTheme($event.checked)"
+											(change)="setTheme($event.checked)"
 										>
-										</mat-slide-toggle>
+										</mat-slide-toggle> -->
+										<mat-slide-toggle
+											[checked]="isDarkTheme | async"
+											labelPosition="after"
+											(change)="toggleDarkTheme($event.checked)"
+										></mat-slide-toggle>
 										<mat-icon>
 											brightness_5
 										</mat-icon>
 									</div>
 								</div>
 								<!--the next column element under-->
-								<div fxFlex fxFlexAlign="center">
+								<div fxFlex fxFlexAlign="space-between center">
 									<h5>dark or light</h5>
 								</div>
 							</div>
@@ -136,7 +142,7 @@
 	</mat-sidenav>
 	<!--start top toolbar-->
 	<mat-sidenav-content>
-		<mat-toolbar color="primary" [class.mat-elevation-z70]>
+		<mat-toolbar [class.mat-elevation-z70]>
 			<a id="nav-logo-link" [routerLink]="['/home']">
 				<img class="nav-logo" src="../../assets/branding/branding.svg" />
 			</a>
@@ -180,7 +186,7 @@
       -->
 		</mat-toolbar>
 		<!--wrap content for margin-->
-		<div class="content">
+		<div class="content mat-app-background">
 			<!--all router-outlet content shows here-->
 			<router-outlet></router-outlet>
 		</div>

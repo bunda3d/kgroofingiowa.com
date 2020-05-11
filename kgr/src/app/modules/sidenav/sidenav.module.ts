@@ -9,30 +9,25 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
-
 import { RouterModule } from '@angular/router';
+// component imports -->
 import { SidenavComponent } from './sidenav.component';
 
 @NgModule({
-  declarations: [
-    SidenavComponent
-  ],
-  imports: [
-    CommonModule, 
-    FlexLayoutModule,
-    MatButtonModule, 
-    MatGridListModule,
-    MatIconModule,
-    MatListModule,
-    MatMenuModule,
-    MatSidenavModule,
-    MatSlideToggleModule,
-    MatToolbarModule,
-    RouterModule
-  ],
-  exports: [
-    SidenavComponent
-  ]
+	declarations: [SidenavComponent],
+	imports: [
+		CommonModule,
+		FlexLayoutModule,
+		MatButtonModule,
+		MatGridListModule,
+		MatIconModule,
+		MatListModule,
+		MatMenuModule,
+		MatSidenavModule,
+		MatSlideToggleModule,
+		MatToolbarModule,
+		RouterModule
+	],
+	exports: [SidenavComponent]
 })
-export class SidenavModule { }
+export class SidenavModule {}

@@ -73,7 +73,7 @@ $nav-logo-max-ht:80px;
 // nav bar flex items
 %nav-msg {
   font-size: 1em; //$h5; //$h3;
-  color: white; //$accent;
+  color: primary; //$accent;
   margin: 0;
   padding: 0;
   line-height: 1em; //$h5;
@@ -81,6 +81,7 @@ $nav-logo-max-ht:80px;
 
 #nav-phone {
   @extend %nav-msg;
+  color: accent;
 }
 
 #nav-slogan {

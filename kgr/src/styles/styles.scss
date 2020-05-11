@@ -16,3 +16,5 @@ body {
 @import '../assets/fonts/fonts';
 //Imports
 @import './imports/directory';
+//Material.Angular styles
+@import '~@angular/cdk/overlay-prebuilt.css';

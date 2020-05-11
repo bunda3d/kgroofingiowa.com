@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core'
-import { AngularFirestore } from '@angular/fire/firestore'
-import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout'
-import { Observable, Subject } from 'rxjs'
-import { ThemeService } from './core/services/theme.service'
+import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { BreakpointObserver } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { ThemeService } from './core/services/theme.service';
 
 @Component({
 	selector: 'app-root',
@@ -10,19 +10,19 @@ import { ThemeService } from './core/services/theme.service'
 	styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-	Page = 'KG Roofing'
-	items: Observable<any[]>
-	isLightTheme: Observable<boolean>
+	Page = 'KG Roofing';
+	items: Observable<any[]>;
+	isDarkTheme: Observable<boolean>;
 
 	constructor(
-		public breakpointObserver: BreakpointObserver,
 		private themeService: ThemeService,
-		firestore: AngularFirestore
+		firestore: AngularFirestore,
+		public breakpointObserver: BreakpointObserver
 	) {
-		this.items = firestore.collection('items').valueChanges()
+		this.items = firestore.collection('items').valueChanges();
 	}
 
 	ngOnInit() {
-		this.isLightTheme = this.themeService.isLightTheme
+		this.isDarkTheme = this.themeService.isDarkTheme;
 	}
 }
