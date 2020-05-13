@@ -1,11 +1,30 @@
 // LAYOUTS
 
+// Toolbar
+.position-fixed {
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+  z-index: 70;
+
+}
+
 // Container styles
-.container {
+.content {
   display: block;
   margin: 0 auto;
-  padding: 0 $pad;
-  max-width: 1080px;
+  padding: 2$pad 1$pad;
+  max-width: 1024px;
+}
+.ctr-lg-max-container{
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+// Carousel
+.carousel {
+  margin-bottom: 1rem;
 }
 
 // Mat-Card Styles

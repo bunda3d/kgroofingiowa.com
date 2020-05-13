@@ -2,14 +2,16 @@
 **** VARIABLES ****
 */
 
-// primary fonts
-$primary-font: 'Roboto';
-$title-font: 'Roboto Condensed';
+// font-style
+$norm: normal;
+$ital: italic;
+$obli: oblique;
 
-// line heights
-$root-size: 16px;
-$primary-line-ht: 1.5;
-$title-line-ht: 1.2;
+// font-variant
+$title-case: titling-caps;
+$sm-caps: small-caps;
+$ligs: common-ligatures;
+$zero: slashed-zero;
 
 // font-weight
 $thin:100;
@@ -19,13 +21,22 @@ $medium:500;
 $bold:700;
 $black:900;
 
-// Font size
+// font-size
 $font-xs: 0.5em;
 $font-sm: 0.75em;
 $primary-fs: 1em;
 $font-md: 1.25em;
 $font-lg: 1.5em;
 $fine-print: 0.375em;
+
+// line-height
+$root-size: 16px;
+$primary-line-ht: 1.5;
+$title-line-ht: 1.2;
+
+// font-family
+$primary-font: 'Roboto';
+$title-font: 'Roboto Condensed';
 
 // Heading size
 $h1:2.5em;

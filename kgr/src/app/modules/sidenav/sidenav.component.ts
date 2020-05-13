@@ -20,6 +20,12 @@ export class SidenavComponent implements OnInit {
 			map(result => result.matches),
 			shareReplay()
 		);
+	isTablet$: Observable<boolean> = this.breakpointObserver
+		.observe(Breakpoints.Tablet)
+		.pipe(
+			map(result => result.matches),
+			shareReplay()
+		);
 
 	@ViewChild('drawer') drawer: SidenavComponent;
 

@@ -4,7 +4,6 @@
 <mat-sidenav-container class="sidenav-container">
 	<mat-sidenav
 		#drawer
-		fixedInViewport
 		class="sidenav"
 		position="end"
 		[attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
@@ -12,7 +11,18 @@
 		[opened]="(isHandset$ | async) ? 'false' : 'false'"
 	>
 		<!--" ? 'false':'false' " >> keeps side drawer closed both on small and large viewports (else it opens as sidenav on tablet+ size screens). To leave open on large screens, change back to " === 'false' " or maybe " ? 'false' : 'true' " -->
-		<mat-toolbar [class.mat-elevation-z80]>Menu</mat-toolbar>
+		<mat-toolbar [class.mat-elevation-z80]
+			>Menu
+			<span class="spacer"></span>
+			<div fxLayout="column" fxLayoutAlign="flex-end">
+				<h5 class="custom-list-item" id="nav-slogan">
+					The experts you can trust, &nbsp;
+				</h5>
+				<h5 class="custom-list-item" id="nav-slogan">
+					The quality you can count on!
+				</h5>
+			</div>
+		</mat-toolbar>
 		<mat-divider></mat-divider>
 		<mat-nav-list>
 			<a
@@ -87,12 +97,10 @@
 				<mat-icon>vpn_key</mat-icon>
 				<span> &nbsp; &nbsp; Members</span>
 			</a> -->
+			<!-- 
 			<div mat-list-item-content>
-				<!--flex container-->
 				<div class="flex-container" fxLayout="row">
-					<!--flex item, 1st child of container row, should be 50% width of parent row-->
 					<div fxFlex="50%">
-						<!--items should display in row-->
 						<a mat-list-item>
 							<mat-icon>
 								settings_brightness
@@ -100,25 +108,14 @@
 							<span>&nbsp; &nbsp; Theme &nbsp; &nbsp; </span>
 						</a>
 					</div>
-					<!--flex item, 2nd child of container row-->
 					<div fxFlex="50%" class="custom-list-item">
 						<a mat-list-item>
-							<!--column container-->
 							<div fxLayout="column" fxLayoutAlign="center" fxFlex="100%">
-								<!--first child of column-->
-								<!--display switch and icons in a row-->
 								<div fxLayout="row" fxLayoutAlign="space-between center">
 									<div fxFlex="100%" fxLayoutGap="8px" fxFlexAlign="center">
 										<mat-icon>
 											brightness_3
 										</mat-icon>
-										<!-- git hub on Material theme toggling -->
-										<!-- <mat-slide-toggle
-											[checked]="light | async"
-											labelPosition="after"
-											(change)="setTheme($event.checked)"
-										>
-										</mat-slide-toggle> -->
 										<mat-slide-toggle
 											[checked]="isDarkTheme | async"
 											labelPosition="after"
@@ -129,7 +126,6 @@
 										</mat-icon>
 									</div>
 								</div>
-								<!--the next column element under-->
 								<div fxFlex fxFlexAlign="space-between center">
 									<h5>dark or light</h5>
 								</div>
@@ -138,57 +134,100 @@
 					</div>
 				</div>
 			</div>
+ -->
+
+			<mat-list-item>
+				<a
+					href="tel:+1-515-955-2061"
+					mat-raised-button
+					color="primary"
+				>
+					<mat-icon inline="true" >call</mat-icon
+					> &nbsp; Click to Call
+				</a>
+			</mat-list-item>
 		</mat-nav-list>
 	</mat-sidenav>
 	<!--start top toolbar-->
 	<mat-sidenav-content>
-		<mat-toolbar [class.mat-elevation-z70]>
-			<a id="nav-logo-link" [routerLink]="['/home']">
-				<img class="nav-logo" src="../../assets/branding/branding.svg" />
-			</a>
-			<div fxLayout="column" fxFlexAlign="space-around center" fxHide.lt-sm="true">
-				<div fxFlex>
-					<h3 id="nav-phone">515-955-2061</h3>
-				</div>
-				<div fxFlex>
-					<h5 class="custom-list-item" id="nav-slogan">The experts you can trust,</h5>
-					<h5 class="custom-list-item" id="nav-slogan">The quality you can count on!</h5>
-				</div>
-			</div>
-			<span class="spacer"></span>
+		<mat-toolbar
+			id="top-toolbar"
+			class="position-fixed"
+			[class.mat-elevation-z70]
+			color="primary"
+		>
+			<!--centering for lg screens using 3 flex divs + fx div container & toolbar row goes in center div w/max-width -->
+			<div class="flex-container" fxLayout="row" fxLayoutAlign="space-around center">
+				<!-- <div fxFlex></div> -->
+				<div class="ctr-lg-max-container" fxFlex>
+					<mat-toolbar-row>
+						<a id="nav-logo-link" [routerLink]="['/home']">
+							<img class="nav-logo" src="../../assets/branding/branding.svg" />
+						</a>
 
-			<!--see this video for adding dropdowns:  https://www.youtube.com/watch?v=08svzu9JGNM -->
+						<div fxLayout.="column" fxFlexAlign="space-around center" fxHide.lt-sm="true">
+							<div fxFlex>
+								<a
+									href="tel:+1-515-955-2061"
+									mat-raised-button
+									id="nav-phone-btn"
+									color="primary"
+								>
+									<mat-icon inline="true" fxHide.lt-sm="true" id="nav-phone-icon"
+										>call</mat-icon
+									>515-955-2061
+								</a>
+							</div>
+							<div fxFlex fxHide.lt-sm="true">
+								<h5 class="custom-list-item" id="nav-slogan">
+									The experts you can trust, &nbsp;
+								</h5>
+								<h5 class="custom-list-item" id="nav-slogan">
+									The quality you can count on!
+								</h5>
+							</div>
+						</div>
+						<span class="spacer"></span>
 
-			<div fxShow="true" fxHide.lt-md="true">
-				<!-- The following menu items will be hidden on both SM and XS screen sizes -->
-				<a routerLinkActive="active" [routerLink]="['/about']" mat-button>About Us</a>
-				<!-- <a routerLinkActive="active" [routerLink]="['/projects']" mat-button>Projects</a> -->
-				<a routerLinkActive="active" [routerLink]="['/contact']" mat-button>Contact Us</a>
-				<!-- 		<a routerLinkActive="active" [routerLink]="['/blogs']" mat-button>Blog</a>
+						<!--see this video for adding dropdowns:  https://www.youtube.com/watch?v=08svzu9JGNM -->
+
+						<div fxShow="true" fxHide.lt-md="true">
+							<!-- The following menu items will be hidden on both SM and XS screen sizes -->
+							<a routerLinkActive="active" [routerLink]="['/about']" mat-button
+								>About Us</a
+							>
+							<!-- <a routerLinkActive="active" [routerLink]="['/projects']" mat-button>Projects</a> -->
+							<a routerLinkActive="active" [routerLink]="['/contact']" mat-button
+								>Contact Us</a
+							>
+							<!-- 		<a routerLinkActive="active" [routerLink]="['/blogs']" mat-button>Blog</a>
 				<a routerLinkActive="active" [routerLink]="['/financing']" mat-button>Financing</a>
 				<a routerLinkActive="active" [routerLink]="['/members']" mat-button>Members</a> -->
-			</div>
+						</div>
 
-			<!--sidenav toggle-->
-			<button
-				type="button"
-				aria-label="Toggle sidenav"
-				mat-icon-button
-				(click)="drawer.toggle()"
-				*ngIf="isHandset$ | async"
-			>
-				<mat-icon aria-label="Side nav toggle icon" position="end">menu</mat-icon>
-			</button>
-			<!--title 
-			<span fxFlex>
-				<a class="home-link" routerLink=".">{{ Page }}</a>
-      </span>
-      -->
+						<!--sidenav toggle-->
+						<button
+							type="button"
+							aria-label="Toggle sidenav"
+							mat-icon-button
+							(click)="drawer.toggle()"
+							*ngIf="(isHandset$ | async) || (isTablet$ | async)"
+						>
+							<mat-icon aria-label="Side nav toggle icon" position="end">menu</mat-icon>
+						</button>
+					</mat-toolbar-row>
+				</div>
+				<!-- <div fxFlex></div> -->
+			</div>
 		</mat-toolbar>
 		<!--wrap content for margin-->
-		<div class="content mat-app-background">
-			<!--all router-outlet content shows here-->
-			<router-outlet></router-outlet>
+		<div class="mat-app-background" color="primary">
+			<div class="flex-container" fxLayout="column" fxLayoutAlign="space-around center">
+				<div class="content" fxFlex>
+					<!--all router-outlet content shows here-->
+					<router-outlet></router-outlet>
+				</div>
+			</div>
 		</div>
 	</mat-sidenav-content>
 </mat-sidenav-container>

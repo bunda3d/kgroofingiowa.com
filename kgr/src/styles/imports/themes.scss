@@ -4,15 +4,21 @@
 @include mat-core();
 // Material Design palettes available in palette.scss
 // https://material.io/design/color/
-$dark-primary: mat-palette($mat-indigo);
-$dark-accent: mat-palette($mat-orange, A100, A200, A400);
-$dark-warn: mat-palette($mat-pink);
+$primary: mat-palette($mat-indigo);
+$accent: mat-palette($mat-orange, A100, A200, A400);
+$warn: mat-palette($mat-pink);
 // Create the theme object (Sass map containing all palettes).
-$theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+$theme: mat-dark-theme($primary, $accent, $warn);
 // Include theme styles for core and each component used in your app.
 // Alternatively, import and @include mixins for each component.
 
 @include angular-material-theme($theme);
+// @mixin for "mat-color" hue shifts, like "color: mat-color($primary, lighter);
+@mixin theme($theme) {
+	$primary: map-get($theme, primary);
+	$accent: map-get($theme, accent);
+	$warn: map-get($theme, warn);
+}
 // Include the alternative theme styles inside block with CSS class.
 // any component inside of an element with `.light-theme` will be affected by this alternate light theme instead of the default theme.
 .theme-light {

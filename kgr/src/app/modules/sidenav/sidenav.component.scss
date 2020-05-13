@@ -25,6 +25,7 @@ $nav-logo-max-ht:80px;
   position: sticky;
   top: 0;
   z-index: 80;
+
 }
 
 .spacer {
@@ -36,6 +37,10 @@ $nav-logo-max-ht:80px;
   display: inline-block;
   margin: 0 2rem;
   color: primary;
+}
+
+#top-toolbar {
+  box-shadow: 0 .25rem 2rem 0 #777777;
 }
 
 // small type in theme switch toggle in nav drawer
@@ -68,24 +73,46 @@ $nav-logo-max-ht:80px;
 
 #nav-logo-link {
   padding-left: 0;
-  margin-left: 0;
+  margin: 0 1em 0 0;
 }
 // nav bar flex items
 %nav-msg {
-  font-size: 1em; //$h5; //$h3;
-  color: primary; //$accent;
+  font-size: 1em; 
+  color: accent;
   margin: 0;
   padding: 0;
-  line-height: 1em; //$h5;
+  line-height: 1.125em;
 }
 
 #nav-phone {
   @extend %nav-msg;
-  color: accent;
+  text-decoration: none;
+  margin: 0;
 }
-
+#nav-phone-btn {
+  max-height: 1.75em;
+  padding: .25em .5em;
+  line-height: 1.25em;
+  font-size: 1em;
+  margin: 0 1em 0 0;
+  border-width: 2px;
+  border-color: mat-color($accent, darker);
+}
+#nav-phone-icon {
+  @extend %nav-msg;
+  //color: accent;
+  font-size: 1em;
+  margin-right: .5em;
+  margin-bottom: .125em;
+}
 #nav-slogan {
   @extend %nav-msg;
-
-  font-size: 0.5em; //$h5
+  color:primary;
+  // font
+  font-style: $ital;
+  font-variant: $ligs;
+  font-weight: $light;
+  font-size: $font-sm;
+  line-height: $title-line-ht;
+  font-family: $title-font;
 }
