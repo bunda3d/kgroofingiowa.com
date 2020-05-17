@@ -29,14 +29,17 @@
 
 // Mat-Card Styles
 .mcard {
-  max-width: 400px;
+  height: 100% auto;
 }
-
-.mcard-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+mat-icon.mat-card-avatar {
+  width: 96px;
+  height: 96px;
+  font-size: 96px;
+}
+.mcard-header-img {
+  background-image: url("/assets/branding/KG_Roofing_logo_RND2.svg");
   background-size: cover;
 }
-
 
 // Footer Styles
 footer {

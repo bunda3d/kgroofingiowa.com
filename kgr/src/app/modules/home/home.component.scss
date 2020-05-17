@@ -1,11 +1,25 @@
 @import '../../../styles/styles';
 
 
-.example-card {
-  height: 100% auto;
+.mcard #inspection {
+  background-image: url("/assets/bg/bg-gr-gld-yel.svg");
+  background-size: cover;
+  padding: 0 .5rem;
+  margin: 1rem 0;
+}
+.mcard #inspectIcons img {
+  min-height: 6rem;
+  width: auto;
+}
+.mcard #inspectQuote {
+  font-size: $font-lg;
+  line-height: $primary-line-ht;
+  font-style: $ital;
+  color: $nblu;
 }
 
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
+.mat-card-content {
+  margin-bottom: 0;
 }
+//<img [src]="itemImageUrl2">
+//https://angular.io/guide/template-syntax#property-binding-or-interpolation

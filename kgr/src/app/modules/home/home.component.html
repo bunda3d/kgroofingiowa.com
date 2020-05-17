@@ -1,7 +1,7 @@
 <mat-carousel
-	timings="250ms ease-in"
+	timings="400ms ease-in"
 	[autoplay]="true"
-	interval="4000"
+	interval="5000"
 	color="accent"
 	maxWidth="auto"
 	proportion="50"
@@ -35,24 +35,54 @@
 	></mat-carousel-slide>
 </mat-carousel>
 
-<mat-card class="example-card">
+<mat-card class="mcard">
 	<mat-card-header>
-		<div mat-card-avatar class="example-header-image"></div>
-		<mat-card-title>Shiba Inu</mat-card-title>
-		<mat-card-subtitle>Dog Breed</mat-card-subtitle>
+		<i mat-card-avatar class="mcard-header-img"></i>
+		<mat-card-title>Protect Your Home or Business</mat-card-title>
+		<mat-card-subtitle
+			>​PUTTING A ROOF OVER YOUR HEAD IS THE MOST IMPORTANT THING YOUR HOME
+			DOES</mat-card-subtitle
+		>
 	</mat-card-header>
 	<img
 		mat-card-image
-		src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-		alt="Photo of a Shiba Inu"
+		src="/assets/img/home/KG_Roofing_homeowner_residential_roof_repair_before.jpg"
+		alt="KG Roofing photo of a homeowner's residential roof in need of repair: before"
 	/>
 	<mat-card-content>
 		<p>
-			The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog
-			from Japan. A small, agile dog that copes very well with mountainous terrain, the
-			Shiba Inu was originally bred for hunting.
+			Knowing if your roof is sound is a homeowner's responsibility, yet many homeowners
+			neglect their roofs. Like everything in your home, it requires maintenance.
 		</p>
-		<!--experiment with service / interface-->
+		<p>
+			Maintaining your roof is a low-cost way of ensuring your home and family, employees
+			or residents, all stay safe and comfortable.
+		</p>
+	</mat-card-content>
+	<mat-card
+		id="inspection"
+		fxLayout="row"
+		fxLayoutAlign="start center"
+		fxLayoutGap="16px"
+	>
+		<mat-card-content id="inspectIcons" fxFlexAlign="start">
+			<img src="/assets/bg/bg-icons/vert6pk.svg" />
+		</mat-card-content>
+		<mat-card-content fxFlex>
+			<p id="inspectQuote">
+				If you haven't had your roof inspected recently, we're here to help.
+			</p>
+		</mat-card-content>
+	</mat-card>
+	<img
+		mat-card-image
+		src="/assets/img/home/KG_Roofing_commercial_flat_roof_EPDM_in_need_of_inspection.jpg"
+		alt="KG Roofing photo of a commercial business' flat roof in need of inspection and repair: before"
+	/>
+
+	<!--experiment with service / interface-->
+
+	<mat-card-content>
 		<usertable></usertable>
 	</mat-card-content>
 	<mat-card-actions>
