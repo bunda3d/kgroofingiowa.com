@@ -5,8 +5,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { MatDividerModule } from '@angular/material/divider';
 import { UsertableModule } from './../usertable/usertable.module';
 import { HomeRoutingModule } from './home-routing.module';
+
 // components
 import { HomeComponent } from './home.component';
 
@@ -16,6 +18,7 @@ import { HomeComponent } from './home.component';
 		CommonModule,
 		HomeRoutingModule,
 		MatCardModule,
+		MatDividerModule,
 		MatButtonModule,
 		FlexLayoutModule,
 		MatCarouselModule.forRoot(),

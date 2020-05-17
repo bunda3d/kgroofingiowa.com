@@ -35,7 +35,7 @@
 	></mat-carousel-slide>
 </mat-carousel>
 
-<mat-card class="mcard">
+<mat-card id="inspect" class="mcard">
 	<mat-card-header>
 		<i mat-card-avatar class="mcard-header-img"></i>
 		<mat-card-title>Protect Your Home or Business</mat-card-title>
@@ -63,7 +63,7 @@
 		id="inspection"
 		fxLayout="row"
 		fxLayoutAlign="start center"
-		fxLayoutGap="16px"
+		fxLayoutGap="32px"
 	>
 		<mat-card-content id="inspectIcons" fxFlexAlign="start">
 			<img src="/assets/bg/bg-icons/vert6pk.svg" />
@@ -79,14 +79,44 @@
 		src="/assets/img/home/KG_Roofing_commercial_flat_roof_EPDM_in_need_of_inspection.jpg"
 		alt="KG Roofing photo of a commercial business' flat roof in need of inspection and repair: before"
 	/>
+	<mat-card-subtitle id="inspectSubTitle">
+		MAKE THE BEST FINANCIAL DECISION
+	</mat-card-subtitle>
+	<mat-card-content>
+		<p>
+			Since your home or business' buildings may be your most valuable investment, it's
+			important to know what condition your roofs are in before an expensive failure
+			occurs.
+		</p>
+		<p id="inspectionP">
+			Call us today if you'd like a free, professional inspection.
+		</p>
+	</mat-card-content>
 
 	<!--experiment with service / interface-->
 
-	<mat-card-content>
+	<!-- 	<mat-card-content>
 		<usertable></usertable>
-	</mat-card-content>
-	<mat-card-actions>
-		<button mat-button>LIKE</button>
-		<button mat-button>SHARE</button>
+	</mat-card-content> -->
+	<mat-divider></mat-divider>
+	<mat-card-actions fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="8px">
+		<div
+			fxLayout.gt-sm="row"
+			fxLayout.lt-sm="column"
+			fxLayoutGap="1.5rem"
+			id="inspectIcons2"
+		>
+			<img src="/assets/bg/bg-icons/bg-icons-inspection-row1.svg" />
+			<img src="/assets/bg/bg-icons/bg-icons-inspection-row2.svg" />
+		</div>
+		<span class="spacer">&nbsp;</span>
+		<a
+			routerLinkActive="active"
+			[routerLink]="['/contact']"
+			fxLayoutAlign="end center"
+			id="inspectBtn"
+			mat-stroked-button
+			>&nbsp;&nbsp; CALL US &nbsp;&nbsp;
+		</a>
 	</mat-card-actions>
 </mat-card>
