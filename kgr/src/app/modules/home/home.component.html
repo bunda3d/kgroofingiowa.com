@@ -1,3 +1,5 @@
+<!--mat carousel info: https://gsr.dev/material2-carousel/-->
+
 <mat-carousel
 	timings="400ms ease-in"
 	[autoplay]="true"
@@ -5,7 +7,7 @@
 	color="accent"
 	maxWidth="auto"
 	proportion="50"
-	slides="6"
+	slides="7"
 	[loop]="true"
 	[hideArrows]="false"
 	[hideIndicators]="false"
@@ -14,35 +16,87 @@
 	orientation="ltr"
 >
 	<mat-carousel-slide
+		#matCarouselSlide
+		overlayColor="#00000040"
+		[hideOverlay]="false"
+		image="./../../assets/img/home-carousel/kyle_grell_kg_roofing_autumn_grell_family.jpg"
+		><div class="carousel-slide-overlay">
+			<p fxLayout="column" fxLayoutAlign="center center">Residential</p>
+		</div>
+	</mat-carousel-slide>
+	<mat-carousel-slide
+		#matCarouselSlide
+		overlayColor="#00000040"
+		[hideOverlay]="false"
 		image="./../../assets/img/home-carousel/kg_roofing_flat_roof_before.jpg"
-	></mat-carousel-slide>
+		><div class="carousel-slide-overlay">
+			<p fxLayout="column" fxLayoutAlign="center center">hello there</p>
+		</div>
+	</mat-carousel-slide>
 	<mat-carousel-slide
+		#matCarouselSlide
+		overlayColor="#00000040"
+		[hideOverlay]="false"
 		image="./../../assets/img/home-carousel/kg_roofing_flat_roof_after.jpg"
-	></mat-carousel-slide>
+		><div class="carousel-slide-overlay">
+			<p fxLayout="column" fxLayoutAlign="center center">hello there</p>
+		</div>
+	</mat-carousel-slide>
 	<mat-carousel-slide
 		#matCarouselSlide
-		image="./../../assets/img/home-carousel/kg_roofing_residential_shingles_before.jpg"
-	></mat-carousel-slide>
-	<mat-carousel-slide
+		overlayColor="#00000040"
+		[hideOverlay]="false"
 		image="./../../assets/img/home-carousel/kg_roofing_residential_shingles_after.jpg"
-	></mat-carousel-slide>
+		><div class="carousel-slide-overlay">
+			<p fxLayout="column" fxLayoutAlign="center center">hello there</p>
+		</div>
+	</mat-carousel-slide>
 	<mat-carousel-slide
 		#matCarouselSlide
+		overlayColor="#00000040"
+		[hideOverlay]="false"
 		image="./../../assets/img/home-carousel/kg_roofing_residential_shingles_before.jpg"
-	></mat-carousel-slide>
+		><div class="carousel-slide-overlay">
+			<p fxLayout="column" fxLayoutAlign="center center">hello there</p>
+		</div>
+	</mat-carousel-slide>
 	<mat-carousel-slide
+		#matCarouselSlide
+		overlayColor="#00000040"
+		[hideOverlay]="false"
 		image="./../../assets/img/home-carousel/kg_roofing_residential_shingles_after.jpg"
-	></mat-carousel-slide>
+		><div class="carousel-slide-overlay">
+			<p fxLayout="column" fxLayoutAlign="center center">hello there</p>
+		</div>
+	</mat-carousel-slide>
+	<mat-carousel-slide
+		matCarouselSlide
+		overlayColor="#00000040"
+		[hideOverlay]="false"
+		image="./../../assets/img/home-carousel/kg-roofing-staging-safe-and-clean-work-area"
+		><div fxLayout="column" fxLayoutAlign="center center" class="carousel-slide-overlay">
+			<p>hello there</p>
+		</div>
+	</mat-carousel-slide>
+	<mat-carousel-slide
+		#matCarouselSlide
+		overlayColor="#00000040"
+		[hideOverlay]="false"
+		image="./../../assets/img/home-carousel/kg_roofing_iowa_service_area.jpg"
+		><div fxLayout="column" fxLayoutAlign="center center" class="carousel-slide-overlay">
+			<p>hello there</p>
+		</div>
+	</mat-carousel-slide>
 </mat-carousel>
 
+<!--card: inspection-->
 <mat-card id="inspect" class="mcard">
 	<mat-card-header>
 		<i mat-card-avatar class="mcard-header-img"></i>
 		<mat-card-title>Protect Your Home or Business</mat-card-title>
-		<mat-card-subtitle
-			>​PUTTING A ROOF OVER YOUR HEAD IS THE MOST IMPORTANT THING YOUR HOME
-			DOES</mat-card-subtitle
-		>
+		<mat-card-subtitle>
+			PUTTING A ROOF OVER YOUR HEAD IS THE MOST IMPORTANT THING YOUR HOME DOES
+		</mat-card-subtitle>
 	</mat-card-header>
 	<img
 		mat-card-image
@@ -119,4 +173,55 @@
 			>&nbsp;&nbsp; CALL US &nbsp;&nbsp;
 		</a>
 	</mat-card-actions>
+</mat-card>
+
+<!--Products & Services List card-->
+<mat-card id="productServiceList" class="mcard">
+	<mat-card-header>
+		<i mat-card-avatar id="productServiceAvatar" class="mcard-header-img"></i>
+		<mat-card-title class="orange">Products & Services</mat-card-title>
+		<mat-card-subtitle>
+			WE/'VE GOT ALL YOUR ROOFING NEEDS COVERED
+		</mat-card-subtitle>
+	</mat-card-header>
+	<img
+		mat-card-image
+		src="/assets/img/home/kg-roofing-staging-safe-and-clean-work-area.jpg"
+		alt="KG Roofing photo of a homeowner's residential roof in need of repair: before"
+	/>
+	<mat-card-content>
+		<mat-list>
+			<mat-list-item *ngFor="let productService of productServices">
+				<mat-divider></mat-divider>
+				<mat-icon class="orange" matListIcon>stars</mat-icon>
+				<p matLine>
+					<span> {{ productService.name }} </span>
+					<span class="orange"> {{ productService.acronym }} </span>
+				</p>
+			</mat-list-item>
+		</mat-list>
+	</mat-card-content>
+	<img
+		mat-card-image
+		src="/assets/img/home/kg_roofing_safety_perimeter.jpg"
+		alt="KG Roofing photo of a commercial business' flat roof in need of inspection and repair: before"
+	/>
+	<mat-card-footer id="safeCleanFooter">
+		<mat-card id="safeCleanCard" [class.mat-elevation-z8]>
+			<mat-card-title class="obl" id="safeCleanTitle">SAFE and CLEAN</mat-card-title>
+			<mat-divider></mat-divider>
+			<mat-card-content>
+				<span>&nbsp;</span>
+				<p class="obl">
+					<span class="goldBold">We take <u>job site safety</u> seriously: </span>
+					&nbsp; for our crew and yours.
+				</p>
+				<p class="obl">
+					<span class="goldBold">We run a <u>clean worksite</u>: </span>
+					&nbsp; nail and debris problems are <u>not</u> the legacy we want to leave
+					behind, so we take every precaution.
+				</p>
+			</mat-card-content>
+		</mat-card>
+	</mat-card-footer>
 </mat-card>

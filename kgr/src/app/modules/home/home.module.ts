@@ -6,6 +6,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 import { UsertableModule } from './../usertable/usertable.module';
 import { HomeRoutingModule } from './home-routing.module';
 
@@ -20,6 +22,8 @@ import { HomeComponent } from './home.component';
 		MatCardModule,
 		MatDividerModule,
 		MatButtonModule,
+		MatIconModule,
+		MatListModule,
 		FlexLayoutModule,
 		MatCarouselModule.forRoot(),
 		UsertableModule
