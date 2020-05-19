@@ -27,12 +27,12 @@ export class HomeComponent implements OnInit {
 			acronym: ''
 		},
 		{
-			name: 'TPO',
-			acronym: ' ThermoPlastic Olefin membrane'
+			name: 'TPO: ',
+			acronym: 'ThermoPlastic Olefin membrane'
 		},
 		{
-			name: 'EPDM',
-			acronym: ' Rubber Ethylene Propylene Diene Monomer membrane'
+			name: 'EPDM: ',
+			acronym: 'Rubber Ethylene Propylene Diene Monomer membrane'
 		},
 		{
 			name: 'Roof Coatings',

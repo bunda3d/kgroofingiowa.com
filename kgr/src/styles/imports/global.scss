@@ -30,6 +30,21 @@ app-routing {
 	}
 }
 
+// mat-list wrap
+.mat-line {
+  word-wrap: break-word !important;
+  white-space: pre-wrap !important;
+}
+/* .mat-list .mat-list-item {
+  height:initial !important;
+} */
+mat-list.mat-list.mat-list-base {
+	margin-bottom: 2rem;
+}
+.mat-list-base {
+	padding-top: 0;
+}
+
 // colorful
 .goldBold {
 	color: $gold;
