@@ -98,11 +98,17 @@
 			PUTTING A ROOF OVER YOUR HEAD IS THE MOST IMPORTANT THING YOUR HOME DOES
 		</mat-card-subtitle>
 	</mat-card-header>
-	<img
-		mat-card-image
-		src="/assets/img/home/KG_Roofing_homeowner_residential_roof_repair_before.jpg"
-		alt="KG Roofing photo of a homeowner's residential roof in need of repair: before"
-	/>
+	<div class="caption-wrap">
+		<img
+			mat-card-image
+			src="/assets/img/home/KG_Roofing_homeowner_residential_roof_repair_before.jpg"
+			alt="KG Roofing photo of a homeowner's residential roof in need of repair: before"
+		/>
+		<div class="caption">
+			Residential shingle roof - call us for a free inspection--you should know your
+			roof's condition.
+		</div>
+	</div>
 	<mat-card-content>
 		<p>
 			Knowing if your roof is sound is a homeowner's responsibility, yet many homeowners
@@ -117,9 +123,9 @@
 		id="inspection"
 		fxLayout="row"
 		fxLayoutAlign="start center"
-		fxLayoutGap="32px"
+		fxLayoutGap="16px"
 	>
-		<mat-card-content id="inspectIcons" fxFlexAlign="start">
+		<mat-card-content id="inspectIcons" fxFlexAlign="center space-around">
 			<img src="/assets/bg/bg-icons/vert6pk.svg" />
 		</mat-card-content>
 		<mat-card-content fxFlex>
@@ -128,11 +134,16 @@
 			</p>
 		</mat-card-content>
 	</mat-card>
-	<img
-		mat-card-image
-		src="/assets/img/home/KG_Roofing_commercial_flat_roof_EPDM_in_need_of_inspection.jpg"
-		alt="KG Roofing photo of a commercial business' flat roof in need of inspection and repair: before"
-	/>
+	<div class="caption-wrap">
+		<img
+			mat-card-image
+			src="/assets/img/home/KG_Roofing_commercial_flat_roof_EPDM_in_need_of_inspection.jpg"
+			alt="KG Roofing photo of a commercial business' flat roof in need of inspection and repair: before"
+		/>
+		<div class="caption">
+			Commercial flat roof in need of inspection and repair
+		</div>
+	</div>
 	<mat-card-subtitle id="inspectSubTitle">
 		MAKE THE BEST FINANCIAL DECISION
 	</mat-card-subtitle>
@@ -153,25 +164,28 @@
 		<usertable></usertable>
 	</mat-card-content> -->
 	<mat-divider></mat-divider>
-	<mat-card-actions fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="16px">
+	<mat-card-actions fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
 		<div
 			fxLayout.gt-sm="row"
 			fxLayout.lt-sm="column"
-			fxLayoutGap="1.5rem"
+			fxLayoutGap.gt-sm="1.5rem"
+			fxLayoutGap.lt-sm=".75rem"
 			id="inspectIcons2"
 		>
 			<img src="/assets/bg/bg-icons/bg-icons-inspection-row1.svg" />
 			<img src="/assets/bg/bg-icons/bg-icons-inspection-row2.svg" />
 		</div>
 		<span class="spacer">&nbsp;</span>
-		<a
-			routerLinkActive="active"
-			[routerLink]="['/contact']"
-			fxLayoutAlign="end center"
-			id="inspectBtn"
-			mat-stroked-button
-			>&nbsp;&nbsp; CALL US &nbsp;&nbsp;
-		</a>
+		<div fxFlexAlign="center end">
+			<a
+				fxFlexAlign="center end"
+				routerLinkActive="active"
+				[routerLink]="['/contact']"
+				id="inspectBtn"
+				mat-stroked-button
+				>&nbsp;&nbsp; CALL US &nbsp;&nbsp;
+			</a>
+		</div>
 	</mat-card-actions>
 </mat-card>
 
@@ -181,7 +195,7 @@
 		<i mat-card-avatar id="productServiceAvatar" class="mcard-header-img"></i>
 		<mat-card-title class="orange">Products & Services</mat-card-title>
 		<mat-card-subtitle>
-			WE/'VE GOT ALL YOUR ROOFING NEEDS COVERED
+			WE'VE GOT ALL YOUR ROOFING NEEDS COVERED
 		</mat-card-subtitle>
 	</mat-card-header>
 	<img
