@@ -35,9 +35,9 @@ app-routing {
   word-wrap: break-word !important;
   white-space: pre-wrap !important;
 }
-/* .mat-list .mat-list-item {
+.mat-list .mat-list-item {
   height:initial !important;
-} */
+} 
 mat-list.mat-list.mat-list-base {
 	margin-bottom: 2rem;
 }
@@ -53,3 +53,7 @@ mat-list.mat-list.mat-list-base {
 .orange {
 	color: $orange;
 }
+.neonAqua {
+	color: $neon-aqua;
+}
+

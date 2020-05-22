@@ -12,7 +12,6 @@ import { Observable } from 'rxjs';
 export class SidenavComponent implements OnInit {
 	Page = 'KG Roofing';
 	isDarkTheme: Observable<boolean>;
-	events: string[] = [];
 
 	isHandset$: Observable<boolean> = this.breakpointObserver
 		.observe(Breakpoints.Handset)

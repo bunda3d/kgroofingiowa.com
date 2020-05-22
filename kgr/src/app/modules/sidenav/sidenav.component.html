@@ -30,6 +30,7 @@
 				routerLinkActive="active"
 				[routerLink]="['/home']"
 				[routerLinkActiveOptions]="{ exact: true }"
+				(click)="drawer.toggle()"
 			>
 				<mat-icon>home</mat-icon>
 				<span> &nbsp; &nbsp; Home</span>
@@ -39,6 +40,7 @@
 				routerLinkActive="active"
 				[routerLink]="['/about']"
 				[routerLinkActiveOptions]="{ exact: true }"
+				(click)="drawer.toggle()"
 			>
 				<mat-icon>assignment</mat-icon>
 				<span> &nbsp; &nbsp; About Us</span>
@@ -48,6 +50,7 @@
 				routerLinkActive="active"
 				[routerLink]="['/projects']"
 				[routerLinkActiveOptions]="{ exact: true }"
+				(click)="drawer.toggle()"
 			>
 				<mat-icon>business</mat-icon>
 				<span> &nbsp; &nbsp; View Our Work</span>
@@ -57,6 +60,7 @@
 				routerLinkActive="active"
 				[routerLink]="['/contact']"
 				[routerLinkActiveOptions]="{ exact: true }"
+				(click)="drawer.toggle()"
 			>
 				<mat-icon>call</mat-icon>
 				<span> &nbsp; &nbsp; Contact Us</span>
@@ -66,6 +70,7 @@
 				routerLinkActive="active"
 				[routerLink]="['/blogs']"
 				[routerLinkActiveOptions]="{ exact: true }"
+				(click)="drawer.toggle()"
 			>
 				<mat-icon>art_track</mat-icon>
 				<span> &nbsp; &nbsp; Blog</span>
@@ -75,6 +80,7 @@
 				routerLinkActive="active"
 				[routerLink]="['/financing']"
 				[routerLinkActiveOptions]="{ exact: true }"
+				(click)="drawer.toggle()"
 			>
 				<mat-icon>credit_card</mat-icon>
 				<span> &nbsp; &nbsp; Financing</span>
@@ -84,6 +90,7 @@
 				routerLinkActive="active"
 				[routerLink]="['/members']"
 				[routerLinkActiveOptions]="{ exact: true }"
+				(click)="drawer.toggle()"
 			>
 				<mat-icon>vpn_key</mat-icon>
 				<span> &nbsp; &nbsp; Members</span>

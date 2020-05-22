@@ -59,34 +59,58 @@ mat-icon.mat-card-avatar {
   z-index: 10;
   box-shadow: 0 .25rem 1.25rem 0 #777777;
 }
+.mcard-header-img-48 {
+  width: 48px;
+  height: 48px;
+  font-size: 48px;
+  background-image: url("/assets/branding/better-business-bureau/round-bbb_180px.png");
+  background-size: cover;
+  z-index: 10;
+  box-shadow: 0 .25rem 1.25rem 0 #777777;
+}
 .mat-card-header {
-  margin-bottom: -1.25rem;
+  margin-bottom: -1.0rem;
+}
+.mat-card-image:first-child {
+  margin-top:0;
 }
 
 // img captions
 .caption-wrap {
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   gap: 0 1em;
   width: calc(100% + 0px);
   margin: 0;
   position: relative;
 }
-.caption {
+.caption-btm {
   width: calc(100% + 32px);
   margin: 0 16px;
   position: absolute;
   bottom: 1rem;
   align-self: flex-end;
-  font-size: $font-sm;  
-  font-weight: $thin;
+  font-size: $primary-fs;  
+  font-weight: $light;
   text-align: center;
   vertical-align: baseline;
   padding: 0 .5rem;
   background-color: rgba(0, 0, 0, 0.45);
   z-index: 2;
 }
-
+.caption-btm-overlay {
+  width: 100%;
+  margin: 0 -16px;
+  position: absolute;
+  bottom: 0rem;
+  font-size: $primary-fs;  
+  font-weight: $light;
+  text-align: center;
+  vertical-align: baseline;
+  padding: 0 .5rem;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 2;
+}
 // Footer Styles
 footer {
   background: $blue;

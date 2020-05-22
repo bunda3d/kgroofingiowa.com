@@ -8,7 +8,7 @@
   background-image: url("/assets/bg/bg-gr-gld-yel.svg");
   background-size: cover;
   padding: 0 .5rem;
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 .mcard #inspectIcons img {
   min-height: 7rem;
@@ -29,6 +29,9 @@
 }
 .mat-card-content {
   margin-bottom: 0rem;
+}
+mat-card #inspection{
+  margin:2rem 0;
 }
 #inspectSubTitle {
   color: $gold;
@@ -68,6 +71,28 @@
   background-image: url("/assets/bg/bg-caution2.png");
   background-size: cover;
   padding: 1rem;
+  margin-top: -1rem;
 }
+#why {
+  background-image: url("/assets/bg/bg-gr-dbl-lbl.svg");
+  background-size: cover;
+}
+#why-bgimg {
+  width: calc(100% + 32px);
+  margin: 0 -16px;
+  padding: 0;
+  background-image: url("/assets/img/home/church/church_roof_slate_shingle_architectural_kg_roofing_iowa_3524.jpg");
+  background-size: cover;
+}
+#why-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 3rem 1rem;
+}
+#why-footer {
+  padding: 2rem 3rem 1rem 3rem;
+}
+
+
+
 //<img [src]="itemImageUrl2">
 //https://angular.io/guide/template-syntax#property-binding-or-interpolation
