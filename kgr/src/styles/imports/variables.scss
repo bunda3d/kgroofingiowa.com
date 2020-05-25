@@ -32,16 +32,16 @@ $fine-print: 0.375em;
 // line-height
 $root-size: 16px;
 $primary-line-ht: 1.75;
-$title-line-ht: 1.25;
+$title-line-ht: 1.5;
 
 // font-family
 $primary-font: 'Roboto';
 $title-font: 'Roboto Condensed';
 
 // Heading size
-$h1:2.5em;
-$h2:2em;
-$h3:1.75em;
+$h1:3em;
+$h2:2.5em;
+$h3:2em;
 $h4:1.5em;
 $h5:0.875em;
 $h6:0.625em;
@@ -58,6 +58,11 @@ $nblu: #171696;
 $gold: #f2c94c;
 $neon-aqua: #00ffff;
 $orange: #f2994a;
+
+// No Decoration
+.nodec {
+  text-decoration: none;
+}
 
 
 // Breakpoints

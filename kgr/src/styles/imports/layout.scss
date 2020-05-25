@@ -19,7 +19,7 @@
 .content {
   display: block;
   margin: 0 auto;
-  padding: 2$pad 1$pad;
+  padding: 2$pad $pad;
   max-width: 1024px;
 }
 .ctr-lg-max-container{
@@ -94,7 +94,7 @@ mat-icon.mat-card-avatar {
   font-weight: $light;
   text-align: center;
   vertical-align: baseline;
-  padding: 0 .5rem;
+  padding: 0.25rem 0.5rem;
   background-color: rgba(0, 0, 0, 0.45);
   z-index: 2;
 }
@@ -107,13 +107,119 @@ mat-icon.mat-card-avatar {
   font-weight: $light;
   text-align: center;
   vertical-align: baseline;
-  padding: 0 .5rem;
+  padding: 0.25rem .5rem;
   background-color: rgba(0, 0, 0, 0.45);
   z-index: 2;
 }
 // Footer Styles
 footer {
-  background: $blue;
-  color: $red;
-  padding: $pad * 2;
+  background-image:  url("/assets/bg/bg-gr-dbl-lbl2.svg");
+  background-size: cover;
+  padding: 2rem 0;
+}
+footer mat-toolbar {
+  background-color: transparent;
+}
+footer mat-toolbar-row.mat-toolbar-row {
+  background: none;
+  background-color: transparent;
+  height: auto;
+}
+
+// MARGIN & PADDING helpers
+// // // NO PADDING
+.np {
+  padding: 0 !important;
+}
+.npl {
+  padding-left: 0 !important;
+}
+.npr {
+  padding-right: 0 !important;
+}
+.npt {
+  padding-top: 0 !important;
+}
+.npb {
+  padding-bottom: 0 !important;
+}
+// // // PADDING
+.pt {
+  padding-top: $pad;
+}
+.pt2 {
+  padding-top: 2$pad;
+}
+.pb {
+  padding-bottom: $pad;
+}
+.pb2 {
+  padding-bottom: 2$pad;
+}
+.pl {
+  padding-left: $pad;
+}
+.pl2 {
+  padding-left: 2$pad;
+}
+.pr {
+  padding-right: $pad;
+}
+.pr2 {
+  padding-right: 2$pad;
+}
+// // MARGIN helpers
+// // // NO MARGIN
+.nm {
+  margin: 0 !important;
+}
+.nml {
+  margin-left: 0 !important;
+}
+.nmr {
+  margin-right: 0 !important;
+}
+.nmt {
+  margin-top: 0 !important;
+}
+.nmb {
+  margin-bottom: 0 !important;
+}
+// // // MARGIN
+.mr {
+  margin-right: $pad;
+}
+.mr2 {
+  margin-right: 2$pad;
+}
+.ml {
+  margin-left: $pad;
+}
+.ml2 {
+  margin-left: 2$pad;
+}
+.mt {
+  margin-top: $pad;
+}
+.mt2 {
+  margin-top: 2$pad;
+}
+.mb {
+  margin-bottom: $pad;
+}
+.mb2 {
+  margin-bottom: 2$pad;
+}
+// LINE Helpers
+.lb {
+  border-bottom: solid;
+}
+.lt {
+  border-top: solid;
+}
+.ll {
+  border-left: solid;
+}
+.lr {
+  border-right: solid;
 }

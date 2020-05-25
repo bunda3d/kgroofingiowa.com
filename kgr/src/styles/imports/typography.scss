@@ -7,7 +7,7 @@
   font-family: $primary-font, "Helvetica Neue", sans-serif;
 }
 %title-font-fam {
-  font-family: $title-font, Impact, "Franklin Gothic Bold", sans-serif;
+  font-family: $title-font, "Franklin Gothic Bold", sans-serif;
 }
 
 // font styles for main elements
@@ -31,9 +31,9 @@ h4,
 h5,
 h6 {
   @extend %title-font-fam;
-
-  font-weight: $bold;
+  font-weight: $medium;
   margin: 0;
+  margin-top: $pad;
   margin-bottom: $pad/2;
   line-height: $title-line-ht;
 
@@ -41,6 +41,13 @@ h6 {
     font-weight: inherit;
   }
 }
+
+h1 { font-size: $h1;}
+h2 { font-size: $h2;}
+h3 { font-size: $h3;}
+h4 { font-size: $h4;}
+h5 { font-size: $h5;}
+h6 { font-size: $h6;}
 
 // Text Styles
 em { font-style: italic; }

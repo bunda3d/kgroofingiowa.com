@@ -1,13 +1,13 @@
 <!-- Icon info: https://material.io/resources/icons/?search=dark&icon=art_track&style=baseline
 -->
 
-<mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container class="sidenav-container" fullscreen>
 	<mat-sidenav
 		#drawer
 		class="sidenav"
 		position="end"
 		[attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-		[mode]="(isHandset$ | async) ? 'over' : 'side'"
+		[mode]="(isHandset$ | async) || (isTablet$ | async) ? 'over' : 'side'"
 		[opened]="(isHandset$ | async) ? 'false' : 'false'"
 	>
 		<!--" ? 'false':'false' " >> keeps side drawer closed both on small and large viewports (else it opens as sidenav on tablet+ size screens). To leave open on large screens, change back to " === 'false' " or maybe " ? 'false' : 'true' " -->
@@ -142,7 +142,7 @@
 		</mat-nav-list>
 	</mat-sidenav>
 	<!--start top toolbar-->
-	<mat-sidenav-content>
+	<mat-sidenav-content fxLayout="column">
 		<mat-toolbar
 			id="top-toolbar"
 			class="position-fixed"
@@ -222,5 +222,81 @@
 				</div>
 			</div>
 		</div>
+		<!--footer-->
+		<footer fxFlexOffset="auto">
+			<div class="content" fxLayout="column" fxLayoutAlign="center space-around">
+				<mat-toolbar class="lb">
+					<mat-toolbar-row class="pb2">
+						<div>
+							<img
+								class="mr pr"
+								src="./assets/branding/branding.svg"
+								alt="KG Roofing Logo"
+							/>
+						</div>
+						<div class="pb" fxLayout="column" fxLayoutAlign="start space-around">
+							<h1>KG Roofing</h1>
+							<h5 class="custom-list-item" id="nav-slogan">
+								The experts you can trust, &nbsp;
+							</h5>
+							<h5 class="custom-list-item" id="nav-slogan">
+								The quality you can count on!
+							</h5>
+						</div>
+					</mat-toolbar-row>
+				</mat-toolbar>
+				<mat-toolbar class="pt pb">
+					<mat-toolbar-row>
+						<div class="pr lr" fxLayout="column" fxLayoutAlign="start space-around">
+							<h3>Phone:</h3>
+							<p class="pb">515-955-2061</p>
+							<h3>email:</h3>
+							<p class="pb">
+								<a href="mailto:kgrell@kgroofingiowa.com">kgrell@kgroofingiowa.com</a>
+							</p>
+							<h3>Address:</h3>
+							<p class="nmb npb">KG Roofing, LLC</p>
+							<p class="nmb npb">2578 150th Street,</p>
+							<p>Fort Dodge, IA 50501</p>
+						</div>
+						<div fxLayout="column" fxLayoutAlign="start space-around">
+							<mat-nav-list
+								class="ml2"
+								fxLayout="column"
+								fxLayoutAlign="start space-around"
+							>
+								<a
+									mat-list-item
+									routerLinkActive="active"
+									[routerLink]="['/home']"
+									[routerLinkActiveOptions]="{ exact: true }"
+									><span> &nbsp; &nbsp; Home</span>
+								</a>
+								<a
+									mat-list-item
+									routerLinkActive="active"
+									[routerLink]="['/about']"
+									[routerLinkActiveOptions]="{ exact: true }"
+									><span> &nbsp; &nbsp; About</span>
+								</a>
+								<a
+									mat-list-item
+									routerLinkActive="active"
+									[routerLink]="['/contact']"
+									[routerLinkActiveOptions]="{ exact: true }"
+									><span> &nbsp; &nbsp; Contact</span>
+								</a>
+							</mat-nav-list>
+						</div>
+					</mat-toolbar-row>
+				</mat-toolbar>
+				<mat-toolbar class="pt lt">
+					<mat-toolbar-row>
+						© KG Roofing &nbsp; &nbsp; | &nbsp; &nbsp;
+						<a href="https://krisbunda.com/blog/about/" target="_blank">Web App by KBD</a>
+					</mat-toolbar-row>
+				</mat-toolbar>
+			</div>
+		</footer>
 	</mat-sidenav-content>
 </mat-sidenav-container>

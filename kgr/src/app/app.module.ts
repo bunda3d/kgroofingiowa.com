@@ -1,7 +1,7 @@
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule, HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { HttpClientModule } from '@angular/common/http';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSliderModule } from '@angular/material/slider';
 
@@ -18,6 +18,7 @@ import { CoreModule } from './core/core.module';
 import { environment } from 'src/environments/environment';
 import { ThemeService } from './core/services/theme.service';
 import { SidenavModule } from './modules/sidenav/sidenav.module';
+
 //import { UsertableModule } from './modules/usertable/usertable.module';
 //import { UsertableComponent } from './modules/usertable/usertable.component';
 
@@ -32,7 +33,7 @@ import { SidenavModule } from './modules/sidenav/sidenav.module';
 		BrowserAnimationsModule,
 		CoreModule,
 		HammerModule,
-		//HttpClientModule,
+		HttpClientModule,
 		LayoutModule,
 		MatSliderModule,
 		//MatTableModule,

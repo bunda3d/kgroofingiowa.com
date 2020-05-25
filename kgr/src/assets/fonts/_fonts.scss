@@ -14,8 +14,8 @@
  src:
   local("Roboto Condensed Bold"),
   local("RobotoCondensed-Bold"),
-  url("/fonts/700/hinted-RobotoCondensed-Bold.woff2") format("woff2"),
-  url("/fonts/700/hinted-RobotoCondensed-Bold.woff") format("woff");
+  url("/assets/fonts/700/hinted-RobotoCondensed-Bold.woff2") format("woff2"),
+  url("/assets/fonts/700/hinted-RobotoCondensed-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -25,8 +25,8 @@
  src:
   local("Roboto Medium"),
   local("Roboto-Medium"),
-  url("/fonts/500/hinted-Roboto-Medium.woff2") format("woff2"),
-  url("/fonts/500/hinted-Roboto-Medium.woff") format("woff");
+  url("/assets/fonts/500/hinted-Roboto-Medium.woff2") format("woff2"),
+  url("/assets/fonts/500/hinted-Roboto-Medium.woff") format("woff");
 }
 
 @font-face {
@@ -34,8 +34,8 @@
  src:
   local("Roboto Condensed"),
   local("RobotoCondensed-Regular"),
-  url("/fonts/400/hinted-RobotoCondensed-Regular.woff2") format("woff2"),
-  url("/fonts/400/hinted-RobotoCondensed-Regular.woff") format("woff");
+  url("/assets/fonts/400/hinted-RobotoCondensed-Regular.woff2") format("woff2"),
+  url("/assets/fonts/400/hinted-RobotoCondensed-Regular.woff") format("woff");
  font-weight: normal;
  font-style: normal;
 }
@@ -45,8 +45,8 @@
  src:
   local("Roboto Condensed Bold Italic"),
   local("RobotoCondensed-BoldItalic"),
-  url("/fonts/700/hinted-RobotoCondensed-BoldItalic.woff2") format("woff2"),
-  url("/fonts/700/hinted-RobotoCondensed-BoldItalic.woff") format("woff");
+  url("/assets/fonts/700/hinted-RobotoCondensed-BoldItalic.woff2") format("woff2"),
+  url("/assets/fonts/700/hinted-RobotoCondensed-BoldItalic.woff") format("woff");
  font-weight: bold;
  font-style: italic;
 }
@@ -56,8 +56,8 @@
  src:
   local("Roboto Thin Italic"),
   local("Roboto-ThinItalic"),
-  url("/fonts/100/hinted-Roboto-ThinItalic.woff2") format("woff2"),
-  url("/fonts/100/hinted-Roboto-ThinItalic.woff") format("woff");
+  url("/assets/fonts/100/hinted-Roboto-ThinItalic.woff2") format("woff2"),
+  url("/assets/fonts/100/hinted-Roboto-ThinItalic.woff") format("woff");
  font-weight: 100;
  font-style: italic;
 }
@@ -67,8 +67,8 @@
  src:
   local("Roboto Italic"),
   local("Roboto-Italic"),
-  url("/fonts/400/hinted-Roboto-Italic.woff2") format("woff2"),
-  url("/fonts/400/hinted-Roboto-Italic.woff") format("woff");
+  url("/assets/fonts/400/hinted-Roboto-Italic.woff2") format("woff2"),
+  url("/assets/fonts/400/hinted-Roboto-Italic.woff") format("woff");
  font-weight: normal;
  font-style: italic;
 }
@@ -78,8 +78,8 @@
  src:
   local("Roboto Thin"),
   local("Roboto-Thin"),
-  url("/fonts/100/hinted-Roboto-Thin.woff2") format("woff2"),
-  url("/fonts/100/hinted-Roboto-Thin.woff") format("woff");
+  url("/assets/fonts/100/hinted-Roboto-Thin.woff2") format("woff2"),
+  url("/assets/fonts/100/hinted-Roboto-Thin.woff") format("woff");
  font-weight: 100;
  font-style: normal;
 }
@@ -89,8 +89,8 @@
  src:
   local("Roboto Bold"),
   local("Roboto-Bold"),
-  url("/fonts/700/hinted-Roboto-Bold.woff2") format("woff2"),
-  url("/fonts/700/hinted-Roboto-Bold.woff") format("woff");
+  url("/assets/fonts/700/hinted-Roboto-Bold.woff2") format("woff2"),
+  url("/assets/fonts/700/hinted-Roboto-Bold.woff") format("woff");
  font-weight: bold;
  font-style: normal;
 }
@@ -100,8 +100,8 @@
  src:
   local("Roboto Light"),
   local("Roboto-Light"),
-  url("/fonts/300/hinted-Roboto-Light.woff2") format("woff2"),
-  url("/fonts/300/hinted-Roboto-Light.woff") format("woff");
+  url("/assets/fonts/300/hinted-Roboto-Light.woff2") format("woff2"),
+  url("/assets/fonts/300/hinted-Roboto-Light.woff") format("woff");
  font-weight: 300;
  font-style: normal;
 }
@@ -111,8 +111,8 @@
  src:
   local("Roboto Black Italic"),
   local("Roboto-BlackItalic"),
-  url("/fonts/900/hinted-Roboto-BlackItalic.woff2") format("woff2"),
-  url("/fonts/900/hinted-Roboto-BlackItalic.woff") format("woff");
+  url("/assets/fonts/900/hinted-Roboto-BlackItalic.woff2") format("woff2"),
+  url("/assets/fonts/900/hinted-Roboto-BlackItalic.woff") format("woff");
  font-weight: 900;
  font-style: italic;
 }
@@ -122,8 +122,8 @@
  src:
   local("Roboto Condensed Light Italic"),
   local("RobotoCondensed-LightItalic"),
-  url("/fonts/300/hinted-RobotoCondensed-LightItalic.woff2") format("woff2"),
-  url("/fonts/300/hinted-RobotoCondensed-LightItalic.woff") format("woff");
+  url("/assets/fonts/300/hinted-RobotoCondensed-LightItalic.woff2") format("woff2"),
+  url("/assets/fonts/300/hinted-RobotoCondensed-LightItalic.woff") format("woff");
  font-weight: 300;
  font-style: italic;
 }
@@ -133,8 +133,8 @@
  src:
   local("Roboto Condensed Italic"),
   local("RobotoCondensed-Italic"),
-  url("/fonts/400/hinted-RobotoCondensed-Italic.woff2") format("woff2"),
-  url("/fonts/400/hinted-RobotoCondensed-Italic.woff") format("woff");
+  url("/assets/fonts/400/hinted-RobotoCondensed-Italic.woff2") format("woff2"),
+  url("/assets/fonts/400/hinted-RobotoCondensed-Italic.woff") format("woff");
  font-weight: normal;
  font-style: italic;
 }
@@ -144,8 +144,8 @@
  src:
   local("Roboto Medium Italic"),
   local("Roboto-MediumItalic"),
-  url("/fonts/500/hinted-Roboto-MediumItalic.woff2") format("woff2"),
-  url("/fonts/500/hinted-Roboto-MediumItalic.woff") format("woff");
+  url("/assets/fonts/500/hinted-Roboto-MediumItalic.woff2") format("woff2"),
+  url("/assets/fonts/500/hinted-Roboto-MediumItalic.woff") format("woff");
  font-weight: 500;
  font-style: italic;
 }
@@ -155,8 +155,8 @@
  src:
   local("Roboto Condensed Light"),
   local("RobotoCondensed-Light"),
-  url("/fonts/300/hinted-RobotoCondensed-Light.woff2") format("woff2"),
-  url("/fonts/300/hinted-RobotoCondensed-Light.woff") format("woff");
+  url("/assets/fonts/300/hinted-RobotoCondensed-Light.woff2") format("woff2"),
+  url("/assets/fonts/300/hinted-RobotoCondensed-Light.woff") format("woff");
  font-weight: 300;
  font-style: normal;
 }
@@ -166,8 +166,8 @@
  src:
   local("Roboto"),
   local("Roboto-Regular"),
-  url("/fonts/400/hinted-Roboto-Regular.woff2") format("woff2"),
-  url("/fonts/400/hinted-Roboto-Regular.woff") format("woff");
+  url("/assets/fonts/400/hinted-Roboto-Regular.woff2") format("woff2"),
+  url("/assets/fonts/400/hinted-Roboto-Regular.woff") format("woff");
  font-weight: normal;
  font-style: normal;
 }
@@ -177,8 +177,8 @@
  src:
   local("Roboto Black"),
   local("Roboto-Black"),
-  url("/fonts/900/hinted-Roboto-Black.woff2") format("woff2"),
-  url("/fonts/900/hinted-Roboto-Black.woff") format("woff");
+  url("/assets/fonts/900/hinted-Roboto-Black.woff2") format("woff2"),
+  url("/assets/fonts/900/hinted-Roboto-Black.woff") format("woff");
  font-weight: 900;
  font-style: normal;
 }
@@ -188,8 +188,8 @@
  src:
   local("Roboto Bold Italic"),
   local("Roboto-BoldItalic"),
-  url("/fonts/700/hinted-Roboto-BoldItalic.woff2") format("woff2"),
-  url("/fonts/700/hinted-Roboto-BoldItalic.woff") format("woff");
+  url("/assets/fonts/700/hinted-Roboto-BoldItalic.woff2") format("woff2"),
+  url("/assets/fonts/700/hinted-Roboto-BoldItalic.woff") format("woff");
  font-weight: bold;
  font-style: italic;
 }
@@ -199,8 +199,8 @@
  src:
   local("Roboto Light Italic"),
   local("Roboto-LightItalic"),
-  url("/fonts/300/hinted-Roboto-LightItalic.woff2") format("woff2"),
-  url("/fonts/300/hinted-Roboto-LightItalic.woff") format("woff");
+  url("/assets/fonts/300/hinted-Roboto-LightItalic.woff2") format("woff2"),
+  url("/assets/fonts/300/hinted-Roboto-LightItalic.woff") format("woff");
  font-weight: 300;
  font-style: italic;
 }
