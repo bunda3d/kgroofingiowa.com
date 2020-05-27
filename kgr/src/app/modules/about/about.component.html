@@ -1,1 +1,102 @@
-<p>about works!</p>
+<!--card: Products & Services List-->
+<mat-card id="aboutKGR" class="mcard">
+	<mat-card-header>
+		<i mat-card-avatar id="aboutKGRAvatar" class="mcard-header-img"></i>
+		<mat-card-title class="display-3">About KG Roofing</mat-card-title>
+		<mat-card-subtitle>
+			<h3 class="obl goldBold">Professional, Trustworthy, Competent.</h3>
+		</mat-card-subtitle>
+	</mat-card-header>
+	<div class="caption-wrap">
+		<img
+			mat-card-image
+			src="/assets/img/about/kg_roofing_kyle_grell_ppe_safe_worksite_3541.jpg"
+			alt="KG Roofing worksite with owner Kyle Grell foreground, roofing crew on building background."
+		/>
+		<div class="caption-btm">
+			KG Roofing worksite with owner Kyle Grell foreground, roofing crew on building
+			background.
+		</div>
+	</div>
+	<!--text-->
+	<mat-card-content>
+		<div
+			class="flex-container"
+			fxLayout="row"
+			fxLayout.xs="column"
+			fxLayoutGap="16px"
+			fxLayoutAlign="space-between"
+		>
+			<div fxFlex.gt-xs="60%" fxLayoutAlign="stretch">
+				<mat-card id="aboutKGRstory">
+					<mat-card-title>
+						Origins
+					</mat-card-title>
+					<mat-card-subtitle>
+						Raised On Roofing
+					</mat-card-subtitle>
+					<mat-card-content>
+						<p>
+							KG Roofing is named after owner Kyle Grell. Kyle spent years learning the
+							roofing trades while working for a family business, eventually deciding to
+							start his own venture.
+						</p>
+						<mat-card-subtitle>
+							Experience
+						</mat-card-subtitle>
+						<p>
+							KG Roofing has the expertise to seam-weld membranes on an enormous factory
+							roof one day, then turn around a single-family tear off & re-shingle the
+							next. This versatility comes with professionalism; meaning KG works hard,
+							safely, and runs a tidy worksite with cleanup.
+						</p>
+						<mat-card-subtitle>
+							Professionalism
+						</mat-card-subtitle>
+						<p>
+							This professionalism extends to working with customers: from understanding
+							what the job requires, to ensuring it's all done to satisfaction.
+							<a
+								class="goldBold nodec"
+								title="Go to Contact page"
+								[routerLink]="['/contact']"
+								><span>Call KG</span> </a
+							>, we're easy and honest to deal with.
+						</p>
+					</mat-card-content>
+				</mat-card>
+			</div>
+			<div fxFlex.gt-xs="40%">
+				<mat-card id="aboutKGRCard" [class.mat-elevation-z8]>
+					<div class="caption-wrap">
+						<img
+							mat-card-image
+							src="/assets/img/personnel/that_is_kyle_grell.jpg"
+							alt="KG Roofing owner Kyle Grell with wife, Autumn, getting ready for a parade"
+						/>
+						<div class="caption-btm">
+							Kyle and crew preparing for a parade.
+						</div>
+					</div>
+					<mat-card-content>
+						<mat-card-title class="obl display-3 pt2 pb">KG Roofing</mat-card-title>
+						<mat-divider></mat-divider>
+						<mat-card-title class="obl display-3 goldBold pt2 pb"
+							>Professional,</mat-card-title
+						>
+						<mat-card-title class="obl display-3 goldBold pt pb"
+							>Trustworthy,</mat-card-title
+						>
+						<mat-card-title class="obl display-3 goldBold pt pb2"
+							>Competent.</mat-card-title
+						>
+					</mat-card-content>
+				</mat-card>
+			</div>
+		</div>
+	</mat-card-content>
+	<!--footer-->
+	<mat-card-footer>
+		<span class="spacer">&nbsp;</span>
+	</mat-card-footer>
+</mat-card>

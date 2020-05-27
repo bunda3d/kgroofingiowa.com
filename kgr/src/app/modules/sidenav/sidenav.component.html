@@ -214,12 +214,10 @@
 			</div>
 		</mat-toolbar>
 		<!--wrap content for margin-->
-		<div class="mat-app-background" color="primary">
-			<div class="flex-container" fxLayout="column" fxLayoutAlign="space-around center">
-				<div class="content" fxFlex>
-					<!--all router-outlet content shows here-->
-					<router-outlet></router-outlet>
-				</div>
+		<div class="flex-container" fxLayout="column" fxLayoutAlign="space-around center">
+			<div class="content" fxFlex>
+				<!--all router-outlet content shows here-->
+				<router-outlet></router-outlet>
 			</div>
 		</div>
 		<!--footer-->
@@ -249,22 +247,21 @@
 					<mat-toolbar-row>
 						<div class="pr lr" fxLayout="column" fxLayoutAlign="start space-around">
 							<h3>Phone:</h3>
+							<mat-divider></mat-divider>
 							<p class="pb">515-955-2061</p>
 							<h3>email:</h3>
+							<mat-divider></mat-divider>
 							<p class="pb">
 								<a href="mailto:kgrell@kgroofingiowa.com">kgrell@kgroofingiowa.com</a>
 							</p>
 							<h3>Address:</h3>
+							<mat-divider></mat-divider>
 							<p class="nmb npb">KG Roofing, LLC</p>
 							<p class="nmb npb">2578 150th Street,</p>
 							<p>Fort Dodge, IA 50501</p>
 						</div>
 						<div fxLayout="column" fxLayoutAlign="start space-around">
-							<mat-nav-list
-								class="ml2"
-								fxLayout="column"
-								fxLayoutAlign="start space-around"
-							>
+							<mat-nav-list fxLayout="column" fxLayoutAlign="start space-around">
 								<a
 									mat-list-item
 									routerLinkActive="active"

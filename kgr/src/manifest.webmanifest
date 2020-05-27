@@ -1,7 +1,7 @@
 {
-	"name": "kgr",
-	"short_name": "kgroofing",
-	"theme_color": "#1976d2",
+	"name": "KG Roofing",
+	"short_name": "kgr",
+	"theme_color": "#171696",
 	"background_color": "#fafafa",
 	"display": "standalone",
 	"scope": "./",

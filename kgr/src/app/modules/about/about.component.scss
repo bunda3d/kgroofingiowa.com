@@ -1,0 +1,33 @@
+@import '../../../styles/styles';
+
+.mcard#aboutKGR {
+  background-image: url("/assets/bg/bg-gr-rbl-blk.svg");
+  background-size: cover;
+}
+.mcard-header-img#aboutKGRAvatar {
+  background-image: url("/assets/branding/KG_Roofing_logo_RND1.svg");
+  margin-right: 1rem;
+}
+#aboutKGRCard {
+  // margin:2rem 1rem;
+  // padding:1rem 2rem;
+  padding: 0 16px 16px 16px;
+  background-image: url("/assets/bg/bg-gr-rbl-blk.svg");
+  background-size: cover;
+  // background-color: #212131;
+  mat-card-title {
+    padding-left: 1rem;
+  }
+  .caption-btm {
+    position: absolute;
+    bottom: -.88rem;
+  }
+}
+#aboutKGRstory {
+  padding-top: 1rem;
+  background-color: transparent;
+  border: solid $neon-aqua;
+  mat-card-subtitle {
+    color: $neon-aqua;
+  }
+}

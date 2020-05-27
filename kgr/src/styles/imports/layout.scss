@@ -17,9 +17,7 @@
 
 // Container styles
 .content {
-  display: block;
   margin: 0 auto;
-  padding: 2$pad $pad;
   max-width: 1024px;
 }
 .ctr-lg-max-container{
@@ -67,6 +65,7 @@ mat-icon.mat-card-avatar {
   background-size: cover;
   z-index: 10;
   box-shadow: 0 .25rem 1.25rem 0 #777777;
+  margin-bottom: 2.5rem;
 }
 .mat-card-header {
   margin-bottom: -1.0rem;
@@ -125,6 +124,19 @@ footer mat-toolbar-row.mat-toolbar-row {
   background-color: transparent;
   height: auto;
 }
+footer .mat-list-item-content {
+  font-size: $font-md;
+  padding: 0 1.5*$pad;
+}
+footer .mat-toolbar a  {
+  color: inherit;
+  text-decoration: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+footer p {
+  margin-top: 0;
+}
 
 // MARGIN & PADDING helpers
 // // // NO PADDING
@@ -148,25 +160,25 @@ footer mat-toolbar-row.mat-toolbar-row {
   padding-top: $pad;
 }
 .pt2 {
-  padding-top: 2$pad;
+  padding-top: 2 * $pad;
 }
 .pb {
   padding-bottom: $pad;
 }
 .pb2 {
-  padding-bottom: 2$pad;
+  padding-bottom: 2 * $pad;
 }
 .pl {
   padding-left: $pad;
 }
 .pl2 {
-  padding-left: 2$pad;
+  padding-left: 2 * $pad;
 }
 .pr {
   padding-right: $pad;
 }
 .pr2 {
-  padding-right: 2$pad;
+  padding-right: 2 * $pad;
 }
 // // MARGIN helpers
 // // // NO MARGIN
@@ -190,25 +202,25 @@ footer mat-toolbar-row.mat-toolbar-row {
   margin-right: $pad;
 }
 .mr2 {
-  margin-right: 2$pad;
+  margin-right: 2 * $pad;
 }
 .ml {
   margin-left: $pad;
 }
 .ml2 {
-  margin-left: 2$pad;
+  margin-left: 2 * $pad;
 }
 .mt {
   margin-top: $pad;
 }
 .mt2 {
-  margin-top: 2$pad;
+  margin-top: 2 * $pad;
 }
 .mb {
   margin-bottom: $pad;
 }
 .mb2 {
-  margin-bottom: 2$pad;
+  margin-bottom: 2 * $pad;
 }
 // LINE Helpers
 .lb {

@@ -31,9 +31,14 @@ const routes: Routes = [
 		pathMatch: 'full'
 	}
 ];
-
+// for routing to tops of pages:
+// https://stackoverflow.com/questions/39601026/angular-2-scroll-to-top-on-route-change
 @NgModule({
-	imports: [RouterModule.forRoot(routes)],
+	imports: [
+		RouterModule.forRoot(routes, {
+			scrollPositionRestoration: 'enabled' // Add options right here
+		})
+	],
 	exports: [RouterModule]
 })
 export class AppRoutingModule {}

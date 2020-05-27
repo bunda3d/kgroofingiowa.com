@@ -21,7 +21,7 @@
 		[hideOverlay]="false"
 		image="./../../assets/img/home-carousel/kyle_grell_kg_roofing_autumn_grell_family.jpg"
 		><div class="carousel-slide-overlay" fxLayout="column" fxLayoutAlign="end center">
-			<p>Training tomorrow's roofers.</p>
+			<p>Owners Kyle and Autumn, training tomorrow's roofers.</p>
 		</div>
 	</mat-carousel-slide>
 	<mat-carousel-slide
@@ -30,7 +30,7 @@
 		[hideOverlay]="false"
 		image="./../../assets/img/home-carousel/kg_roofing_flat_roof_before.jpg"
 		><div class="carousel-slide-overlay" fxLayout="column" fxLayoutAlign="end center">
-			<p>Training tomorrow's roofers.</p>
+			<p>Flat Roof Owners: Find out your roof's condition.</p>
 		</div>
 	</mat-carousel-slide>
 	<mat-carousel-slide
@@ -39,16 +39,7 @@
 		[hideOverlay]="false"
 		image="./../../assets/img/home-carousel/kg_roofing_flat_roof_after.jpg"
 		><div class="carousel-slide-overlay" fxLayout="column" fxLayoutAlign="end center">
-			<p>Training tomorrow's roofers.</p>
-		</div>
-	</mat-carousel-slide>
-	<mat-carousel-slide
-		#matCarouselSlide
-		overlayColor="#00000040"
-		[hideOverlay]="false"
-		image="./../../assets/img/home-carousel/kg_roofing_residential_shingles_after.jpg"
-		><div class="carousel-slide-overlay" fxLayout="column" fxLayoutAlign="end center">
-			<p>Training tomorrow's roofers.</p>
+			<p>...the satisfaction of having a good roof over your assets.</p>
 		</div>
 	</mat-carousel-slide>
 	<mat-carousel-slide
@@ -57,7 +48,7 @@
 		[hideOverlay]="false"
 		image="./../../assets/img/home-carousel/kg_roofing_residential_shingles_before.jpg"
 		><div class="carousel-slide-overlay" fxLayout="column" fxLayoutAlign="end center">
-			<p>Training tomorrow's roofers.</p>
+			<p>Call for a free inspection by a helpful professional.</p>
 		</div>
 	</mat-carousel-slide>
 	<mat-carousel-slide
@@ -66,7 +57,7 @@
 		[hideOverlay]="false"
 		image="./../../assets/img/home-carousel/kg_roofing_residential_shingles_after.jpg"
 		><div class="carousel-slide-overlay" fxLayout="column" fxLayoutAlign="end center">
-			<p>Training tomorrow's roofers.</p>
+			<p>Residential re-roof: Add value and peace of mind to your property.</p>
 		</div>
 	</mat-carousel-slide>
 	<mat-carousel-slide
@@ -75,7 +66,7 @@
 		[hideOverlay]="false"
 		image="./../../assets/img/home-carousel/kg-roofing-staging-safe-and-clean-work-area.jpg"
 		><div class="carousel-slide-overlay" fxLayout="column" fxLayoutAlign="end center">
-			<p>Training tomorrow's roofers.</p>
+			<p>KG Roofing: staging a safe and clean work area.</p>
 		</div>
 	</mat-carousel-slide>
 	<mat-carousel-slide
@@ -84,7 +75,7 @@
 		[hideOverlay]="false"
 		image="./../../assets/img/home-carousel/kg_roofing_iowa_service_area.png"
 		><div class="carousel-slide-overlay" fxLayout="column" fxLayoutAlign="end center">
-			<p>Training tomorrow's roofers.</p>
+			<p>KG Roofing's Service Area</p>
 		</div>
 	</mat-carousel-slide>
 </mat-carousel>
@@ -283,7 +274,13 @@
 		<mat-divider></mat-divider>
 		<mat-card-content id="why-footer">
 			<div>
-				<h3>Learn more <span class="neonAqua">ABOUT </span> KG Roofing</h3>
+				<h2>
+					Learn more
+					<a class="nodec" [routerLink]="['/about']">
+						<span class="neonAqua">ABOUT </span>
+					</a>
+					KG Roofing
+				</h2>
 			</div>
 		</mat-card-content>
 		<mat-card-actions fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="16px">

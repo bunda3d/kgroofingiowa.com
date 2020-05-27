@@ -1,6 +1,39 @@
-/**
- * TYPOGRAPHY
- */
+// TYPOGRAPHY
+
+/* extending Material theme and typography 
+to make title fonts (h1, dislplay-4, etc.) 
+use Roboto Condensed Medium (500) */
+// https://material.angular.io/guide/typography 
+
+@import '~@angular/material/theming';
+
+// Define a custom typography config that overrides the font-family as well as the other `headlines` and `body-1` levels. 
+$custom-heading-typography: mat-typography-config(
+  $font-family: $title-font,
+  $display-4: mat-typography-level($d4, $disp-line-ht, $light),
+  $display-3: mat-typography-level($d3, $disp-line-ht, $regular),
+  $display-2: mat-typography-level($d2, $title-line-ht, $regular),
+  $display-1: mat-typography-level($d1, $title-line-ht, $regular),
+  $headline: mat-typography-level($h1, $title-line-ht, $bold),
+  $title: mat-typography-level($h2, $title-line-ht, $regular),
+  $subheading-2: mat-typography-level($h3, $title-line-ht $regular),
+  $subheading-1: mat-typography-level($h4, $title-line-ht, $light),
+);
+$custom-body-typography: mat-typography-config(
+  $font-family: $primary-font,
+  $body-1: mat-typography-level($primary-fs, $primary-line-ht, $regular),
+  $body-2: mat-typography-level($primary-fs, $primary-line-ht, $medium),
+  $caption: mat-typography-level($font-sm, $caption-line-ht, $regular),
+  $button: mat-typography-level($primary-fs, $disp-line-ht, $medium),
+  $input: mat-typography-level(inherit, $input-line-ht, $regular),
+);
+// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
+@include mat-base-typography($custom-heading-typography);
+// Override typography for all Angular Material, including mat-base-typography and all components.
+/* @include angular-material-typography($custom-heading-typography); */
+
+// Override the typography in the core CSS.
+// @include mat-core($custom-body-typography);
 
 // font stacks
 %primary-font-fam {
@@ -42,10 +75,6 @@ h6 {
   }
 }
 
-h1 { font-size: $h1;}
-h2 { font-size: $h2;}
-h3 { font-size: $h3;}
-h4 { font-size: $h4;}
 h5 { font-size: $h5;}
 h6 { font-size: $h6;}
 
