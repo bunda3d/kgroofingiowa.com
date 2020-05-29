@@ -99,31 +99,44 @@
 			Residential shingle roof - call to know your roof's condition.
 		</div>
 	</div>
-	<mat-card-content>
-		<p>
-			Knowing if your roof is sound is a homeowner's responsibility, yet many homeowners
-			neglect their roofs. Like everything in your home, it requires maintenance.
-		</p>
-		<p>
-			Maintaining your roof is a low-cost way of ensuring your home and family, employees
-			or residents, all stay safe and comfortable.
-		</p>
-	</mat-card-content>
-	<mat-card
-		id="inspection"
+	<div
+		class="flex-container"
 		fxLayout="row"
-		fxLayoutAlign="start center"
+		fxLayout.lt-md="column"
 		fxLayoutGap="16px"
+		fxLayoutAlign="space-between"
 	>
-		<mat-card-content id="inspectIcons" fxFlexAlign="center space-around">
-			<img src="/assets/bg/bg-icons/vert6pk.svg" />
-		</mat-card-content>
-		<mat-card-content fxFlex>
-			<p id="inspectQuote">
-				If you haven't had your roof inspected recently, we're here to help.
-			</p>
-		</mat-card-content>
-	</mat-card>
+		<div fxFlex.gt-sm="50%" fxLayoutAlign="stretch">
+			<mat-card-content>
+				<p>
+					Knowing if your roof is sound is a homeowner's responsibility, yet many
+					homeowners neglect their roofs. Like everything in your home, it requires
+					maintenance.
+				</p>
+				<p>
+					Maintaining your roof is a low-cost way of ensuring your home and family,
+					employees or residents, all stay safe and comfortable.
+				</p>
+			</mat-card-content>
+		</div>
+		<div fxflex.gt-sm="50%">
+			<mat-card
+				id="inspection"
+				fxLayout="row"
+				fxLayoutAlign="start center"
+				fxLayoutGap="16px"
+			>
+				<mat-card-content id="inspectIcons" fxFlexAlign="center space-around">
+					<img src="/assets/bg/bg-icons/vert6pk.svg" />
+				</mat-card-content>
+				<mat-card-content fxFlex>
+					<p id="inspectQuote">
+						If you haven't had your roof inspected recently, we're here to help.
+					</p>
+				</mat-card-content>
+			</mat-card>
+		</div>
+	</div>
 	<div class="caption-wrap">
 		<img
 			mat-card-image
@@ -134,19 +147,33 @@
 			Commercial flat roof in need of inspection and repair
 		</div>
 	</div>
-	<mat-card-subtitle id="inspectSubTitle">
-		MAKE THE BEST FINANCIAL DECISION
-	</mat-card-subtitle>
-	<mat-card-content>
-		<p>
-			Since your home or business' buildings may be your most valuable investment, it's
-			important to know what condition your roofs are in before an expensive failure
-			occurs.
-		</p>
-		<p id="inspectP">
-			Call us today if you'd like a free, professional inspection.
-		</p>
-	</mat-card-content>
+	<div
+		fxLayout.gt-xs="row"
+		fxLayout.xs="column"
+		fxLayoutAlign="space-between center"
+		fxLayoutGap="16px"
+	>
+		<div fxFlex="50%" fxFlexAlign="start">
+			<mat-card-subtitle id="inspectSubTitle" fxFlexFill>
+				MAKE THE BEST FINANCIAL DECISION
+			</mat-card-subtitle>
+			<mat-card-content>
+				<p>
+					Since your home or business' buildings may be your most valuable investment,
+					it's important to know what condition your roofs are in before an expensive
+					failure occurs.
+				</p>
+				<p id="inspectP">
+					Call us today if you'd like a free, professional inspection.
+				</p>
+			</mat-card-content>
+		</div>
+		<div id="investprotect" fxFlex="50%" fxFlexAlign="stretch">
+			<div id="investoverlay">
+				<h1 class="bld shd gold">Invest in your investment.</h1>
+			</div>
+		</div>
+	</div>
 	<!--experiment with service / interface-->
 	<!-- 	<mat-card-content>
 		<usertable></usertable>

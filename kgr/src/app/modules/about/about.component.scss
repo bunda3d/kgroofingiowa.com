@@ -31,3 +31,20 @@
     color: $neon-aqua;
   }
 }
+
+// Services Card
+
+#servicesListHeader {
+  background-image: url("/assets/bg/bg-gr-blk-ltr.svg");
+  background-size: cover;
+}
+.mcard-header-img-48#servicesAvatar {
+  background-image: url("/assets/bg/bg-icons/bg-icons-service.svg");
+  margin-right: 1rem;
+}
+
+#lists-footer {
+  padding: 1rem;
+  background-image: url("/assets/bg/bg-gr-blk-ltr.svg");
+  background-size: cover;
+}

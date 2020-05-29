@@ -51,6 +51,30 @@ mat-card #inspection{
 .mat-card-actions {
   padding: .5rem 1rem;
 }
+#investprotect {
+  //border: solid $neon-aqua;
+  min-height: 7rem;
+  border-radius: 16px;
+  margin-bottom: 1rem;
+  background-image: url("/assets/img/home/investment-invest-protection-umbrella.jpg");
+  background-position: center center;
+  background-size: contain;
+  overflow: hidden;
+  h1 {
+    text-align: center;
+    vertical-align: auto;
+    margin: 0rem auto;
+    letter-spacing: .75rem;
+    line-height: 2.25;
+  }
+}
+#investoverlay {
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 3rem 1rem;
+  height: 100%;
+  width: 100%;
+}
+
 .mcard#productServiceList {
   background-image: url("/assets/bg/bg-gr-slate.svg");
   background-size: cover;

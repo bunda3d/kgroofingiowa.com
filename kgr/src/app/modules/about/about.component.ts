@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-export interface ProductService {
+export interface Service {
 	name: string;
 	acronym: string;
 }
@@ -11,9 +11,9 @@ export interface ProductService {
 	styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-	productServices: ProductService[] = [
+	services: Service[] = [
 		{
-			name: 'Emergency Repair',
+			name: 'Inspections',
 			acronym: ''
 		},
 		{
@@ -21,27 +21,23 @@ export class AboutComponent implements OnInit {
 			acronym: ''
 		},
 		{
+			name: 'Repairs',
+			acronym: ''
+		},
+		{
 			name: 'Maintenance',
 			acronym: ''
 		},
 		{
-			name: 'TPO: ',
-			acronym: 'ThermoPlastic Olefin membrane'
-		},
-		{
-			name: 'EPDM: ',
-			acronym: 'Rubber Ethylene Propylene Diene Monomer membrane'
-		},
-		{
-			name: 'Roof Coatings',
+			name: 'Commercial Roofing',
 			acronym: ''
 		},
 		{
-			name: 'Shingles',
+			name: 'Residential Roofing',
 			acronym: ''
 		},
 		{
-			name: 'Metal Roofs',
+			name: 'Insulation',
 			acronym: ''
 		},
 		{
@@ -49,11 +45,19 @@ export class AboutComponent implements OnInit {
 			acronym: ''
 		},
 		{
-			name: 'Metal Roofing, Coating & Retrofitting',
+			name: 'Tear off',
 			acronym: ''
 		},
 		{
 			name: 'Site Cleanup',
+			acronym: ''
+		},
+		{
+			name: 'Metal Roof Coating',
+			acronym: ''
+		},
+		{
+			name: 'Metal Roof Retrofitting',
 			acronym: ''
 		}
 	];

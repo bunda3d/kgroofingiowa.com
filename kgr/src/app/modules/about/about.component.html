@@ -1,4 +1,4 @@
-<!--card: Products & Services List-->
+<!--card: About-->
 <mat-card id="aboutKGR" class="mcard">
 	<mat-card-header>
 		<i mat-card-avatar id="aboutKGRAvatar" class="mcard-header-img"></i>
@@ -98,5 +98,42 @@
 	<!--footer-->
 	<mat-card-footer>
 		<span class="spacer">&nbsp;</span>
+	</mat-card-footer>
+</mat-card>
+
+<!--Services List-->
+<mat-card id="servicesListHeader" class="mcard">
+	<mat-card-header>
+		<i mat-card-avatar id="servicesAvatar" class="mcard-header-img-48"></i>
+		<mat-card-title>
+			Services
+		</mat-card-title>
+	</mat-card-header>
+	<mat-card-content>
+		<mat-list>
+			<mat-list-item *ngFor="let service of services">
+				<mat-divider></mat-divider>
+				<mat-icon matListIcon>stars</mat-icon>
+				<p matLine>
+					<span> {{ service.name }} </span>
+					<span class="orange"> {{ service.acronym }} </span>
+				</p>
+			</mat-list-item>
+		</mat-list>
+	</mat-card-content>
+	<mat-card-footer id="lists-footer">
+		<!-- 		<mat-card-actions fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="16px">
+			<div fxLayout="row">
+				<span class="spacer">&nbsp;</span>
+				<a
+					fxFlexAlign="end space-around"
+					routerLinkActive="active"
+					[routerLink]="['/about']"
+					id="inspectBtn"
+					mat-stroked-button
+					>&nbsp;&nbsp; ABOUT US &nbsp;&nbsp;
+				</a>
+			</div>
+		</mat-card-actions> -->
 	</mat-card-footer>
 </mat-card>

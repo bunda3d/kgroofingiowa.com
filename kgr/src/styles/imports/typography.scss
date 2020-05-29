@@ -81,8 +81,10 @@ h6 { font-size: $h6;}
 // Text Styles
 em { font-style: italic; }
 strong { font-weight: bold; }
+.bld { font-weight: bold; }
 .uppercase { text-transform: uppercase; }
 .obl { font-style: $obli; }
+.shd { text-shadow: 3px 3px 3px $nblu; } 
 
 /** html {
   font-family: $sansSerif, sans-serif;
