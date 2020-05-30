@@ -37,14 +37,20 @@
 #servicesListHeader {
   background-image: url("/assets/bg/bg-gr-blk-ltr.svg");
   background-size: cover;
+  margin: -1rem -1rem 2rem -1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 .mcard-header-img-48#servicesAvatar {
   background-image: url("/assets/bg/bg-icons/bg-icons-service.svg");
   margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 #lists-footer {
   padding: 1rem;
   background-image: url("/assets/bg/bg-gr-blk-ltr.svg");
   background-size: cover;
+}
+#mcardBorder {
+  border: solid;
 }

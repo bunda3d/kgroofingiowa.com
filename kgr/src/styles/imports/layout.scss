@@ -1,5 +1,5 @@
 // LAYOUTS
-
+@import 'typography.scss';
 // Toolbar
 .position-fixed {
   position: fixed;
@@ -42,6 +42,7 @@
 .mcard {
   height: 100% auto;
   margin-bottom: 1rem;
+  overflow: hidden;
 }
 mat-icon.mat-card-avatar {
   width: 96px;
@@ -117,7 +118,9 @@ footer {
   padding: 2rem 0;
 }
 footer mat-toolbar {
-  background-color: transparent;
+  background-color: transparent;  
+  font-size: 16px;
+
 }
 footer mat-toolbar-row.mat-toolbar-row {
   background: none;
@@ -125,7 +128,7 @@ footer mat-toolbar-row.mat-toolbar-row {
   height: auto;
 }
 footer .mat-list-item-content {
-  font-size: $font-md;
+  font-size: $primary-fs;
   padding: 0 1.5*$pad;
 }
 footer .mat-toolbar a  {
@@ -136,6 +139,9 @@ footer .mat-toolbar a  {
 }
 footer p {
   margin-top: 0;
+}
+footer mat-toolbar p {
+  @include mat-typography-level-to-styles($custom-body-typography, body-1);
 }
 
 // MARGIN & PADDING helpers
