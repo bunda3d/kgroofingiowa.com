@@ -101,6 +101,42 @@
 	</mat-card-footer>
 </mat-card>
 
+<!--Brands & Licenses List-->
+<mat-card class="mcard lt lr lb ll" id="#mcardBorder">
+	<mat-card-header
+		fxLayout="column"
+		fxLayoutAlign="center start"
+		id="brandsLicensesHeader"
+		class="lb"
+	>
+		<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+			<i mat-card-avatar id="brandsLicensesAvatar" class="mcard-header-img-48"></i>
+			<mat-card-title class="gold">
+				Brands & Licenses
+			</mat-card-title>
+		</div>
+		<div class="pl">
+			<mat-card-subtitle>
+				Quality products and manufacturers we’re proud to carry and/or have exclusive
+				license contracts with
+			</mat-card-subtitle>
+		</div>
+	</mat-card-header>
+	<mat-card-content>
+		<mat-list>
+			<mat-list-item *ngFor="let product of products">
+				<mat-divider></mat-divider>
+				<mat-icon matListIcon>stars</mat-icon>
+				<p matLine>
+					<span> {{ product.name }} </span>
+					<span class="orange"> {{ product.description }} </span>
+				</p>
+			</mat-list-item>
+		</mat-list>
+	</mat-card-content>
+	<mat-card-footer id="lists-footer"> </mat-card-footer>
+</mat-card>
+
 <!--Services List-->
 <mat-card class="mcard lt lr lb ll" id="#mcardBorder">
 	<mat-card-header id="servicesListHeader" class="lb">
@@ -108,6 +144,9 @@
 		<mat-card-title>
 			Services
 		</mat-card-title>
+		<mat-card-subtitle>
+			KG Roofing Services List
+		</mat-card-subtitle>
 	</mat-card-header>
 	<mat-card-content>
 		<mat-list>
@@ -136,4 +175,56 @@
 			</div>
 		</mat-card-actions> -->
 	</mat-card-footer>
+</mat-card>
+
+<!--Roof Types List-->
+<mat-card class="mcard lt lr lb ll" id="#mcardBorder">
+	<mat-card-header id="servicesListHeader" class="lb">
+		<i mat-card-avatar id="roofTypesAvatar" class="mcard-header-img-48"></i>
+		<mat-card-title>
+			Roof Types
+		</mat-card-title>
+		<mat-card-subtitle>
+			Roof Types We Build and Repair
+		</mat-card-subtitle>
+	</mat-card-header>
+	<mat-card-content>
+		<mat-list>
+			<mat-list-item *ngFor="let roofType of roofTypes">
+				<mat-divider></mat-divider>
+				<mat-icon matListIcon>stars</mat-icon>
+				<p matLine>
+					<span> {{ roofType.name }} </span>
+					<span class="orange"> {{ roofType.description }} </span>
+				</p>
+			</mat-list-item>
+		</mat-list>
+	</mat-card-content>
+	<mat-card-footer id="lists-footer"> </mat-card-footer>
+</mat-card>
+
+<!--Products List-->
+<mat-card class="mcard lt lr lb ll" id="#mcardBorder">
+	<mat-card-header id="servicesListHeader" class="lb">
+		<i mat-card-avatar id="productsListAvatar" class="mcard-header-img-48"></i>
+		<mat-card-title>
+			Products
+		</mat-card-title>
+		<mat-card-subtitle>
+			Products We're Experts at Installing
+		</mat-card-subtitle>
+	</mat-card-header>
+	<mat-card-content>
+		<mat-list>
+			<mat-list-item *ngFor="let product of products">
+				<mat-divider></mat-divider>
+				<mat-icon matListIcon>stars</mat-icon>
+				<p matLine>
+					<span> {{ product.name }} </span>
+					<span class="orange"> {{ product.description }} </span>
+				</p>
+			</mat-list-item>
+		</mat-list>
+	</mat-card-content>
+	<mat-card-footer id="lists-footer"> </mat-card-footer>
 </mat-card>

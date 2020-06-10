@@ -54,3 +54,39 @@
 #mcardBorder {
   border: solid;
 }
+
+// Roof Types Card
+.mcard-header-img-48#roofTypesAvatar {
+  background-image: url("/assets/bg/bg-icons/bg-icons-roof-types.svg");
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+// Products Card
+.mcard-header-img-48#productsListAvatar {
+  background-image: url("/assets/bg/bg-icons/bg-icons-products.svg");
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+// Brands & Licenses Card
+
+#brandsLicensesHeader {
+  background-image: url("/assets/bg/bg-gr-blk-ltr.svg");
+  background-size: cover;
+  margin: -1rem -1rem 2rem -1rem;
+  padding: 1rem 1rem 0 1rem;
+  mat-card-title {
+    @include mat-typography-level-to-styles($custom-heading-typography, display-1);
+  }
+  mat-card-subtitle {
+    @include mat-typography-level-to-styles($custom-heading-typography, title);
+    color: whitesmoke;
+    font-style: $obli;
+  }
+}
+.mcard-header-img-48#brandsLicensesAvatar {
+  background-image: url("/assets/bg/bg-icons/bg-icons-vendor.svg");
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
