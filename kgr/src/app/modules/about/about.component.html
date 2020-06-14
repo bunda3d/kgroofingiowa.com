@@ -122,6 +122,23 @@
 			</mat-card-subtitle>
 		</div>
 	</mat-card-header>
+	<mat-card-content *ngFor="let vendorHeader of vendorHeaders">
+		<mat-toolbar
+			id="vendorToolbar"
+			[style.background-image]="'url(' + vendorHeader.titlebgimg + ')'"
+		>
+			<mat-toolbar-row id="vendorToolbarRow" class="bgclr">
+				<mat-icon matListIcon>stars</mat-icon>
+				<p matLine>
+					<span class="mat-headline">&nbsp; {{ vendorHeader.name }} </span>
+				</p>
+			</mat-toolbar-row>
+			<mat-toolbar-row id="vendorLogo" [style.background]="vendorHeader.logobgcolor">
+				<img [src]="vendorHeader.logoimg" />
+			</mat-toolbar-row>
+		</mat-toolbar>
+	</mat-card-content>
+
 	<mat-card-content>
 		<mat-list>
 			<mat-list-item *ngFor="let product of products">

@@ -74,7 +74,7 @@
 #brandsLicensesHeader {
   background-image: url("/assets/bg/bg-gr-blk-ltr.svg");
   background-size: cover;
-  margin: -1rem -1rem 2rem -1rem;
+  margin: -1rem -1rem 0rem -1rem;
   padding: 1rem 1rem 0 1rem;
   mat-card-title {
     @include mat-typography-level-to-styles($custom-heading-typography, display-1);
@@ -89,4 +89,32 @@
   background-image: url("/assets/bg/bg-icons/bg-icons-vendor.svg");
   margin-right: 1rem;
   margin-bottom: 1rem;
+}
+#vendorToolbar {
+  background-color: transparent;
+  width: calc(100% + 32px);
+  margin: 0 -16px;
+  padding: 0;
+  height: auto;
+  background-position: center center;
+  background-size: cover;
+}
+#vendorToolbarRow {
+  height: auto;
+  p {
+    margin: .75rem 0rem .25rem 0rem;
+  }
+  span {
+    line-height: 1;
+  }
+}
+#vendorLogo {
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  img {
+    max-height: 15rem;
+  }
 }
