@@ -13,14 +13,18 @@ export class SidenavComponent implements OnInit {
 	Page = 'KG Roofing';
 	isDarkTheme: Observable<boolean>;
 
-	isHandset$: Observable<boolean> = this.breakpointObserver
-		.observe(Breakpoints.Handset)
+	isExtraSmall$: Observable<boolean> = this.breakpointObserver
+		.observe(Breakpoints.XSmall)
 		.pipe(
 			map(result => result.matches),
 			shareReplay()
 		);
+	isSmall$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Small).pipe(
+		map(result => result.matches),
+		shareReplay()
+	);
 	isTablet$: Observable<boolean> = this.breakpointObserver
-		.observe(Breakpoints.Tablet)
+		.observe(Breakpoints.Medium)
 		.pipe(
 			map(result => result.matches),
 			shareReplay()

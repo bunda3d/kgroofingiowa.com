@@ -6,9 +6,17 @@
 		#drawer
 		class="sidenav"
 		position="end"
-		[attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-		[mode]="(isHandset$ | async) || (isTablet$ | async) ? 'over' : 'side'"
-		[opened]="(isHandset$ | async) ? 'false' : 'false'"
+		[attr.role]="
+			(isExtraSmall$ | async) || (isSmall$ | async) || (isTablet$ | async)
+				? 'dialog'
+				: 'navigation'
+		"
+		[mode]="
+			(isExtraSmall$ | async) || (isSmall$ | async) || (isTablet$ | async)
+				? 'over'
+				: 'side'
+		"
+		[opened]="(isSmall$ | async) ? 'false' : 'false'"
 	>
 		<!--" ? 'false':'false' " >> keeps side drawer closed both on small and large viewports (else it opens as sidenav on tablet+ size screens). To leave open on large screens, change back to " === 'false' " or maybe " ? 'false' : 'true' " -->
 		<mat-toolbar [class.mat-elevation-z80]
@@ -158,8 +166,8 @@
 							<img class="nav-logo" src="../../assets/branding/branding.svg" />
 						</a>
 
-						<div fxLayout.="column" fxFlexAlign="space-around center" fxHide.lt-sm="true">
-							<div fxFlex>
+						<div fxFlexAlign="start center" fxHide.lt-sm="true">
+							<div fxFlexAlign="center">
 								<a
 									href="tel:+1-515-955-2061"
 									mat-raised-button
@@ -204,7 +212,7 @@
 							aria-label="Toggle sidenav"
 							mat-icon-button
 							(click)="drawer.toggle()"
-							*ngIf="(isHandset$ | async) || (isTablet$ | async)"
+							*ngIf="(isExtraSmall$ | async) || (isSmall$ | async) || (isTablet$ | async)"
 						>
 							<mat-icon aria-label="Side nav toggle icon" position="end">menu</mat-icon>
 						</button>

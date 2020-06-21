@@ -117,13 +117,14 @@
 		</div>
 		<div class="pl">
 			<mat-card-subtitle>
-				Quality products and manufacturers we’re proud to carry and/or have exclusive
+				Quality products and manufacturers we are proud to carry and/or have exclusive
 				license contracts with
 			</mat-card-subtitle>
 		</div>
 	</mat-card-header>
 	<mat-card-content *ngFor="let vendorHeader of vendorHeaders">
 		<mat-toolbar
+			class="mb2"
 			id="vendorToolbar"
 			[style.background-image]="'url(' + vendorHeader.titlebgimg + ')'"
 		>
@@ -137,19 +138,11 @@
 				<img [src]="vendorHeader.logoimg" />
 			</mat-toolbar-row>
 		</mat-toolbar>
-	</mat-card-content>
-
-	<mat-card-content>
-		<mat-list>
-			<mat-list-item *ngFor="let product of products">
-				<mat-divider></mat-divider>
-				<mat-icon matListIcon>stars</mat-icon>
-				<p matLine>
-					<span> {{ product.name }} </span>
-					<span class="orange"> {{ product.description }} </span>
-				</p>
-			</mat-list-item>
-		</mat-list>
+		<mat-card-content class="mb2">
+			<p *ngFor="let content of vendorHeader.content">
+				{{ content.paragraph }}
+			</p>
+		</mat-card-content>
 	</mat-card-content>
 	<mat-card-footer id="lists-footer"> </mat-card-footer>
 </mat-card>

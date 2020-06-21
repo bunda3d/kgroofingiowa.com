@@ -17,6 +17,15 @@ export interface VendorHeader {
 	titlebgimg: string;
 	logobgcolor: string;
 	logoimg: string;
+	content?: {
+		id: number;
+		paragraph: string;
+	}[];
+}
+export interface VendorContent {
+	vendor: string;
+	id: number;
+	paragraph: string;
 }
 
 @Component({
@@ -75,7 +84,6 @@ export class AboutComponent implements OnInit {
 			acronym: ''
 		}
 	];
-
 	roofTypes: RoofType[] = [
 		{
 			name: 'Pitched roofs',
@@ -102,7 +110,6 @@ export class AboutComponent implements OnInit {
 			description: ''
 		}
 	];
-
 	products: ProductType[] = [
 		{
 			name: 'TPO',
@@ -138,7 +145,24 @@ export class AboutComponent implements OnInit {
 			name: 'Firestone',
 			titlebgimg: '/assets/bg/bg-gr-red-red.svg',
 			logobgcolor: 'white',
-			logoimg: '/assets/branding/firestone-roofs/firestonelicenced.png'
+			logoimg: '/assets/branding/firestone-roofs/firestonelicenced.png',
+			content: [
+				{
+					id: 0,
+					paragraph:
+						'KG Roofing became a Firestone licensed contractor in 2019. This is an exclusive arrangement (for our region) with a highly regarded roofing products manufacturer. '
+				},
+				{
+					id: 1,
+					paragraph:
+						'Architects and general contractors specify Firestone branded products because of quality and reputation. Because of this quality promise, we can provide roofs with optional 30-year warranties, which was not possible with some other vendor relationships we’ve held. '
+				},
+				{
+					id: 2,
+					paragraph:
+						'We’re proud to work with Firestone, and affirmed in the fact they entered into this exclusive arrangement with KG Roofing, we are in rare company. '
+				}
+			]
 		},
 		{
 			name: 'DaVinci',
@@ -158,6 +182,26 @@ export class AboutComponent implements OnInit {
 			logobgcolor:
 				'radial-gradient(205.37% 430.32% at 50% 81%, #F00000 0%, #333333 100%)',
 			logoimg: '/assets/branding/gaf-roofs/GAFLogo.jpg'
+		}
+	];
+	vendorContents: VendorContent[] = [
+		{
+			vendor: 'Firestone',
+			id: 1,
+			paragraph:
+				'KG Roofing became a Firestone licensed contractor in 2019. This is an exclusive arrangement (for our region) with a highly regarded roofing products manufacturer. '
+		},
+		{
+			vendor: 'Firestone',
+			id: 2,
+			paragraph:
+				'Architects and general contractors specify Firestone branded products because of quality and reputation. Because of this quality promise, we can provide roofs with optional 30-year warranties, which was not possible with some other vendor relationships we’ve held. '
+		},
+		{
+			vendor: 'Firestone',
+			id: 3,
+			paragraph:
+				'We’re proud to work with Firestone, and affirmed in the fact they entered into this exclusive arrangement with KG Roofing, we are in rare company. '
 		}
 	];
 
