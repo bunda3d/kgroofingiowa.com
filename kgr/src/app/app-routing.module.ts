@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './modules/home/home.component';
 
 const routes: Routes = [
 	{
@@ -29,6 +30,10 @@ const routes: Routes = [
 		path: '',
 		redirectTo: '/home',
 		pathMatch: 'full'
+	},
+	{
+		path: '**',
+		component: HomeComponent
 	}
 ];
 // for routing to tops of pages:
@@ -36,7 +41,9 @@ const routes: Routes = [
 @NgModule({
 	imports: [
 		RouterModule.forRoot(routes, {
-			scrollPositionRestoration: 'enabled' // Add options right here
+			initialNavigation: 'enabled',
+			enableTracing: false,
+			scrollPositionRestoration: 'top' // Add options right here
 		})
 	],
 	exports: [RouterModule]

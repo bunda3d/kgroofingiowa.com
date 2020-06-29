@@ -9,10 +9,20 @@
   z-index: 70;
 }
 
-// Flexbox Spacer Span
+//FLEX BOX
+// // Flexbox Spacer Span
 .spacer {
   -webkit-box-flex: 1;
   flex: 1 1 auto;
+}
+// ideas from https://tobiasahlin.com/blog/flexbox-break-to-new-row/
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.fxBreakRow {
+  flex-basis: 100%;
+  height: 0;
 }
 
 // Container styles
