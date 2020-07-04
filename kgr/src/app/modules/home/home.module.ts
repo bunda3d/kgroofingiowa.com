@@ -8,7 +8,6 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
-import { UsertableModule } from './../usertable/usertable.module';
 import { HomeRoutingModule } from './home-routing.module';
 
 // components
@@ -25,8 +24,7 @@ import { HomeComponent } from './home.component';
 		MatIconModule,
 		MatListModule,
 		FlexLayoutModule,
-		MatCarouselModule.forRoot(),
-		UsertableModule
+		MatCarouselModule.forRoot()
 	],
 	exports: []
 })

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { ThemeService } from './core/services/theme.service';
@@ -16,11 +15,8 @@ export class AppComponent implements OnInit {
 
 	constructor(
 		private themeService: ThemeService,
-		firestore: AngularFirestore,
 		public breakpointObserver: BreakpointObserver
-	) {
-		this.items = firestore.collection('items').valueChanges();
-	}
+	) {}
 
 	ngOnInit() {
 		this.isDarkTheme = this.themeService.isDarkTheme;

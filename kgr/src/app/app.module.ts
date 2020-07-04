@@ -6,12 +6,8 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatSliderModule } from '@angular/material/slider';
 
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 // import { OverlayContainer, FullscreenOverlayContainer } from '@angular/cdk/overlay';
-
-import { AngularFireModule } from '@angular/fire';
-import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireStorageModule } from '@angular/fire/storage';
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
@@ -19,13 +15,10 @@ import { environment } from 'src/environments/environment';
 import { ThemeService } from './core/services/theme.service';
 import { SidenavModule } from './modules/sidenav/sidenav.module';
 
-//import { UsertableModule } from './modules/usertable/usertable.module';
-//import { UsertableComponent } from './modules/usertable/usertable.component';
-
 @NgModule({
 	declarations: [
 		AppComponent
-		//UsertableComponent
+		// UsertableComponent
 	],
 	imports: [
 		AppRoutingModule,
@@ -36,15 +29,10 @@ import { SidenavModule } from './modules/sidenav/sidenav.module';
 		HttpClientModule,
 		LayoutModule,
 		MatSliderModule,
-		//MatTableModule,
+		// MatTableModule,
 		// OverlayContainer,
-		SidenavModule,
-		//UsertableModule,
-		// sets key to initialize firebase:
-		AngularFireModule.initializeApp(environment.firebase),
-		AngularFireAnalyticsModule,
-		AngularFirestoreModule,
-		AngularFireStorageModule
+		ReactiveFormsModule,
+		SidenavModule
 	],
 	providers: [
 		ThemeService
