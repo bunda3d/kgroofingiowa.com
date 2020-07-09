@@ -1,12 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+// self-reference components
 import { ContactComponent } from './contact.component';
 import { ContactRoutingModule } from './contact-routing.module';
+
+// Material
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+// Other
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
 	declarations: [ContactComponent],
@@ -17,7 +24,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 		MatCardModule,
 		MatListModule,
 		MatToolbarModule,
-		MatIconModule
+		MatIconModule,
+		MatFormFieldModule
 	],
 	exports: [ContactComponent]
 })

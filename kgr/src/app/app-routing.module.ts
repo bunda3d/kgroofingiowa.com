@@ -22,9 +22,9 @@ const routes: Routes = [
 			import('./modules/financing/financing.module').then(m => m.FinancingModule)
 	},
 	{
-		path: 'projects',
+		path: 'project',
 		loadChildren: () =>
-			import('./modules/projects/projects.module').then(m => m.ProjectsModule)
+			import('./modules/project/project.module').then(m => m.ProjectModule)
 	},
 	{
 		path: '',
@@ -43,7 +43,8 @@ const routes: Routes = [
 		RouterModule.forRoot(routes, {
 			initialNavigation: 'enabled',
 			enableTracing: false,
-			scrollPositionRestoration: 'top' // Add options right here
+			scrollPositionRestoration: 'top'
+			// Add options right here
 		})
 	],
 	exports: [RouterModule]

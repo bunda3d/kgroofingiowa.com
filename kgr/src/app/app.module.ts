@@ -3,10 +3,12 @@ import { BrowserModule, HammerModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { LayoutModule } from '@angular/cdk/layout';
+// Material
 import { MatSliderModule } from '@angular/material/slider';
 
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 // import { OverlayContainer, FullscreenOverlayContainer } from '@angular/cdk/overlay';
 
 import { AppComponent } from './app.component';
@@ -31,6 +33,7 @@ import { SidenavModule } from './modules/sidenav/sidenav.module';
 		MatSliderModule,
 		// MatTableModule,
 		// OverlayContainer,
+		FormsModule,
 		ReactiveFormsModule,
 		SidenavModule
 	],

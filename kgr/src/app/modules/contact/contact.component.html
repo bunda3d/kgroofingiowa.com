@@ -36,11 +36,45 @@
 							Raised On Roofing
 						</mat-card-subtitle>
 						<mat-card-content>
-							<p>
-								KG Roofing is named after owner Kyle Grell. Kyle spent years learning the
-								roofing trades while working for a family business, eventually deciding to
-								start his own venture.
-							</p>
+							<div formGroupName="profileForm">
+								<h3>Address</h3>
+								<p>
+									<mat-form-field appearance="outline">
+										<mat-label>Street</mat-label>
+										<input matInput formControlName="street" placeholder="Street" />
+										<mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+										<mat-hint>Hint</mat-hint>
+									</mat-form-field>
+								</p>
+								<p>
+									<mat-form-field appearance="outline">
+										<mat-label>City</mat-label>
+										<input matInput formControlName="city" placeholder="City" />
+										<mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+										<mat-hint>Hint</mat-hint>
+									</mat-form-field>
+								</p>
+								<p>
+									<mat-form-field appearance="outline">
+										<mat-label>State</mat-label>
+										<input matInput formControlName="state" placeholder="State" />
+										<mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+										<mat-hint>Hint</mat-hint>
+									</mat-form-field>
+								</p>
+								<p>
+									<mat-form-field appearance="outline">
+										<mat-label>Zip Code</mat-label>
+										<input matInput formControlName="zip" placeholder="Zip Code" />
+										<mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+										<mat-hint>Hint</mat-hint>
+									</mat-form-field>
+								</p>
+								<p>Form Status: {{ profileForm.status }}</p>
+								<p>
+									<button type="submit" [disabled]="!profileForm.valid">Submit</button>
+								</p>
+							</div>
 							<mat-card-subtitle>
 								Experience
 							</mat-card-subtitle>
