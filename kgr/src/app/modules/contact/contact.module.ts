@@ -11,13 +11,17 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 // Other
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
 	declarations: [ContactComponent],
 	imports: [
+		FormsModule,
+		ReactiveFormsModule,
 		CommonModule,
 		ContactRoutingModule,
 		FlexLayoutModule,
@@ -25,7 +29,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 		MatListModule,
 		MatToolbarModule,
 		MatIconModule,
-		MatFormFieldModule
+		MatFormFieldModule,
+		MatInputModule
 	],
 	exports: [ContactComponent]
 })

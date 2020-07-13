@@ -20,6 +20,40 @@ app-root {
 app-routing {
 	flex: 1;
 }
+// loader spinner 
+.loader {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  top: calc(50% - 50px);
+  transform: translateY(-50%);
+}
+
+.loader:after {
+  content: ' ';
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: loader 1.2s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 // button large radius
 @mixin angular-button-large-radius {
@@ -61,6 +95,12 @@ mat-list.mat-list.mat-list-base {
 }
 .nblu {
 	color: $nblu;
+}
+.blu {
+	color: $blue;
+}
+.blu2 {
+	color: $blu2;
 }
 .blu3 {
 	color: $blu3;

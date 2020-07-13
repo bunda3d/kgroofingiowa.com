@@ -1,17 +1,74 @@
-<div>
-	<nav class="navbar navbar-expand navbar-dark bg-dark">
-		<a href="#" class="navbar-brand">KG Roofing Projects</a>
-		<div class="navbar-nav mr-auto">
-			<li class="nav-item">
-				<a routerLink="project" class="nav-link">Projects</a>
-			</li>
-			<li class="nav-item">
-				<a routerLink="add" class="nav-link">Add</a>
-			</li>
+<!--card: Roof Inspection-->
+<mat-card id="project" class="mcard">
+	<mat-card-header fxLayout="column" fxLayoutAlign="center start" id="projectsTodoHeader">
+		<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0px">
+			<div mat-card-avatar id="projectsTodoAvatar" fxFlex="15" fxFlexAlign="start start">
+				<span class="spacer">&nbsp;</span>
+			</div>
+			<div fxFlex class="ml">
+				<mat-card-title class="bld white">Featured Projects</mat-card-title>
+				<mat-card-subtitle class="">
+					​Take a look at what KG Roofing has been working on, and
+					<u>ask what we can do for you</u>
+				</mat-card-subtitle>
+			</div>
 		</div>
-	</nav>
-
-	<div class="container mt-3">
-		<router-outlet></router-outlet>
+	</mat-card-header>
+	<mat-divider></mat-divider>
+	<div
+		fxLayout.gt-xs="row"
+		fxLayout.xs="column"
+		fxLayoutAlign.xs="center start"
+		fxLayoutGap="16px"
+	>
+		<div fxFlex.gt-xs="60%">
+			<mat-card id="todoCard" class="mt mb">
+				<mat-card-content>
+					<h2 class="goldBold ml">Checklist</h2>
+					<mat-selection-list #projecttodos>
+						<mat-list-option
+							checkboxPosition="before"
+							*ngFor="let projectTodo of projectTodos"
+						>
+							{{ projectTodo.paragraph }}
+						</mat-list-option>
+					</mat-selection-list>
+					<p class="pl bld">
+						Done:
+						<span class="goldBold">
+							&nbsp; {{ projecttodos.selectedOptions.selected.length }} &nbsp;
+						</span>
+					</p>
+				</mat-card-content>
+			</mat-card>
+		</div>
 	</div>
+	<mat-divider></mat-divider>
+	<mat-card-actions fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+		<div
+			fxLayout.gt-sm="row"
+			fxLayout.lt-sm="column"
+			fxLayoutGap.gt-sm="1.5rem"
+			fxLayoutGap.lt-sm=".75rem"
+			id="inspectIcons2"
+		>
+			<img src="/assets/bg/bg-icons/bg-icons-inspection-row1.svg" />
+			<img src="/assets/bg/bg-icons/bg-icons-inspection-row2.svg" />
+		</div>
+		<span class="spacer">&nbsp;</span>
+		<div fxFlexAlign="center end">
+			<a
+				fxFlexAlign="center end"
+				routerLinkActive="active"
+				[routerLink]="['/contact']"
+				id="inspectBtn"
+				mat-stroked-button
+				>&nbsp;&nbsp; CALL US &nbsp;&nbsp;
+			</a>
+		</div>
+	</mat-card-actions>
+</mat-card>
+
+<div>
+	<router-outlet></router-outlet>
 </div>

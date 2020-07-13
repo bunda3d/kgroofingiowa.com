@@ -1,12 +1,13 @@
 <!--Mat Theme Wrapper, for toggling light-mode-->
 <div [ngClass]="{ 'theme-dark': isDarkTheme | async }">
-	<!--Mat theme wrapper, for background coloring-->
-	<!-- Toolbar / Navbar (with ROUTER OUTLET inside)[openedSubject]="openedSubject"-->
-	<app-sidenav> </app-sidenav>
-	<!--testing firebase example
-		<ul>
-			<li class="text" *ngFor="let item of items | async">
-				{{ item.name }}
-			</li>
-		</ul>-->
+	<app-sidenav> <span class="loader" *ngIf="loading"></span></app-sidenav>
 </div>
+<!--testing inputs -->
+
+<app-formctrl-phone></app-formctrl-phone>
+<mat-form-field appearance="outline">
+	<mat-label>Phone number</mat-label>
+	<input-phone required></input-phone>
+	<mat-icon matSuffix>phone</mat-icon>
+	<mat-hint>Include area code</mat-hint>
+</mat-form-field>

@@ -8,8 +8,6 @@ import { AddProjectComponent } from './add-project/add-project.component';
 
 // NOTE: 'PROJECTS' is routed to projectslist component, not PROJECTS component
 const projectRoutes: Routes = [
-	{ path: '', redirectTo: 'project', pathMatch: 'full' },
-	//
 	{
 		path: 'project',
 		component: ProjectComponent,

@@ -44,7 +44,4 @@ export class SidenavComponent implements OnInit {
 	toggleDarkTheme(checked: boolean) {
 		this.themeService.setDarkTheme(checked);
 	}
-	/* 	setTheme(theme: string) {
-		this.colorSchemeService.update(theme);
-	} */
 }

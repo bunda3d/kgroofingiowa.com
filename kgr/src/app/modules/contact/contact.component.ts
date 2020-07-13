@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { FormArray } from '@angular/forms';
 
 @Component({
 	selector: 'app-contact',
@@ -15,9 +16,19 @@ export class ContactComponent implements OnInit {
 			city: [''],
 			state: [''],
 			zip: ['']
-		})
+		}),
+
+		aliases: this.fb.array([this.fb.control('')])
 	});
+
 	constructor(private fb: FormBuilder) {}
 
 	ngOnInit(): void {}
+
+	get aliases() {
+		return this.profileForm.get('aliases') as FormArray;
+	}
+	addAlias() {
+		this.aliases.push(this.fb.control(''));
+	}
 }

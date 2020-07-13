@@ -1,0 +1,25 @@
+<div [formGroup]="parts" class="input-phone-container">
+	<input
+		class="input-phone-element"
+		formControlName="area"
+		size="3"
+		aria-label="Area code"
+		(input)="_handleInput()"
+	/>
+	<span class="input-phone-spacer">&ndash;</span>
+	<input
+		class="input-phone-element"
+		formControlName="exchange"
+		size="3"
+		aria-label="Exchange code"
+		(input)="_handleInput()"
+	/>
+	<span class="input-phone-spacer">&ndash;</span>
+	<input
+		class="input-phone-element"
+		formControlName="subscriber"
+		size="4"
+		aria-label="Subscriber number"
+		(input)="_handleInput()"
+	/>
+</div>

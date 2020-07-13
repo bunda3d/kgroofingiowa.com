@@ -1,1 +1,76 @@
 @import '../../../styles/styles';
+
+.mcard#project {
+  //background-image: url("/assets/bg/bg-gr-nbl-ltr-nbl.svg");
+  background-color: $blu2;
+  background-size: cover;
+}
+#projectsTodoHeader {
+  //background-image: url("/assets/bg/bg-gr-blk-ltr.svg");
+  //background-size: cover;
+  //background-position: center;
+  //background-color: $blu2;
+  margin: -1rem -1rem 0rem -1rem;
+  padding: 1rem 1rem 0 1rem;
+  mat-card-title {
+    @include mat-typography-level-to-styles($custom-heading-typography, display-1);
+  }
+  mat-card-subtitle {
+    @include mat-typography-level-to-styles($custom-heading-typography, title);
+    font-style: oblique;
+    color:white;
+  }
+}
+#projectsTodoAvatar {
+  height: 100%;
+  width: auto;
+  background-image: url("/assets/bg/bg-icons/bg-icons-screw.svg");    
+  background-color: $blu2;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5%;
+  span {
+    font-size: 96px;
+  }
+}
+#todoCard {
+  background-color: $blue;
+}
+.mcard #inspectIcons, #inspectIcons2 {
+  line-height: 0;
+}
+#inspectIcons2 img {
+  min-height: 1.5rem;
+  width: auto;
+  margin-right: 1rem;
+}
+.mcard #inspectQuote {
+  font-size: $font-lg;
+  line-height: $primary-line-ht;
+  font-style: $ital;
+  color: $nblu;
+}
+.mat-card-content {
+  margin-bottom: 0rem;
+}
+mat-card #inspection{
+  margin:2rem 0;
+}
+#inspectSubTitle {
+  color: $gold;
+  font-size: $font-md;
+}
+#inspectP {
+  color: $gold;
+  font-weight: $medium;
+  margin-bottom: 1rem;
+}
+#inspectBtn{
+  color: $neon-aqua;
+  border: 2px solid $white !important;
+  padding-top: .125em;
+}
+.mat-card-actions {
+  padding: .5rem 1rem;
+}
