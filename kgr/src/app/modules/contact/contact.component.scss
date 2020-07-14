@@ -1,26 +1,39 @@
 @import '../../../styles/styles';
 
 .mcard#contactKGR {
-  background-image: url("/assets/bg/bg-gr-dbl-lbl2.svg");
-  background-size: cover;
+  background-image: url("/assets/bg/bg-gr-rbl-ltr.svg");
+  background-size: contain;
+  background-position: top;
 }
 .mcard-header-img#contactKGRAvatar {
   background-image: url("/assets/branding/KG_Roofing_logo_RND1.svg");
   margin-right: 1rem;
 }
 #contactKGRCard {
-  // margin:2rem 1rem;
-  // padding:1rem 2rem;
-  padding: 0 16px 16px 16px;
+  width: calc(100% + 32px);
+  height: calc(100% + 32px);
+  margin: 0 -16px;
+  padding: 1rem;
   background-image: url("/assets/bg/bg-gr-dbl-lbl2.svg");
+  background-position: center center;
   background-size: cover;
-  // background-color: #212131;
-  mat-card-title {
-    padding-left: 1rem;
+  div #sub {
+    border-bottom: solid;
+    mat-card-title {
+      @include mat-typography-level-to-styles($custom-heading-typography, display-1);
+      padding: 1rem 1rem 0rem 1.5rem; 
+      color: $gold; 
+    }
   }
-  .caption-btm {
-    position: absolute;
-    bottom: -.88rem;
+  mat-card-title.subtwo {
+    @include mat-typography-level-to-styles($custom-heading-typography, display-1);
+    padding: 1rem 0rem 0rem 1.5rem; 
+    color: $blu3; 
+  }
+  mat-card-subtitle.subthree {
+    @include mat-typography-level-to-styles($custom-heading-typography, display-1);
+    padding: 0.5rem 1rem 0rem 1.5rem;
+    color: white;
   }
 }
 #contactKGRstory {

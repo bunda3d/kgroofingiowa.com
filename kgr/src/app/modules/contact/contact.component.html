@@ -3,23 +3,24 @@
 	<mat-card id="contactKGR" class="mcard">
 		<mat-card-header>
 			<i mat-card-avatar id="contactKGRAvatar" class="mcard-header-img"></i>
-			<mat-card-title class="display-3">About KG Roofing</mat-card-title>
+			<mat-card-title class="display-3">Contact KG Roofing</mat-card-title>
 			<mat-card-subtitle>
 				<h3 class="obl">Serving Your Commercial & Residential Roofing Needs</h3>
 			</mat-card-subtitle>
 		</mat-card-header>
 		<div class="caption-wrap">
 			<img
+				class="nmb npb"
 				mat-card-image
 				src="/assets/img/contact/kg_roofing_iowa_safe_roof_inspection_ladders.jpg"
 				alt="KG Roofing's safe and free rooftop inspection worksite with work truck in foreground and commercial building 2-tier roof and ladders in background with safety markers around roof perimeter."
 			/>
-			<div class="caption-btm">
+			<div class="caption-btm caption-btm-zero">
 				Call for safe, free rooftop inspections.
 			</div>
 		</div>
 		<!--text-->
-		<mat-card-content>
+		<mat-card-content id="contactKGRCard">
 			<div
 				class="flex-container"
 				fxLayout="row"
@@ -27,24 +28,51 @@
 				fxLayoutGap="16px"
 				fxLayoutAlign="space-between"
 			>
-				<div fxFlex.gt-xs="60%" fxLayoutAlign="stretch">
+				<div fxFlex>
 					<mat-card id="contactKGRstory">
-						<mat-card-title>
-							Origins
+						<!--contact info1-->
+						<div id="sub">
+							<mat-card-title>
+								Phone
+							</mat-card-title>
+						</div>
+						<mat-card-title class="subtwo nodec">
+							Talk with a Roofing Professional
 						</mat-card-title>
-						<mat-card-subtitle>
-							Raised On Roofing
+						<mat-card-subtitle class="subthree nodec"> 515-955-2061 </mat-card-subtitle>
+						<!--contact info2-->
+						<div id="sub">
+							<mat-card-title>
+								Location
+							</mat-card-title>
+						</div>
+						<mat-card-title class="subtwo nodec">
+							KG Roofing, LLC
+						</mat-card-title>
+						<mat-card-subtitle class="subthree nodec">
+							2578 150th Street,
 						</mat-card-subtitle>
-
+						<mat-card-subtitle class="subthree nodec">
+							Fort Dodge, IA 50501
+						</mat-card-subtitle>
+						<!--contact info3-->
+						<div id="sub">
+							<mat-card-title>
+								Service Area:
+							</mat-card-title>
+						</div>
+						<mat-card-title class="subtwo nodec">
+							Greater Iowa
+						</mat-card-title>
 						<!--form-->
-
+						<!-- 
 						<mat-card-content>
-							<!-- 							<mat-form-field appearance="outline">
+							<mat-form-field appearance="outline">
 								<mat-label>Phone number</mat-label>
 								<input-phone required></input-phone>
 								<mat-icon matSuffix>phone</mat-icon>
 								<mat-hint>Include area code</mat-hint>
-							</mat-form-field> -->
+							</mat-form-field>
 							<div formGroupName="profileForm">
 								<h3>Address</h3>
 								<p>
@@ -84,23 +112,8 @@
 									<button type="submit" [disabled]="!profileForm.valid">Submit</button>
 								</p>
 							</div>
-							<mat-card-subtitle>
-								Experience
-							</mat-card-subtitle>
-							<p>
-								KG Roofing has the expertise to seam-weld membranes on an enormous factory
-								roof one day, then turn around a single-family tear off & re-shingle the
-								next. This versatility comes with professionalism; meaning KG works hard,
-								safely, and runs a tidy worksite with cleanup.
-							</p>
-							<mat-card-subtitle>
-								Professionalism
-							</mat-card-subtitle>
-							<p>
-								This professionalism extends to working with customers: from understanding
-								what the job requires, to ensuring it's all done to satisfaction.
-							</p>
 						</mat-card-content>
+ -->
 						<div class="caption-wrap">
 							<img
 								mat-card-image
@@ -116,7 +129,7 @@
 			</div>
 		</mat-card-content>
 		<!--footer-->
-		<mat-card-footer>
+		<mat-card-footer id="contactFooter">
 			<span class="spacer">&nbsp;</span>
 		</mat-card-footer>
 	</mat-card>
