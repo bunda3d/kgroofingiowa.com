@@ -25,7 +25,11 @@ export class ProjectComponent implements OnInit {
 		},
 		{
 			id: 2,
-			paragraph: `Know your roof's condition and get recommendations on keeping your major	assets protected. `
+			paragraph: `Know your roof's condition [ Important ] `
+		},
+		{
+			id: 3,
+			paragraph: `Get recommendations on keeping your major	assets protected. `
 		}
 	];
 	constructor(private projectService: ProjectService) {}

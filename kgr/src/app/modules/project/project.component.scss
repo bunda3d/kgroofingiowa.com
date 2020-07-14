@@ -37,6 +37,11 @@
 #todoCard {
   background-color: $blue;
 }
+#qualityWorkCard {
+  background-image: url("/assets/bg/br-gld-yel.svg");
+  background-size: cover;
+  background-position: center;
+}
 .mcard #inspectIcons, #inspectIcons2 {
   line-height: 0;
 }

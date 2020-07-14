@@ -18,14 +18,14 @@
 	<div
 		fxLayout.gt-xs="row"
 		fxLayout.xs="column"
-		fxLayoutAlign.xs="center start"
+		fxLayoutAlign="center stretch"
 		fxLayoutGap="16px"
 	>
-		<div fxFlex.gt-xs="60%">
+		<div fxFlex.gt-xs="50%">
 			<mat-card id="todoCard" class="mt mb">
 				<mat-card-content>
-					<h2 class="goldBold ml">Checklist</h2>
-					<mat-selection-list #projecttodos>
+					<h1 class="goldBold ml">Checklist</h1>
+					<mat-selection-list class="mb" #projecttodos>
 						<mat-list-option
 							checkboxPosition="before"
 							*ngFor="let projectTodo of projectTodos"
@@ -33,12 +33,20 @@
 							{{ projectTodo.paragraph }}
 						</mat-list-option>
 					</mat-selection-list>
-					<p class="pl bld">
+					<mat-divider></mat-divider>
+					<h2 class="pl pt goldBold">
 						Done:
-						<span class="goldBold">
+						<span class="bld white">
 							&nbsp; {{ projecttodos.selectedOptions.selected.length }} &nbsp;
 						</span>
-					</p>
+					</h2>
+				</mat-card-content>
+			</mat-card>
+		</div>
+		<div fxHide.xs fxFlex="50%" fxFlexAlign="end stretch">
+			<mat-card id="qualityWorkCard" class="mt mb">
+				<mat-card-content>
+					QUALITY WORK SPEAKS FOR ITSELF
 				</mat-card-content>
 			</mat-card>
 		</div>
