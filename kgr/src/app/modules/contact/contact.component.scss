@@ -37,13 +37,21 @@
   }
 }
 #contactKGRstory {
-  padding-top: 1rem;
+  padding: 0px;
   background-color: transparent;
-  border: solid $neon-aqua;
+  border: solid $white;
   mat-card-subtitle {
     color: $neon-aqua;
   }
 }
+.mat-card-btm-img-nm {
+  margin: 0 16px 16px 16px;
+  img.mat-card-image {
+    margin-bottom: 0;
+  }
+}
+
+
 // phone input masking
 // https://material.angular.io/components/form-field/examples
 .example-tel-input-container {

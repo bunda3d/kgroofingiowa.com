@@ -19,16 +19,17 @@
 				Call for safe, free rooftop inspections.
 			</div>
 		</div>
-		<!--text-->
+		<!--contact info group-->
 		<mat-card-content id="contactKGRCard">
 			<div
 				class="flex-container"
 				fxLayout="row"
 				fxLayout.xs="column"
 				fxLayoutGap="16px"
-				fxLayoutAlign="space-between"
+				fxFlexAlign="start"
 			>
-				<div fxFlex>
+				<!--contact info-->
+				<div fxFlex.gt-xs="50%" fxLayoutAlign="start stretch">
 					<mat-card id="contactKGRstory">
 						<!--contact info1-->
 						<div id="sub">
@@ -55,17 +56,24 @@
 						<mat-card-subtitle class="subthree nodec">
 							Fort Dodge, IA 50501
 						</mat-card-subtitle>
-						<!--contact info3-->
+						<div class="pb2"></div>
+					</mat-card>
+				</div>
+				<!--form-->
+				<div fxFlex.gt-xs="50%" fxLayoutAlign="end stretch">
+					<mat-card id="contactKGRstory">
+						<!--contact info1-->
 						<div id="sub">
 							<mat-card-title>
-								Service Area:
+								Email
 							</mat-card-title>
 						</div>
-						<mat-card-title class="subtwo nodec">
-							Greater Iowa
-						</mat-card-title>
-						<!--form-->
-						<!-- 
+						<mat-card-subtitle class="nodec">
+							kgroofingiowa@yahoo.com
+						</mat-card-subtitle>
+
+						<!-- form start -->
+
 						<mat-card-content>
 							<mat-form-field appearance="outline">
 								<mat-label>Phone number</mat-label>
@@ -113,15 +121,35 @@
 								</p>
 							</div>
 						</mat-card-content>
- -->
-						<div class="caption-wrap">
-							<img
-								mat-card-image
-								src="/assets/img/contact/kg_roofing_iowa_service_area.png"
-								alt="KG Roofing territory and preferred service area, with epicenter in Fort Dodge, Iowa. Call us if you are wondering if your building is in our area."
-							/>
-							<div class="caption-btm">
-								KGR approx. service area
+
+						<!-- form end -->
+					</mat-card>
+				</div>
+			</div>
+			<!--map-->
+			<div fxFlexLayout="column" class="mt">
+				<div fxFlex="100">
+					<mat-card id="contactKGRstory">
+						<!--contact info3-->
+						<div id="sub">
+							<mat-card-title>
+								Service Area:
+							</mat-card-title>
+						</div>
+						<mat-card-title class="subtwo nodec">
+							Greater Iowa
+						</mat-card-title>
+						<!--form-->
+						<div class="mat-card-btm-img-nm">
+							<div class="caption-wrap">
+								<img
+									mat-card-image
+									src="/assets/img/contact/kg_roofing_iowa_service_area.png"
+									alt="KG Roofing territory and preferred service area, with epicenter in Fort Dodge, Iowa. Call us if you are wondering if your building is in our area."
+								/>
+								<div class="caption-btm caption-btm-zero">
+									KGR approx. service area
+								</div>
 							</div>
 						</div>
 					</mat-card>
