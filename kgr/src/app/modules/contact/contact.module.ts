@@ -17,6 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InputsModule } from '../_forms/inputs.module';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
 	declarations: [ContactComponent],
@@ -26,6 +27,7 @@ import { InputsModule } from '../_forms/inputs.module';
 		CommonModule,
 		ContactRoutingModule,
 		FlexLayoutModule,
+		MatButtonModule,
 		MatCardModule,
 		MatListModule,
 		MatToolbarModule,

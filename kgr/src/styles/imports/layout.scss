@@ -224,11 +224,17 @@ footer mat-toolbar p {
 .mr2 {
   margin-right: 2 * $pad;
 }
+.mra {
+  margin-right: auto !important;
+}
 .ml {
   margin-left: $pad;
 }
 .ml2 {
   margin-left: 2 * $pad;
+}
+mla {
+  margin-left: auto !important;
 }
 .mt {
   margin-top: $pad;

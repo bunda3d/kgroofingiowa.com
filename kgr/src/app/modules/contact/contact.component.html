@@ -23,13 +23,12 @@
 		<mat-card-content id="contactKGRCard">
 			<div
 				class="flex-container"
-				fxLayout="row"
-				fxLayout.xs="column"
+				fxLayout="column"
 				fxLayoutGap="16px"
 				fxFlexAlign="start"
 			>
 				<!--contact info-->
-				<div fxFlex.gt-xs="50%" fxLayoutAlign="start stretch">
+				<div fxFlex="100">
 					<mat-card id="contactKGRstory">
 						<!--contact info1-->
 						<div id="sub">
@@ -37,30 +36,28 @@
 								Phone
 							</mat-card-title>
 						</div>
-						<mat-card-title class="subtwo nodec">
+						<mat-card-title class="subtwo">
 							Talk with a Roofing Professional
 						</mat-card-title>
-						<mat-card-subtitle class="subthree nodec"> 515-955-2061 </mat-card-subtitle>
-						<!--contact info2-->
-						<div id="sub">
-							<mat-card-title>
-								Location
-							</mat-card-title>
+						<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+							<div>
+								<mat-card-subtitle class="subthree">
+									<a class="nodec" href="tel:+15159552061">
+										515-955-2061
+									</a>
+								</mat-card-subtitle>
+							</div>
+							<div>
+								<a button mat-fab color="warn" href="tel:+15159552061">
+									<mat-icon>phone</mat-icon>
+								</a>
+							</div>
 						</div>
-						<mat-card-title class="subtwo nodec">
-							KG Roofing, LLC
-						</mat-card-title>
-						<mat-card-subtitle class="subthree nodec">
-							2578 150th Street,
-						</mat-card-subtitle>
-						<mat-card-subtitle class="subthree nodec">
-							Fort Dodge, IA 50501
-						</mat-card-subtitle>
 						<div class="pb2"></div>
 					</mat-card>
 				</div>
-				<!--form-->
-				<div fxFlex.gt-xs="50%" fxLayoutAlign="end stretch">
+
+				<div fxFlex="100">
 					<mat-card id="contactKGRstory">
 						<!--contact info1-->
 						<div id="sub">
@@ -68,12 +65,50 @@
 								Email
 							</mat-card-title>
 						</div>
-						<mat-card-subtitle class="nodec">
-							kgroofingiowa@yahoo.com
+						<mat-card-title class="subtwo">
+							Send text & images
+						</mat-card-title>
+						<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="16px">
+							<div>
+								<mat-card-subtitle class="subthree">
+									<a class="nodec" href="mailto:kgroofingiowa@yahoo.com"
+										>kgroofingiowa @ yahoo.com</a
+									>
+								</mat-card-subtitle>
+							</div>
+							<div>
+								<a button mat-fab color="warn" href="mailto:kgroofingiowa@yahoo.com">
+									<mat-icon>email</mat-icon>
+								</a>
+							</div>
+						</div>
+						<div class="pb2"></div>
+					</mat-card>
+				</div>
+
+				<div fxFlex="100">
+					<mat-card id="contactKGRstory">
+						<!--contact info3-->
+						<div id="sub">
+							<mat-card-title>
+								Location
+							</mat-card-title>
+						</div>
+						<mat-card-title class="subtwo">
+							KG Roofing, LLC
+						</mat-card-title>
+						<mat-card-subtitle class="subthree">
+							2578 150th Street,
 						</mat-card-subtitle>
-
-						<!-- form start -->
-
+						<mat-card-subtitle class="subthree">
+							Fort Dodge, IA 50501
+						</mat-card-subtitle>
+						<div class="pb2"></div>
+					</mat-card>
+				</div>
+				<!--
+				<div fxFlex.gt-xs="50%" fxLayoutAlign="end stretch">
+					<mat-card id="contactKGRstory">
 						<mat-card-content>
 							<mat-form-field appearance="outline">
 								<mat-label>Phone number</mat-label>
@@ -121,11 +156,10 @@
 								</p>
 							</div>
 						</mat-card-content>
-
-						<!-- form end -->
 					</mat-card>
-				</div>
+				</div>			-->
 			</div>
+
 			<!--map-->
 			<div fxFlexLayout="column" class="mt">
 				<div fxFlex="100">
@@ -136,9 +170,10 @@
 								Service Area:
 							</mat-card-title>
 						</div>
-						<mat-card-title class="subtwo nodec">
+						<mat-card-title class="subtwo">
 							Greater Iowa
 						</mat-card-title>
+						<div class="pb2"></div>
 						<!--form-->
 						<div class="mat-card-btm-img-nm">
 							<div class="caption-wrap">
