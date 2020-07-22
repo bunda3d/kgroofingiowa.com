@@ -210,6 +210,26 @@ export class AboutComponent implements OnInit {
 					paragraph: `GAF is part of the largest roofing and waterproofing business in the world. GAF offers excellent products, including architectural and 3-tab asphalt shingles. `
 				}
 			]
+		},
+		{
+			name: 'Owens Corning',
+			titlebgimg: '/assets/bg/bg-gr-red-wht.svg',
+			logobgcolor: 'white',
+			logoimg: '/assets/branding/owens-corning/owens-corning_logo.jpg',
+			content: [
+				{
+					id: 0,
+					paragraph: `KG Roofing is an Owens Corning Preferred Contractor. `
+				},
+				{
+					id: 1,
+					paragraph: `Owens Corning is a global leader in  high-quality roofing and insulation products. Really, they make entire roofing systems, and because of how well these systems protect and insulate buildings and homes, they have excellent warrantees. Plus, they look great! `
+				},
+				{
+					id: 2,
+					paragraph: `Contact us for more information on products offered and choices available for your roof. `
+				}
+			]
 		}
 	];
 	vendorContents: VendorContent[] = [

@@ -85,6 +85,67 @@ strong { font-weight: bold; }
 .uppercase { text-transform: uppercase; }
 .obl { font-style: $obli; }
 .shd { text-shadow: 3px 3px 3px $nblu; } 
+// 
+// JUSTIFY CONTENT
+// 
+.jcs {
+  justify-content: start;
+}
+.jcfs { 
+  justify-content: flex-start;
+}
+.jcc {
+  justify-content: center;
+}
+.jce { 
+  justify-content: end;
+}
+.jcfe { 
+  justify-content: flex-end;
+}
+.jcl {
+  justify-content: left;
+}
+.jcr {
+  justify-content: right;
+}
+.jcsb {
+  justify-content: space-between;
+}
+.jcsa {
+  justify-content: space-around;
+}
+.jcse {
+  justify-content: space-evenly;
+}
+.jcst {
+  justify-content: stretch;
+}
+
+//
+// JUSTIFY ITEMS
+//
+.jil {
+  justify-items: left;
+}
+.jic {
+  justify-items: center;
+}
+.jir {
+  justify-items: right;
+}
+//
+// JUSTIFY SELF
+//
+.jsl {
+  justify-self: left;
+}
+.jsc {
+  justify-self: center;
+}
+.jsr {
+  justify-self: right;
+}
 
 /** html {
   font-family: $sansSerif, sans-serif;
