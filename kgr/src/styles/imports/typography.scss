@@ -85,6 +85,7 @@ strong { font-weight: bold; }
 .uppercase { text-transform: uppercase; }
 .obl { font-style: $obli; }
 .shd { text-shadow: 3px 3px 3px $nblu; } 
+.nobrk { white-space: nowrap; }
 // 
 // JUSTIFY CONTENT
 // 
