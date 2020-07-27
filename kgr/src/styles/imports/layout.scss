@@ -47,6 +47,14 @@
   align-items:center;
   justify-content:center;
 }
+.carouselxs {
+  p {
+    margin-bottom: .25rem !important;
+    line-height: 1rem;
+    @include mat-typography-level-to-styles($custom-body-typography, caption);
+
+  }
+}
 
 // Mat-Card Styles
 .mcard {
@@ -83,7 +91,10 @@ mat-icon.mat-card-avatar {
   margin-bottom: -1.0rem;
 }
 .mat-card-image:first-child {
-  margin-top:0;
+  margin-top: 0;
+}
+.mat-card-image:last-child {
+  margin-bottom: 0;
 }
 
 // img captions

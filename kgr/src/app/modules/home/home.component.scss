@@ -14,13 +14,19 @@
   min-height: 7rem;
   width: auto;
 }
-.mcard #inspectIcons, #inspectIcons2 {
+.mcard #inspectIcons, .inspectIcons2 {
   line-height: 0;
 }
-#inspectIcons2 img {
+.inspectIcons2 img {
   min-height: 1.5rem;
   width: auto;
   margin-right: 1rem;
+}
+.inspectIcons2xs img {
+  min-height: 1.125rem;
+  width: auto;
+  margin-right: 0.25rem;
+  line-height: 0;
 }
 .mcard #inspectQuote {
   font-size: $font-lg;
@@ -51,7 +57,7 @@ mat-card #inspection{
 .mat-card-actions {
   padding: .5rem 1rem;
 }
-#investprotect {
+.investprotect {
   //border: solid $neon-aqua;
   min-height: 7rem;
   border-radius: 16px;
@@ -62,11 +68,14 @@ mat-card #inspection{
   overflow: hidden;
   h1 {
     text-align: center;
-    vertical-align: auto;
+    vertical-align: middle;
     margin: 0rem auto;
     letter-spacing: .75rem;
     line-height: 2.25;
   }
+}
+.investprotectxs h1 {
+  letter-spacing: .3125rem !important;
 }
 #investoverlay {
   background-color: rgba(0, 0, 0, 0.35);

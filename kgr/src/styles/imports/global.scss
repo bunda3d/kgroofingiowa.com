@@ -78,6 +78,13 @@ mat-list.mat-list.mat-list-base {
 .mat-list-base {
 	padding-top: 0;
 }
+// mat-list : less padding for small screens
+.mat-list-pad-xs {
+.mat-list-item-content {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+}
 
 // colorful
 .goldBold {
