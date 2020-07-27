@@ -97,7 +97,7 @@ mat-icon.mat-card-avatar {
 }
 .caption-btm {
   width: calc(100% + 32px);
-  margin: 0 16px;
+  margin: 0 -16px;
   position: absolute;
   bottom: 1rem;
   align-self: flex-end;
@@ -129,7 +129,9 @@ mat-icon.mat-card-avatar {
 footer {
   background-image:  url("/assets/bg/bg-gr-dbl-lbl2.svg");
   background-size: cover;
+  background-position: center;
   padding: 2rem 0;
+
 }
 footer mat-toolbar {
   background-color: transparent;  
@@ -156,6 +158,12 @@ footer p {
 }
 footer mat-toolbar p {
   @include mat-typography-level-to-styles($custom-body-typography, body-1);
+}
+
+.xsp { 
+  mat-toolbar p {
+    @include mat-typography-level-to-styles($custom-body-typography, caption);
+  }
 }
 
 // MARGIN & PADDING helpers

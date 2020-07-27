@@ -14,7 +14,7 @@ $custom-heading-typography: mat-typography-config(
   $display-3: mat-typography-level($d3, $disp-line-ht, $regular),
   $display-2: mat-typography-level($d2, $title-line-ht, $regular),
   $display-1: mat-typography-level($d1, $title-line-ht, $regular),
-  $headline: mat-typography-level($h1, $title-line-ht, $bold),
+  $headline: mat-typography-level($h1, $title-line-ht, $regular),
   $title: mat-typography-level($h2, $title-line-ht, $regular),
   $subheading-2: mat-typography-level($h3, $title-line-ht $regular),
   $subheading-1: mat-typography-level($h4, $title-line-ht, $light),
@@ -86,6 +86,14 @@ strong { font-weight: bold; }
 .obl { font-style: $obli; }
 .shd { text-shadow: 3px 3px 3px $nblu; } 
 .nobrk { white-space: nowrap; }
+.brkwrd {
+  word-break: break-word !important;
+}
+.mat-white-space-normal {
+  mat-toolbar-row {
+    white-space: normal !important;
+  }
+}
 // 
 // JUSTIFY CONTENT
 // 
@@ -146,6 +154,19 @@ strong { font-weight: bold; }
 }
 .jsr {
   justify-self: right;
+}
+
+//
+// TEXT ALIGN
+// 
+.tal {
+  text-align: left;
+}
+.tac {
+  text-align: center;
+}
+.tar {
+  text-align: right;
 }
 
 /** html {

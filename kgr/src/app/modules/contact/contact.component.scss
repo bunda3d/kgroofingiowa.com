@@ -17,6 +17,8 @@
   background-image: url("/assets/bg/bg-gr-dbl-lbl2.svg");
   background-position: center center;
   background-size: cover;
+  word-break: break-word;
+  overflow-wrap: break-word;
   div #sub {
     border-bottom: solid;
     mat-card-title {
@@ -26,12 +28,12 @@
     }
   }
   mat-card-title.subtwo {
-    @include mat-typography-level-to-styles($custom-heading-typography, display-1);
+    @include mat-typography-level-to-styles($custom-heading-typography, headline);
     padding: 1rem 0rem 0rem 1.5rem; 
     color: $blu3; 
   }
   mat-card-subtitle.subthree {
-    @include mat-typography-level-to-styles($custom-heading-typography, display-1);
+    @include mat-typography-level-to-styles($custom-heading-typography, headline);
     padding: 0.5rem 1rem 0rem 1.5rem;
     color: white;
   }

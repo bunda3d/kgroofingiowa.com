@@ -230,7 +230,12 @@
 		</div>
 		<!--footer-->
 		<footer fxFlexOffset="auto">
-			<div class="content" fxLayout="column" fxLayoutAlign="center space-around">
+			<div
+				class="content"
+				[ngClass.xs]="['brkwrd', 'mat-white-space-normal', 'xsp']"
+				fxLayout="column"
+				fxLayoutAlign="center space-around"
+			>
 				<mat-toolbar class="lb">
 					<mat-toolbar-row class="pb">
 						<div>
@@ -240,6 +245,23 @@
 								alt="KG Roofing Logo"
 							/>
 						</div>
+						<div
+							fxHide.xs
+							class="pb"
+							fxLayout="column"
+							fxLayoutAlign="start space-around"
+						>
+							<h1>KG Roofing</h1>
+							<h5 class="custom-list-item" id="nav-slogan">
+								The experts you can trust, &nbsp;
+							</h5>
+							<h5 class="custom-list-item" id="nav-slogan">
+								The quality you can count on!
+							</h5>
+						</div>
+					</mat-toolbar-row>
+
+					<mat-toolbar-row fxHide.gt-xs class="pb">
 						<div class="pb" fxLayout="column" fxLayoutAlign="start space-around">
 							<h1>KG Roofing</h1>
 							<h5 class="custom-list-item" id="nav-slogan">
@@ -251,9 +273,15 @@
 						</div>
 					</mat-toolbar-row>
 				</mat-toolbar>
+
 				<mat-toolbar class="pt pb">
 					<mat-toolbar-row>
-						<div class="pr lr" fxLayout="column" fxLayoutAlign="start space-around">
+						<div
+							class="pr lr"
+							fxLayout="column"
+							fxLayoutAlign="start space-around"
+							fxflex.xs="50%"
+						>
 							<h3>Phone:</h3>
 							<mat-divider></mat-divider>
 							<p class="pb">
@@ -264,7 +292,7 @@
 							<h3>email:</h3>
 							<mat-divider></mat-divider>
 							<p class="pb">
-								<a href="mailto:kgrell@kgroofingiowa.com">kgrell@kgroofingiowa.com</a>
+								<a href="mailto:kgrell@kgroofingiowa.com">kgrell @ kgroofing iowa.com</a>
 							</p>
 							<h3>Address:</h3>
 							<mat-divider></mat-divider>
@@ -272,8 +300,8 @@
 							<p class="nmb npb">2578 150th Street,</p>
 							<p>Fort Dodge, IA 50501</p>
 						</div>
-						<div fxLayout="column" fxLayoutAlign="start space-around">
-							<mat-nav-list fxLayout="column" fxLayoutAlign="start space-around">
+						<div fxLayout="column" fxLayoutAlign="start space-around" fxFlex.xs="45%">
+							<mat-nav-list fxLayout="column" fxLayoutAlign="center space-around">
 								<a
 									mat-list-item
 									routerLinkActive="active"
