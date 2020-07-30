@@ -23,7 +23,7 @@ $custom-body-typography: mat-typography-config(
   $font-family: $primary-font,
   $body-1: mat-typography-level($primary-fs, $primary-line-ht, $regular),
   $body-2: mat-typography-level($primary-fs, $primary-line-ht, $medium),
-  $caption: mat-typography-level($font-sm, $caption-line-ht, $regular),
+  $caption: mat-typography-level($font-sm, $caption-line-ht, $light),
   $button: mat-typography-level($primary-fs, $disp-line-ht, $medium),
   $input: mat-typography-level(inherit, $input-line-ht, $regular),
 );

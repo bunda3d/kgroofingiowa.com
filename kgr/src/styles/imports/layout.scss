@@ -98,44 +98,47 @@ mat-icon.mat-card-avatar {
 }
 
 // img captions
-.caption-wrap {
-  display: flex;
-  flex-direction:column;
-  gap: 0 1em;
+.caption-wrap {  
+  position: relative;
   width: calc(100% + 0px);
   margin: 0;
-  position: relative;
+  .caption {    
+    position: absolute;
+    width: calc(100% + 32px);
+    margin: 0 -16px; 
+    padding: 0.25rem 0.5rem;
+    @include mat-typography-level-to-styles($custom-body-typography, caption);
+    //font-size: $primary-fs;  
+    //font-weight: $light;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 2;
+  }
+  .caption-btm { 
+    @extend .caption;
+    bottom: 1.25rem;
+  }
+  .caption-btm-zero {
+    @extend .caption;
+    bottom: -0.125rem;
+  }
+  .caption-top {
+    @extend .caption;
+    top: 1.25rem;
+  }
+  .caption-top-zero {
+    @extend .caption;
+    top: 0.25rem;
+  }
+  // when not 
+  .caption-btm-div { 
+    @extend .caption;
+    bottom: 1rem;
+    width: calc(100% + 0px);
+    margin: 0 -16px -16px -16px; 
+  }
 }
-.caption-btm {
-  width: calc(100% + 32px);
-  margin: 0 -16px;
-  position: absolute;
-  bottom: 1rem;
-  align-self: flex-end;
-  font-size: $primary-fs;  
-  font-weight: $light;
-  text-align: center;
-  vertical-align: baseline;
-  padding: 0.25rem 0.5rem;
-  background-color: rgba(0, 0, 0, 0.45);
-  z-index: 2;
-}
-.caption-btm-zero {
-  bottom: 0rem !important;
-}
-.caption-btm-overlay {
-  width: 100%;
-  margin: 0 -16px;
-  position: absolute;
-  bottom: 0rem;
-  font-size: $primary-fs;  
-  font-weight: $light;
-  text-align: center;
-  vertical-align: baseline;
-  padding: 0.25rem .5rem;
-  background-color: rgba(0, 0, 0, 0.45);
-  z-index: 2;
-}
+
 // Footer Styles
 footer {
   background-image:  url("/assets/bg/bg-gr-dbl-lbl2.svg");
