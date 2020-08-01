@@ -88,35 +88,35 @@ mat-list.mat-list.mat-list-base {
 
 // colorful
 .goldBold {
-	color: $gold;
-	font-weight: $bold;
+	color: $gold !important;
+	font-weight: $bold !important;
 }
 .gold {
-	color: $gold;
+	color: $gold !important;
 }
 .orange {
-	color: $orange;
+	color: $orange !important;
 }
 .neonAqua {
-	color: $neon-aqua;
+	color: $neon-aqua !important;
 }
 .nblu {
-	color: $nblu;
+	color: $nblu !important;
 }
 .blu {
-	color: $blue;
+	color: $blue !important;
 }
 .blu2 {
-	color: $blu2;
+	color: $blu2 !important;
 }
 .blu3 {
-	color: $blu3;
+	color: $blu3 !important;
 }
 .white {
-	color: $white
+	color: $white !important;
 }
 // background: clear
 .bgclr {
-	background-color: transparent;
+	background-color: transparent !important;
 }
 

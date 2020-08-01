@@ -23,15 +23,14 @@ $custom-body-typography: mat-typography-config(
   $font-family: $primary-font,
   $body-1: mat-typography-level($primary-fs, $primary-line-ht, $regular),
   $body-2: mat-typography-level($primary-fs, $primary-line-ht, $medium),
-  $caption: mat-typography-level($font-sm, $caption-line-ht, $light),
+  $caption: mat-typography-level($primary-fs, $caption-line-ht, $light),
   $button: mat-typography-level($primary-fs, $disp-line-ht, $medium),
   $input: mat-typography-level(inherit, $input-line-ht, $regular),
 );
 // Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
-@include mat-base-typography($custom-heading-typography);
+// @include mat-base-typography($custom-heading-typography);
 // Override typography for all Angular Material, including mat-base-typography and all components.
-/* @include angular-material-typography($custom-heading-typography); */
-
+@include angular-material-typography($custom-body-typography); 
 // Override the typography in the core CSS.
 // @include mat-core($custom-body-typography);
 

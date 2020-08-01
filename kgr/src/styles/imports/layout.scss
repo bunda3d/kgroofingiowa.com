@@ -90,6 +90,10 @@ mat-icon.mat-card-avatar {
 .mat-card-header {
   margin-bottom: -1.0rem;
 }
+.mat-card-image {
+  @extend .mat-card-image;
+  margin-bottom: 0rem;
+}
 .mat-card-image:first-child {
   margin-top: 0;
 }
@@ -98,46 +102,49 @@ mat-icon.mat-card-avatar {
 }
 
 // img captions
-.caption-wrap {  
-  position: relative;
-  width: calc(100% + 0px);
-  margin: 0;
-  .caption {    
-    position: absolute;
-    width: calc(100% + 32px);
-    margin: 0 -16px; 
-    padding: 0.25rem 0.5rem;
-    @include mat-typography-level-to-styles($custom-body-typography, caption);
-    //font-size: $primary-fs;  
-    //font-weight: $light;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.45);
-    z-index: 2;
-  }
-  .caption-btm { 
-    @extend .caption;
-    bottom: 1.25rem;
-  }
-  .caption-btm-zero {
-    @extend .caption;
-    bottom: -0.125rem;
-  }
-  .caption-top {
-    @extend .caption;
-    top: 1.25rem;
-  }
-  .caption-top-zero {
-    @extend .caption;
-    top: 0.25rem;
-  }
-  // when not 
-  .caption-btm-div { 
-    @extend .caption;
-    bottom: 1rem;
+
+  .caption-wrap {  
+    position: relative;
     width: calc(100% + 0px);
-    margin: 0 -16px -16px -16px; 
+    margin: -0.25rem 0rem;
+    padding: 0px;
+    .caption {        
+      @include mat-typography-level-to-styles($custom-body-typography, caption); 
+      position: absolute;
+      width: calc(100% + 32px);
+      margin: .25rem -1rem; 
+      padding: 0.25rem 0.5rem;
+      //font-size: $primary-fs;  
+      //font-weight: $light;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.45);
+      z-index: 2;
+    }
+    .caption-btm { 
+      @extend .caption;
+      bottom: 0rem;
+    }
+    .caption-btm-zero {
+      @extend .caption;
+      bottom: -1.75rem;
+    }
+    .caption-top {
+      @extend .caption;
+      top: 0rem;
+    }
+    .caption-top-zero {
+      @extend .caption;
+      top: -2rem;
+    }
+    // when captioning a non mat-img divs
+    .caption-btm-div { 
+      @extend .caption;
+      bottom: 1rem;
+      width: calc(100% + 0px);
+      margin: 0 -16px -16px -16px; 
+    }
   }
-}
+
 
 // Footer Styles
 footer {
