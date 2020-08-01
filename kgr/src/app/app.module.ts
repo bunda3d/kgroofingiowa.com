@@ -28,6 +28,7 @@ import { InputsModule } from './modules/_forms/inputs.module';
 import { EmployeesComponent } from './modules/employees/employees.component';
 import { EmployeeComponent } from './modules/employees/employee/employee.component';
 import { ProjectModule } from './modules/project/project.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
 	declarations: [AppComponent, EmployeesComponent, EmployeeComponent],
@@ -51,7 +52,8 @@ import { ProjectModule } from './modules/project/project.module';
 		SidenavModule,
 		InputsModule,
 		ProjectModule,
-		AppRoutingModule
+		AppRoutingModule,
+		ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
 		// ImagekitioAngularModule.forRoot({
 		// 	// https://github.com/imagekit-developer/imagekit-angular
 		// 	publicKey: environment.publicKey,
