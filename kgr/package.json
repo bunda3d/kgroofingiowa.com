@@ -81,7 +81,7 @@
 		"fix-styles": "prettier-stylelint --write 'src/**/*.{css,scss}'",
 		"lint": "ng lint",
 		"ng": "ng",
-		"bundle-report": "ng build --prod --stats-json && webpack-bundle-analyzer dist/stats.json",
+		"bundle-report": "ng build --prod --stats-json && webpack-bundle-analyzer dist/kgr/stats.json",
 		"postinstall": "ngcc",
 		"start": "ng serve",
 		"test": "ng test"
