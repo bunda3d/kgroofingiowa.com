@@ -1,8 +1,8 @@
 // TYPOGRAPHY
 
-/* extending Material theme and typography 
-to make title fonts (h1, dislplay-4, etc.) 
-use Roboto Condensed Medium (500) */
+/* extending Material theme and typography thru Custom Configs 
+to make title fonts (h1, display-4, etc.) use Roboto Condensed, 
+and body fonts (body-1, buttons, etc.) use Roboto */
 // https://material.angular.io/guide/typography 
 
 @import '~@angular/material/theming';
@@ -30,7 +30,7 @@ $custom-body-typography: mat-typography-config(
 // Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
 // @include mat-base-typography($custom-heading-typography);
 // Override typography for all Angular Material, including mat-base-typography and all components.
-@include angular-material-typography($custom-body-typography); 
+@include angular-material-typography($custom-heading-typography and $custom-body-typography); 
 // Override the typography in the core CSS.
 // @include mat-core($custom-body-typography);
 
