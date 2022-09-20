@@ -221,14 +221,16 @@
 				<!-- <div fxFlex></div> -->
 			</div>
 		</mat-toolbar>
-		<!--wrap content for margin-->
+		<!-- wrap content for margin -->
 		<div class="flex-container" fxLayout="column" fxLayoutAlign="space-around center">
 			<div class="content" fxFlex>
-				<!--all router-outlet content shows here-->
-				<router-outlet> </router-outlet>
+				<!-- so routed content scrolls to top:  (activate)="onActive()" -->
+				<router-outlet (activate)="onActivate($event)">
+					<!-- all router-outlet content shows here -->
+				</router-outlet>
 			</div>
 		</div>
-		<!--footer-->
+		<!-- footer -->
 		<footer fxFlexOffset="auto">
 			<div
 				class="content"
@@ -292,12 +294,14 @@
 							<h3>email:</h3>
 							<mat-divider></mat-divider>
 							<p class="pb">
-								<a href="mailto:kgrell@kgroofingiowa.com">kgrell @ kgroofing iowa.com</a>
+								<a title="email KG Roofing" href="mailto:kgrell@kgroofingiowa.com"
+									>kgrell @ kgroofing iowa.com</a
+								>
 							</p>
 							<h3>Address:</h3>
 							<mat-divider></mat-divider>
 							<p class="nmb npb">KG Roofing, LLC</p>
-							<p class="nmb npb">2578 150th Street,</p>
+							<p class="nmb npb">1824 1st Ave S.</p>
 							<p>Fort Dodge, IA 50501</p>
 						</div>
 						<div fxLayout="column" fxLayoutAlign="start space-around" fxFlex.xs="45%">

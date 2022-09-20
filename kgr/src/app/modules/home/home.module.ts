@@ -13,6 +13,7 @@ import { HomeRoutingModule } from './home-routing.module';
 // Other
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { ScrollTopComponent } from '../scroll-top/scroll-top.component';
 
 @NgModule({
 	declarations: [HomeComponent],

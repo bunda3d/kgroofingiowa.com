@@ -1,6 +1,8 @@
 <!--Mat Theme Wrapper, for toggling light-mode-->
 <div [ngClass]="{ 'theme-dark': isDarkTheme | async }">
-	<app-sidenav> <span class="loader" *ngIf="loading"></span></app-sidenav>
+	<app-sidenav>
+		<span class="loader" *ngIf="loading"></span>
+	</app-sidenav>
 </div>
 <!--testing inputs -->
 <!-- 

@@ -43,8 +43,7 @@ const routes: Routes = [
 		RouterModule.forRoot(routes, {
 			initialNavigation: 'enabled',
 			enableTracing: false,
-			scrollPositionRestoration: 'enabled'
-			// Add options right here
+			scrollPositionRestoration: 'top'
 		})
 	],
 	exports: [RouterModule]

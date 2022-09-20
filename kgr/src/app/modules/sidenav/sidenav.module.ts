@@ -15,6 +15,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 // Component imports
 import { SidenavComponent } from './sidenav.component';
+import { ScrollTopComponent } from '../scroll-top/scroll-top.component';
 
 @NgModule({
 	declarations: [SidenavComponent],

@@ -29,9 +29,10 @@ import { EmployeesComponent } from './modules/employees/employees.component';
 import { EmployeeComponent } from './modules/employees/employee/employee.component';
 import { ProjectModule } from './modules/project/project.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { ScrollTopComponent } from './modules/scroll-top/scroll-top.component';
 
 @NgModule({
-	declarations: [AppComponent, EmployeesComponent, EmployeeComponent],
+	declarations: [AppComponent, EmployeesComponent, EmployeeComponent, ScrollTopComponent],
 	imports: [
 		BrowserModule,
 		FormsModule,

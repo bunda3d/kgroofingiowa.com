@@ -29,6 +29,12 @@ export class SidenavComponent implements OnInit {
 			map(result => result.matches),
 			shareReplay()
 		);
+		
+	//so routed pages scroll to top on load
+	onActivate(event){
+		//window.scrollTo(0, 0);
+		document.body.scrollTop = 0;
+	}
 
 	@ViewChild('drawer') drawer: SidenavComponent;
 

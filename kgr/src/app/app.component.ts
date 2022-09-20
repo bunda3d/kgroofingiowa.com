@@ -19,19 +19,26 @@ export class AppComponent implements OnInit {
 	constructor(
 		private themeService: ThemeService,
 		public breakpointObserver: BreakpointObserver,
-		router: Router
-	) {
+		public router: Router
+	) { 
 		this.loading = false;
-		router.events.subscribe((event: RouterEvent): void => {
+		this.router.events.subscribe((event: RouterEvent): void => {
 			if (event instanceof NavigationStart) {
 				this.loading = true;
 			} else if (event instanceof NavigationEnd) {
 				this.loading = false;
 			}
 		});
+
+		this.router.events.subscribe((evt) => {
+			if (evt instanceof NavigationEnd) {
+				 document.body.scrollTop = 0;
+			}
+	 });
 	}
 
 	ngOnInit() {
 		this.isDarkTheme = this.themeService.isDarkTheme;
+
 	}
 }
