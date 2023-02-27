@@ -1,0 +1,41 @@
+<!-- <div
+	id="g_id_onload"
+	data-client_id="1076446674411-iphlg9r3svgr84cbcm4eipupj63jruit.apps.googleusercontent.com"
+	data-context="signin"
+	data-ux_mode="popup"
+	data-login_uri="https://dev.kgroofingiowa.com/about"
+	data-auto_select="true"
+	data-itp_support="true"
+	data-allowed_parent_origin="http://localhost,https://*.kgroofingiowa.com"
+></div>
+
+<div
+	class="g_id_signin"
+	data-type="standard"
+	data-shape="rectangular"
+	data-theme="outline"
+	data-text="signin_with"
+	data-size="large"
+	data-logo_alignment="left"
+></div> -->
+<mat-card
+	[ngClass.lt-md]="'login-card-ltm'"
+	[ngClass.gt-sm]="'login-card-gts'"
+	[ngClass.xs]="'login-card-xs'"
+>
+	<mat-card-header>
+		<i mat-card-avatar class="mcard-header-img"></i>
+		<mat-card-title>Authorization </mat-card-title>
+	</mat-card-header>
+
+	<mat-card-content>
+		<mat-divider></mat-divider>
+		<p class="pt">
+			KG Roofing App Sign-in
+		</p>
+		<mat-divider></mat-divider>
+	</mat-card-content>
+	<mat-card-footer>
+		<div id="google_btn" class="center pt pb"></div>
+	</mat-card-footer>
+</mat-card>

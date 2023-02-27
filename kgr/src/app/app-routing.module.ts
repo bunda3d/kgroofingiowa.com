@@ -27,6 +27,16 @@ const routes: Routes = [
 			import('./modules/project/project.module').then(m => m.ProjectModule)
 	},
 	{
+		path: 'login',
+		loadChildren: () =>
+			import('./modules/_admin/login/login.module').then(m => m.LoginModule)
+	},
+	{
+		path: 'drive',
+		loadChildren: () =>
+			import('./modules/_admin/drive/drive.module').then(m => m.DriveModule)
+	},
+	{
 		path: '',
 		redirectTo: '/home',
 		pathMatch: 'full'
