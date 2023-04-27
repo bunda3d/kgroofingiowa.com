@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { ThemeService } from './core/services/theme.service';
-
 import { Router, RouterEvent, NavigationEnd, NavigationStart } from '@angular/router';
 
 @Component({

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import jwtDecode from 'jwt-decode';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../../environments/environment';
 
 declare var google: any;
+declare var access_token: any;
 
 interface JwtToken {
   sub: string;
@@ -21,9 +22,11 @@ interface JwtToken {
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-  
-  ngOnInit() {
 
+  ngOnInit() {
+    /*==========================*/
+    // Google Identity Sign In
+    /*==========================*/
     google.accounts.id.initialize({
       client_id: environment.googleOAuthClientId,
       ux_mode: 'popup',
@@ -40,9 +43,24 @@ export class LoginComponent implements OnInit {
       size: 'large',
       width: 240,
     }); 
-    
+
     //this makes One Tap appear
-    //google.accounts.id.prompt();  
+    //google.accounts.id.prompt();
+
+    /*==========================*/
+    // Google Identity Authorization
+    // Implicit Grant Model
+    // https://developers.google.com/identity/oauth2/web/guides/use-token-model
+    /*==========================*/
+
+    const client = google.accounts.oauth2.initTokenClient({
+      client_id: environment.googleOAuthClientId,
+      scope: 'https://www.googleapis.com/auth/drive',
+      callback: (tokenResponse) => {
+        access_token = tokenResponse.access_token;
+      }
+    });
+    client.requestAccessToken();
   }
 
   async handleCredentialResponse(response) {
@@ -55,9 +73,20 @@ export class LoginComponent implements OnInit {
   
   decodeJwtResponse(credential: string): JwtToken {
     const decodedToken = jwtDecode<JwtToken>(credential);
-    
     console.log(decodedToken);
-
     return decodedToken;
+  } 
+
+  async loadDrive() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://www.googleapis.com/calendar/v3/calendars/primary/events');
+    xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);
+    xhr.send();
+  }
+
+  async revokeToken() {
+    google.accounts.oauth2.revoke(access_token, () => {
+      console.log('access token revoked')
+    });
   }
 }
