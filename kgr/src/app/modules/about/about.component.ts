@@ -178,7 +178,7 @@ export class AboutComponent implements OnInit {
 				{
 					id: 1,
 					paragraph:
-						'KG Roofing has installed these remarkable materials on residential, commercial, and institutional buildings-always resulting in an impressive display of character. When you install DaVinci, your roof will be admired. '
+						'KG Roofing has installed these remarkable materials on residential, commercial, and institutional buildings—always resulting in an impressive display of character. When you install DaVinci, your roof will be admired. '
 				},
 				{
 					id: 2,
