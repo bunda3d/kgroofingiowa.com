@@ -238,9 +238,9 @@
 				fxLayout="column"
 				fxLayoutAlign="center space-around"
 			>
-				<mat-toolbar class="mat-toolbar mat-toolbar-multiple-rows">
+				<mat-toolbar>
 					<mat-toolbar-row class="lb">
-						<mat-toolbar-row class="pb">
+						<div class="pb">
 							<div>
 								<img
 									class="mr pr"
@@ -262,9 +262,9 @@
 									The quality you can count on!
 								</h5>
 							</div>
-						</mat-toolbar-row>
+						</div>
 
-						<mat-toolbar-row fxHide.gt-xs class="pb">
+						<div fxHide.gt-xs class="pb">
 							<div class="pb" fxLayout="column" fxLayoutAlign="start space-around">
 								<h1>KG Roofing</h1>
 								<h5 class="custom-list-item" id="nav-slogan">
@@ -274,73 +274,69 @@
 									The quality you can count on!
 								</h5>
 							</div>
-						</mat-toolbar-row>
+						</div>
 					</mat-toolbar-row>
 
 					<mat-toolbar-row class="pt pb">
-						<mat-toolbar-row>
-							<div
-								class="pr lr"
-								fxLayout="column"
-								fxLayoutAlign="start space-around"
-								fxflex.xs="50%"
-							>
-								<h3>Phone:</h3>
-								<mat-divider></mat-divider>
-								<p class="pb">
-									<a class="nodec" title="Call KG Roofing" href="tel:+1-515-955-2061"
-										>515-955-2061</a
-									>
-								</p>
-								<h3>email:</h3>
-								<mat-divider></mat-divider>
-								<p class="pb">
-									<a title="email KG Roofing" href="mailto:kgrell@kgroofingiowa.com"
-										>kgrell @ kgroofing iowa.com</a
-									>
-								</p>
-								<h3>Address:</h3>
-								<mat-divider></mat-divider>
-								<p class="nmb npb">KG Roofing, LLC</p>
-								<p class="nmb npb">1824 1st Ave S.</p>
-								<p>Fort Dodge, IA 50501</p>
-							</div>
-							<div fxLayout="column" fxLayoutAlign="start space-around" fxFlex.xs="45%">
-								<mat-nav-list fxLayout="column" fxLayoutAlign="center space-around">
-									<a
-										mat-list-item
-										routerLinkActive="active"
-										[routerLink]="['/home']"
-										[routerLinkActiveOptions]="{ exact: true }"
-										><span> &nbsp; &nbsp; Home</span>
-									</a>
-									<a
-										mat-list-item
-										routerLinkActive="active"
-										[routerLink]="['/about']"
-										[routerLinkActiveOptions]="{ exact: true }"
-										><span> &nbsp; &nbsp; About</span>
-									</a>
-									<a
-										mat-list-item
-										routerLinkActive="active"
-										[routerLink]="['/contact']"
-										[routerLinkActiveOptions]="{ exact: true }"
-										><span> &nbsp; &nbsp; Contact</span>
-									</a>
-								</mat-nav-list>
-							</div>
-						</mat-toolbar-row>
-					</mat-toolbar-row>
-					<mat-toolbar-row class="pt lt">
-						<mat-toolbar-row>
-							<p>© KG Roofing &nbsp; &nbsp; | &nbsp; &nbsp;</p>
-							<p>
-								<a href="https://krisbunda.com/blog/about/" target="_blank"
-									>Web App by KBD</a
+						<div
+							class="pr lr"
+							fxLayout="column"
+							fxLayoutAlign="start space-around"
+							fxflex.xs="50%"
+						>
+							<h3>Phone:</h3>
+							<mat-divider></mat-divider>
+							<p class="pb">
+								<a class="nodec" title="Call KG Roofing" href="tel:+1-515-955-2061"
+									>515-955-2061</a
 								>
 							</p>
-						</mat-toolbar-row>
+							<h3>email:</h3>
+							<mat-divider></mat-divider>
+							<p class="pb">
+								<a title="email KG Roofing" href="mailto:kgrell@kgroofingiowa.com"
+									>kgrell @ kgroofing iowa.com</a
+								>
+							</p>
+							<h3>Address:</h3>
+							<mat-divider></mat-divider>
+							<p class="nmb npb">KG Roofing, LLC</p>
+							<p class="nmb npb">1824 1st Ave S.</p>
+							<p>Fort Dodge, IA 50501</p>
+						</div>
+						<div fxLayout="column" fxLayoutAlign="start space-around" fxFlex.xs="45%">
+							<mat-nav-list fxLayout="column" fxLayoutAlign="center space-around">
+								<a
+									mat-list-item
+									routerLinkActive="active"
+									[routerLink]="['/home']"
+									[routerLinkActiveOptions]="{ exact: true }"
+									><span> &nbsp; &nbsp; Home</span>
+								</a>
+								<a
+									mat-list-item
+									routerLinkActive="active"
+									[routerLink]="['/about']"
+									[routerLinkActiveOptions]="{ exact: true }"
+									><span> &nbsp; &nbsp; About</span>
+								</a>
+								<a
+									mat-list-item
+									routerLinkActive="active"
+									[routerLink]="['/contact']"
+									[routerLinkActiveOptions]="{ exact: true }"
+									><span> &nbsp; &nbsp; Contact</span>
+								</a>
+							</mat-nav-list>
+						</div>
+					</mat-toolbar-row>
+					<mat-toolbar-row class="pt lt">
+						<p>© KG Roofing &nbsp; &nbsp; | &nbsp; &nbsp;</p>
+						<p>
+							<a href="https://krisbunda.com/blog/about/" target="_blank"
+								>Web App by KBD</a
+							>
+						</p>
 					</mat-toolbar-row>
 				</mat-toolbar>
 			</div>
