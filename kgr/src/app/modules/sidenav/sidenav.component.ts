@@ -13,6 +13,15 @@ export class SidenavComponent implements OnInit {
 	Page = 'KG Roofing';
 	isDarkTheme: Observable<boolean>;
 
+	//for mat-nav-list in drawer
+	/* 	selectedNavItem = '';
+	navItems = [
+		{ title: 'Home', icon: 'home', path: '/home' },
+		{ title: 'About Us', icon: 'assignment', path: '/about' },
+		{ title: 'Contact Us', icon: 'call', path: '/contact' }
+	]; */
+	//end for mat-nav-list in drawer
+
 	isExtraSmall$: Observable<boolean> = this.breakpointObserver
 		.observe(Breakpoints.XSmall)
 		.pipe(
@@ -29,9 +38,9 @@ export class SidenavComponent implements OnInit {
 			map(result => result.matches),
 			shareReplay()
 		);
-		
+
 	//so routed pages scroll to top on load
-	onActivate(event){
+	onActivate(event) {
 		//window.scrollTo(0, 0);
 		document.body.scrollTop = 0;
 	}

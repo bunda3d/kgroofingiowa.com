@@ -33,10 +33,22 @@
 		</mat-toolbar>
 		<mat-divider></mat-divider>
 		<mat-nav-list>
+			<!-- 			<a
+				*ngFor="let link of navItems"
+				mat-list-item
+				(click)="drawer.toggle()"
+				[routerLink]="link.path"
+				[routerLinkActiveOptions]="{ exact: true }"
+				routerLinkActive="active-link"
+			>
+				<mat-icon>{{ link.icon }}</mat-icon>
+				<span> &nbsp; &nbsp; {{ link.title }}</span>
+			</a> -->
+
 			<a
 				mat-list-item
-				routerLinkActive="active"
 				[routerLink]="['/home']"
+				routerLinkActive="active-link"
 				[routerLinkActiveOptions]="{ exact: true }"
 				(click)="drawer.toggle()"
 			>
@@ -45,8 +57,8 @@
 			</a>
 			<a
 				mat-list-item
-				routerLinkActive="active"
 				[routerLink]="['/about']"
+				routerLinkActive="active-link"
 				[routerLinkActiveOptions]="{ exact: true }"
 				(click)="drawer.toggle()"
 			>
@@ -55,7 +67,7 @@
 			</a>
 			<!-- 			<a
 				mat-list-item
-				routerLinkActive="active"
+				routerLinkActive="active-link"
 				[routerLink]="['/project']"
 				[routerLinkActiveOptions]="{ exact: true }"
 				(click)="drawer.toggle()"
@@ -65,8 +77,8 @@
 			</a> -->
 			<a
 				mat-list-item
-				routerLinkActive="active"
 				[routerLink]="['/contact']"
+				routerLinkActive="active-link"
 				[routerLinkActiveOptions]="{ exact: true }"
 				(click)="drawer.toggle()"
 			>
@@ -75,33 +87,13 @@
 			</a>
 			<!-- 			<a
 				mat-list-item
-				routerLinkActive="active"
+				routerLinkActive="active-link"
 				[routerLink]="['/blogs']"
 				[routerLinkActiveOptions]="{ exact: true }"
 				(click)="drawer.toggle()"
 			>
 				<mat-icon>art_track</mat-icon>
 				<span> &nbsp; &nbsp; Blog</span>
-			</a> -->
-			<!-- 			<a
-				mat-list-item
-				routerLinkActive="active"
-				[routerLink]="['/financing']"
-				[routerLinkActiveOptions]="{ exact: true }"
-				(click)="drawer.toggle()"
-			>
-				<mat-icon>credit_card</mat-icon>
-				<span> &nbsp; &nbsp; Financing</span>
-			</a> -->
-			<!-- 			<a
-				mat-list-item
-				routerLinkActive="active"
-				[routerLink]="['/members']"
-				[routerLinkActiveOptions]="{ exact: true }"
-				(click)="drawer.toggle()"
-			>
-				<mat-icon>vpn_key</mat-icon>
-				<span> &nbsp; &nbsp; Members</span>
 			</a> -->
 			<!-- 
 			<div mat-list-item-content>
@@ -194,16 +186,27 @@
 
 						<div fxShow="true" fxHide.lt-md="true">
 							<!-- The following menu items will be hidden on both SM and XS screen sizes -->
-							<a routerLinkActive="active" [routerLink]="['/about']" mat-button
+							<a
+								[routerLink]="['/about']"
+								routerLinkActive="active-link"
+								[routerLinkActiveOptions]="{ exact: true }"
+								mat-button
 								>About Us</a
 							>
-							<!-- <a routerLinkActive="active" [routerLink]="['/project']" mat-button>Projects</a> -->
-							<a routerLinkActive="active" [routerLink]="['/contact']" mat-button
+							<a
+								[routerLink]="['/contact']"
+								routerLinkActive="active-link"
+								[routerLinkActiveOptions]="{ exact: true }"
+								mat-button
 								>Contact Us</a
 							>
-							<!-- <a routerLinkActive="active" [routerLink]="['/blogs']" mat-button>Blog</a> -->
-							<!-- <a routerLinkActive="active" [routerLink]="['/financing']" mat-button>Financing</a> -->
-							<!-- <a routerLinkActive="active" [routerLink]="['/members']" mat-button>Members</a> -->
+							<!-- <a
+								[routerLink]="['/blogs']"
+								routerLinkActive="active-link"
+								[routerLinkActiveOptions]="{ exact: true }"
+								mat-button
+								>Blog</a
+							> -->
 						</div>
 
 						<!--sidenav toggle-->
@@ -218,7 +221,6 @@
 						</button>
 					</mat-toolbar-row>
 				</div>
-				<!-- <div fxFlex></div> -->
 			</div>
 		</mat-toolbar>
 		<!-- wrap content for margin -->
@@ -308,21 +310,21 @@
 							<mat-nav-list fxLayout="column" fxLayoutAlign="center space-around">
 								<a
 									mat-list-item
-									routerLinkActive="active"
+									routerLinkActive="active-link"
 									[routerLink]="['/home']"
 									[routerLinkActiveOptions]="{ exact: true }"
 									><span> &nbsp; &nbsp; Home</span>
 								</a>
 								<a
 									mat-list-item
-									routerLinkActive="active"
+									routerLinkActive="active-link"
 									[routerLink]="['/about']"
 									[routerLinkActiveOptions]="{ exact: true }"
 									><span> &nbsp; &nbsp; About</span>
 								</a>
 								<a
 									mat-list-item
-									routerLinkActive="active"
+									routerLinkActive="active-link"
 									[routerLink]="['/contact']"
 									[routerLinkActiveOptions]="{ exact: true }"
 									><span> &nbsp; &nbsp; Contact</span>

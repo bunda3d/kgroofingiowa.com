@@ -11,7 +11,10 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatTableModule } from '@angular/material/table';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatButtonModule } from '@angular/material/button';
-import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import {
+	MatFormFieldModule,
+	MAT_FORM_FIELD_DEFAULT_OPTIONS
+} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 //services & app config
@@ -23,15 +26,10 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 //views
 import { AppComponent } from './app.component';
 import { SidenavModule } from './modules/sidenav/sidenav.module';
-import { ProjectModule } from './modules/project/project.module';
 import { ScrollTopComponent } from './modules/scroll-top/scroll-top.component';
-import { LoginModule } from './modules/_admin/login/login.module';
 
 @NgModule({
-	declarations: [
-		AppComponent,
-		ScrollTopComponent
-	],
+	declarations: [AppComponent, ScrollTopComponent],
 	imports: [
 		AppRoutingModule,
 		BrowserModule,
@@ -49,8 +47,6 @@ import { LoginModule } from './modules/_admin/login/login.module';
 		MatFormFieldModule,
 		MatInputModule,
 		MatIconModule,
-		LoginModule,
-		ProjectModule,
 		SidenavModule,
 		ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
 	],

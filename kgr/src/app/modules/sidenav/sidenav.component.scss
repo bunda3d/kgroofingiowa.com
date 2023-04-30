@@ -3,6 +3,10 @@
 // variables
 $nav-logo-max-ht:80px;
 
+.active-link {
+  background-color: rgba(0,0,0,0.1);
+}
+
 .sidenav-container {
   position: absolute;
   top: 0;
