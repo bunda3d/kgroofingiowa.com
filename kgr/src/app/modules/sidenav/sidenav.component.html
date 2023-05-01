@@ -150,10 +150,15 @@
 			color="primary"
 		>
 			<!--centering for lg screens using 3 flex divs + fx div container & toolbar row goes in center div w/max-width -->
-			<div class="flex-container" fxLayout="row" fxLayoutAlign="space-around center">
+			<div
+				id="top-toolbar-fullwidth"
+				class="flex-container"
+				fxLayout="row"
+				fxLayoutAlign="space-around center"
+			>
 				<!-- <div fxFlex></div> -->
 				<div class="ctr-lg-max-container" fxFlex>
-					<mat-toolbar-row>
+					<div class="mat-toolbar-row">
 						<a id="nav-logo-link" [routerLink]="['/home']">
 							<img class="nav-logo" src="../../assets/branding/branding.svg" />
 						</a>
@@ -209,17 +214,19 @@
 							> -->
 						</div>
 
-						<!--sidenav toggle-->
+						<!-- sidenav toggle -->
+						<!-- put this in the button to make it disappear on larger screens 
+						*ngIf="(isExtraSmall$ | async) || (isSmall$ | async) || (isTablet$ | async)" -->
 						<button
+							fxFlexAlign="center end"
 							type="button"
 							aria-label="Toggle sidenav"
 							mat-icon-button
 							(click)="drawer.toggle()"
-							*ngIf="(isExtraSmall$ | async) || (isSmall$ | async) || (isTablet$ | async)"
 						>
 							<mat-icon aria-label="Side nav toggle icon" position="end">menu</mat-icon>
 						</button>
-					</mat-toolbar-row>
+					</div>
 				</div>
 			</div>
 		</mat-toolbar>
