@@ -33,7 +33,8 @@
 		</mat-toolbar>
 		<mat-divider></mat-divider>
 		<mat-nav-list>
-			<!-- 			<a
+			<!-- 	way to loop through array of nav items:		
+				<a
 				*ngFor="let link of navItems"
 				mat-list-item
 				(click)="drawer.toggle()"
@@ -156,7 +157,6 @@
 				fxLayout="row"
 				fxLayoutAlign="space-around center"
 			>
-				<!-- <div fxFlex></div> -->
 				<div class="ctr-lg-max-container" fxFlex>
 					<div class="mat-toolbar-row">
 						<a id="nav-logo-link" [routerLink]="['/home']">
@@ -215,9 +215,8 @@
 						</div>
 
 						<!-- sidenav toggle -->
-						<!-- put this in the button to make it disappear on larger screens 
-						*ngIf="(isExtraSmall$ | async) || (isSmall$ | async) || (isTablet$ | async)" -->
 						<button
+							*ngIf="(isExtraSmall$ | async) || (isSmall$ | async) || (isTablet$ | async)"
 							fxFlexAlign="center end"
 							type="button"
 							aria-label="Toggle sidenav"
