@@ -51,10 +51,11 @@ const routes: Routes = [
 @NgModule({
 	imports: [
 		RouterModule.forRoot(routes, {
-			initialNavigation: 'enabled',
-			enableTracing: false,
-			scrollPositionRestoration: 'top'
-		})
+    initialNavigation: 'enabled',
+    enableTracing: false,
+    scrollPositionRestoration: 'top',
+    relativeLinkResolution: 'legacy'
+})
 	],
 	exports: [RouterModule]
 })

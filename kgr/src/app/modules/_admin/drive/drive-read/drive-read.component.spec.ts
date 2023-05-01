@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { DriveReadComponent } from './drive-read.component';
 
@@ -6,7 +6,7 @@ describe('DriveReadComponent', () => {
   let component: DriveReadComponent;
   let fixture: ComponentFixture<DriveReadComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ DriveReadComponent ]
     })
