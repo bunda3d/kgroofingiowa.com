@@ -1,4 +1,5 @@
 // LAYOUTS
+@use '~@angular/material' as mat;
 @import 'typography.scss';
 // Toolbar
 .position-fixed {
@@ -51,7 +52,7 @@
   p {
     margin-bottom: .25rem !important;
     line-height: 1rem;
-    @include mat-typography-level-to-styles($custom-body-typography, caption);
+    @include mat.typography-level($custom-body-typography, caption);
 
   }
 }
@@ -109,7 +110,7 @@ mat-icon.mat-card-avatar {
     margin: -0.25rem 0rem;
     padding: 0px;
     .caption {        
-      @include mat-typography-level-to-styles($custom-body-typography, caption); 
+      @include mat.typography-level($custom-body-typography, caption); 
       position: absolute;
       width: calc(100% + 32px);
       margin: .25rem -1rem; 
@@ -178,12 +179,12 @@ footer p {
   margin-top: 0;
 }
 footer mat-toolbar p {
-  @include mat-typography-level-to-styles($custom-body-typography, body-1);
+  @include mat.typography-level($custom-body-typography, body-1);
 }
 
 .xsp { 
   mat-toolbar p {
-    @include mat-typography-level-to-styles($custom-body-typography, caption);
+    @include mat.typography-level($custom-body-typography, caption);
   }
 }
 

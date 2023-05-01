@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @import '../../../styles/styles';
 
 // variables
@@ -98,7 +99,7 @@ $nav-logo-max-ht:80px;
   font-size: 1em;
   margin: 0 1em 0 0;
   border-width: 2px;
-  border-color: mat-color($accent, darker);
+  border-color: mat.get-color-from-palette($accent, darker);
 }
 #nav-phone-icon {
   @extend %nav-msg;

@@ -1,3 +1,4 @@
+@use '~@angular/material' as mat;
 @import '../../../styles/styles';
 
 .mcard#project {
@@ -13,10 +14,10 @@
   margin: -1rem -1rem 0rem -1rem;
   padding: 1rem 1rem 0 1rem;
   mat-card-title {
-    @include mat-typography-level-to-styles($custom-heading-typography, display-1);
+    @include mat.typography-level($custom-heading-typography, display-1);
   }
   mat-card-subtitle {
-    @include mat-typography-level-to-styles($custom-heading-typography, title);
+    @include mat.typography-level($custom-heading-typography, title);
     font-style: oblique;
     color:white;
   }

@@ -1,18 +1,19 @@
 // https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
 @import '~@angular/material/theming';
 // Be sure that you only ever include this mixin once!
-@include mat-core();
+@include mat.core();
 // Material Design palettes available in palette.scss
 // https://material.io/design/color/
-$primary: mat-palette($mat-indigo);
-$accent: mat-palette($mat-orange, A100, A200, A400);
-$warn: mat-palette($mat-pink);
+$primary: mat.define-palette(mat.$indigo-palette);
+$accent: mat.define-palette(mat.$orange-palette, A100, A200, A400);
+$warn: mat.define-palette(mat.$pink-palette);
 // Create the theme object (Sass map containing all palettes).
-$theme: mat-dark-theme($primary, $accent, $warn);
+$theme: mat.define-dark-theme($primary, $accent, $warn);
 // Include theme styles for core and each component used in your app.
 // Alternatively, import and @include mixins for each component.
 
-@include angular-material-theme($theme);
+@include mat.all-component-themes($theme);
 // @mixin for "mat-color" hue shifts, like "color: mat-color($primary, lighter);
 @mixin theme($theme) {
 	$primary: map-get($theme, primary);
@@ -23,21 +24,21 @@ $theme: mat-dark-theme($primary, $accent, $warn);
 // any component inside of an element with `.light-theme` will be affected by this alternate light theme instead of the default theme.
 .theme-light {
 color: $dark-primary-text;
-$light-primary: mat-palette($mat-indigo);
-$light-accent: mat-palette($mat-amber, A200, A100, A400);
-$light-warn: mat-palette($mat-red);
-$light-theme: mat-light-theme($light-primary, $light-accent, $light-warn);
+$light-primary: mat.define-palette(mat.$indigo-palette);
+$light-accent: mat.define-palette(mat.$amber-palette, A200, A100, A400);
+$light-warn: mat.define-palette(mat.$red-palette);
+$light-theme: mat.define-light-theme($light-primary, $light-accent, $light-warn);
 
-	@include angular-material-theme($light-theme);
+	@include mat.all-component-themes($light-theme);
 }
 // for more on dark mode switch
 // https://github.com/eTallang/theme-demo
 
 // Alternate colors
-$special-primary: mat-palette($mat-teal, 700, 100, 800);
-$special-accent: mat-palette($mat-orange, 700, 100, 800);
-$special-theme: mat-dark-theme($special-primary, $special-accent);
+$special-primary: mat.define-palette(mat.$teal-palette, 700, 100, 800);
+$special-accent: mat.define-palette(mat.$orange-palette, 700, 100, 800);
+$special-theme: mat.define-dark-theme($special-primary, $special-accent);
 
 .theme-special {
-	@include angular-material-theme($special-theme);
+	@include mat.all-component-themes($special-theme);
 }
