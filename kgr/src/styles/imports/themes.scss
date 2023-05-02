@@ -1,6 +1,6 @@
 // https://material.angular.io/guide/theming
-@use '~@angular/material' as mat;
-@import '~@angular/material/theming';
+@use '@angular/material' as mat;
+@import '@angular/material/theming';
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 // Material Design palettes available in palette.scss
