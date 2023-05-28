@@ -13,6 +13,7 @@
     "@angular/platform-browser-dynamic": "^13.4.0",
     "@angular/router": "^13.4.0",
     "@angular/service-worker": "~13.4.0",
+    "@ngbmodule/material-carousel": "^0.7.2",
     "@ngmodule/material-carousel": "^0.6.0",
     "@types/google-one-tap": "^1.2.2",
     "@types/jwt-decode": "^3.1.0",

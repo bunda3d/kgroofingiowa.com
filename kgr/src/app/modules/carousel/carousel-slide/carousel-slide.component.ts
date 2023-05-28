@@ -16,7 +16,7 @@ export class MatCarouselSlideComponent
 	@Input() public hideOverlay = false;
 	@Input() public disabled = false; // implements ListKeyManagerOption
 
-	@ViewChild(TemplateRef, { static: true }) public templateRef: TemplateRef<any>;
+	@ViewChild(TemplateRef) public templateRef: TemplateRef<any>;
 
 	constructor(public sanitizer: DomSanitizer) {}
 

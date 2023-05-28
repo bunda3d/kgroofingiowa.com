@@ -63,6 +63,7 @@ export class MatCarouselComponent
 
 	@Input() public hideArrows = true;
 	@Input() public hideIndicators = true;
+	@Input() public pauseOnHover = true;
 	@Input() public color: ThemePalette = 'warn';
 
 	public get maxWidth(): string {
@@ -94,6 +95,9 @@ export class MatCarouselComponent
 		this.orientation$.next(value);
 		this._orientation = value;
 	}
+
+	@Output()
+	public animationStart: EventEmitter<number> = new EventEmitter<number>();
 
 	@Output()
 	public change: EventEmitter<number> = new EventEmitter<number>();
@@ -224,14 +228,14 @@ export class MatCarouselComponent
 	}
 
 	@HostListener('mousewheel', ['$event'])
-	public onMouseWheel(event: MouseWheelEvent): void {
+	public onMouseWheel(event: WheelEvent): void {
 		if (this.useMouseWheel) {
 			event.preventDefault(); // prevent window to scroll
-			const Δ = Math.sign(event.wheelDelta);
+			const Δ = Math.sign(event.deltaY);
 
-			if (Δ < 0) {
+			if (Δ > 0) {
 				this.next();
-			} else if (Δ > 0) {
+			} else if (Δ < 0) {
 				this.previous();
 			}
 		}
@@ -347,7 +351,10 @@ export class MatCarouselComponent
 		);
 		const animation = factory.create(this.carouselList.nativeElement);
 
-		animation.onStart(() => (this.playing = true));
+		animation.onStart(() => {
+			this.playing = true;
+			this.animationStart.emit(this.currentIndex);
+		});
 		animation.onDone(() => {
 			this.change.emit(this.currentIndex);
 			this.playing = false;

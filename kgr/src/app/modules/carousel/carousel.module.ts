@@ -5,11 +5,15 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { MatCarouselComponent } from './carousel.component';
 import { MatCarouselSlideComponent } from './carousel-slide/carousel-slide.component';
-import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
-import { ModuleWithProviders } from '@angular/compiler/src/core';
+import {
+	HammerGestureConfig,
+	HAMMER_GESTURE_CONFIG,
+	HammerModule
+} from '@angular/platform-browser';
+import { ModuleWithProviders } from '@angular/core';
 
 // https://github.com/angular/angular/issues/10541#issuecomment-300761387
-
+@Injectable()
 export class MatCarouselHammerConfig extends HammerGestureConfig {
 	overrides = {
 		pinch: { enable: false },
@@ -18,11 +22,11 @@ export class MatCarouselHammerConfig extends HammerGestureConfig {
 }
 @NgModule({
 	declarations: [MatCarouselComponent, MatCarouselSlideComponent],
-	imports: [CommonModule, MatButtonModule, MatIconModule],
+	imports: [CommonModule, MatButtonModule, MatIconModule, HammerModule],
 	exports: [MatCarouselComponent, MatCarouselSlideComponent]
 })
 export class MatCarouselModule {
-	static forRoot(): ModuleWithProviders {
+	static forRoot(): ModuleWithProviders<MatCarouselModule> {
 		return {
 			ngModule: MatCarouselModule,
 			providers: [{ provide: HAMMER_GESTURE_CONFIG, useClass: MatCarouselHammerConfig }]
