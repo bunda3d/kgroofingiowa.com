@@ -2,8 +2,8 @@ import { FocusMonitor } from '@angular/cdk/a11y';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { Component, ElementRef, Input, OnDestroy, Optional, Self } from '@angular/core';
 import {
-	FormBuilder,
-	FormGroup,
+	UntypedFormBuilder,
+	UntypedFormGroup,
 	ControlValueAccessor,
 	NgControl,
 	Validators
@@ -40,7 +40,7 @@ export class InputPhoneNum
 	implements ControlValueAccessor, MatFormFieldControl<MyTel>, OnDestroy {
 	static nextId = 0;
 
-	parts: FormGroup;
+	parts: UntypedFormGroup;
 	stateChanges = new Subject<void>();
 	focused = false;
 	errorState = false;
@@ -110,7 +110,7 @@ export class InputPhoneNum
 	}
 
 	constructor(
-		formBuilder: FormBuilder,
+		formBuilder: UntypedFormBuilder,
 		private _focusMonitor: FocusMonitor,
 		private _elementRef: ElementRef<HTMLElement>,
 		@Optional() @Self() public ngControl: NgControl

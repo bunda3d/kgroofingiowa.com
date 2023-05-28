@@ -114,8 +114,7 @@
 				}
 			}
 		}
-	},
-	"defaultProject": "kgr",
+  },
 	"cli": {
 		"analytics": "a7af84fa-87c3-40de-9aad-9c24faf52d8d"
 	}
