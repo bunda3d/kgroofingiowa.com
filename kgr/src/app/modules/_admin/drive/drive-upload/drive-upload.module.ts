@@ -4,11 +4,11 @@ import { CommonModule } from '@angular/common';
 import { DriveUploadRoutingModule } from './drive-upload-routing.module';
 import { DriveUploadComponent } from './drive-upload.component';
 // Material
-import { MatCardModule } from '@angular/material/card';
-import { MatListModule } from '@angular/material/list';
+import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
+import { MatLegacyListModule as MatListModule } from '@angular/material/legacy-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
+import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
 // Other
 import { FlexLayoutModule } from '@angular/flex-layout';
 

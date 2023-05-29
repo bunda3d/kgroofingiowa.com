@@ -8,7 +8,7 @@ import {
 	NgControl,
 	Validators
 } from '@angular/forms';
-import { MatFormFieldControl } from '@angular/material/form-field';
+import { MatLegacyFormFieldControl as MatFormFieldControl } from '@angular/material/legacy-form-field';
 import { Subject } from 'rxjs';
 
 /** @title Form field with custom telephone number input control. */

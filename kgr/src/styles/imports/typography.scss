@@ -9,7 +9,7 @@ and body fonts (body-1, buttons, etc.) use Roboto */
 @import '@angular/material/theming';
 
 // Define a custom typography config that overrides the font-family as well as the other `headlines` and `body-1` levels. 
-$custom-heading-typography: mat.define-typography-config(
+$custom-heading-typography: mat.define-legacy-typography-config(
   $font-family: $title-font,
   $display-4: mat.define-typography-level($d4, $disp-line-ht, $light),
   $display-3: mat.define-typography-level($d3, $disp-line-ht, $regular),
@@ -20,7 +20,7 @@ $custom-heading-typography: mat.define-typography-config(
   $subheading-2: mat.define-typography-level($h3, $title-line-ht $regular),
   $subheading-1: mat.define-typography-level($h4, $title-line-ht, $light),
 );
-$custom-body-typography: mat.define-typography-config(
+$custom-body-typography: mat.define-legacy-typography-config(
   $font-family: $primary-font,
   $body-1: mat.define-typography-level($primary-fs, $primary-line-ht, $regular),
   $body-2: mat.define-typography-level($primary-fs, $primary-line-ht, $medium),
@@ -31,7 +31,7 @@ $custom-body-typography: mat.define-typography-config(
 // Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
 // @include mat-base-typography($custom-heading-typography);
 // Override typography for all Angular Material, including mat-base-typography and all components.
-@include mat.all-component-typographies($custom-heading-typography and $custom-body-typography); 
+@include mat.all-legacy-component-typographies($custom-heading-typography and $custom-body-typography); 
 // Override the typography in the core CSS.
 // @include mat-core($custom-body-typography);
 

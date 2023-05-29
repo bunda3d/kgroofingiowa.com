@@ -8,14 +8,14 @@ import { InputsModule } from './modules/_forms/inputs.module';
 import { HttpClientModule } from '@angular/common/http';
 //styling
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatTableModule } from '@angular/material/table';
-import { MatSliderModule } from '@angular/material/slider';
-import { MatButtonModule } from '@angular/material/button';
+import { MatLegacyTableModule as MatTableModule } from '@angular/material/legacy-table';
+import { MatLegacySliderModule as MatSliderModule } from '@angular/material/legacy-slider';
+import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
 import {
-	MatFormFieldModule,
-	MAT_FORM_FIELD_DEFAULT_OPTIONS
-} from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
+	MatLegacyFormFieldModule as MatFormFieldModule,
+	MAT_LEGACY_FORM_FIELD_DEFAULT_OPTIONS as MAT_FORM_FIELD_DEFAULT_OPTIONS
+} from '@angular/material/legacy-form-field';
+import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
 import { MatIconModule } from '@angular/material/icon';
 //services & app config
 import { ThemeService } from './core/services/theme.service';
