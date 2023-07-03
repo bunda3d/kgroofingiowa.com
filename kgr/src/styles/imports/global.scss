@@ -57,34 +57,47 @@ app-routing {
 
 // button large radius
 @mixin angular-button-large-radius {
-	.mat-raised-button,
-	.mat-stroked-button,
-	.mat-flat-button {
+	.mat-mdc-raised-button,
+	.mat-mdc-outlined-button,
+	.mat-mdc-unelevated-button {
 		border-radius: 45px;
 	}
 }
 
+// MAT-LIST
+
 // mat-list wrap
-.mat-line {
+/** allows mat-list lines to wrap */
+.mat-mdc-list-item-title, .mat-mdc-list-item-line {
   word-wrap: break-word !important;
   white-space: pre-wrap !important;
 }
-.mat-list .mat-list-item {
+/** allows wrapped lines to have vertical room in their parent divs */
+.mat-mdc-list .mat-mdc-list-item {
   height:initial !important;
 } 
-mat-list.mat-list.mat-list-base {
+
+// mat-list spacing
+mat-list.mat-mdc-list {
 	margin-bottom: 2rem;
 }
-.mat-list-base {
-	padding-top: 0;
-}
-// mat-list : less padding for small screens
+
+/** if breakpoint x-small, reduce line's horiz white-space */
 .mat-list-pad-xs {
-.mat-list-item-content {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
-}
-}
+	.mat-mdc-list-item-icon {
+		margin-left: 0 !important;
+		margin-right: 1rem !important;
+	}
+/* 	p.mat-mdc-list-item-title, p.mat-mdc-list-item-line, {
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	} */
+} 
+
+// END MAT-LIST
+
 
 // colorful
 .goldBold {

@@ -40,20 +40,33 @@
 .carousel {
   margin-bottom: 1rem;
 }
-.carousel-slide-overlay {
+.carousel-caption-container {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction:column;
   align-items:center;
-  justify-content:center;
+  justify-content:flex-end;
+  p {
+    padding: 0 1rem;
+    margin: 0 !important;
+    @include mat.typography-level($custom-body-typography, caption);
+    line-height: 2.5rem;
+    font-size: 1.25rem;
+  }
+}
+.carousel-caption-bg {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 .carouselxs {
   p {
-    margin-bottom: .25rem !important;
-    line-height: 1rem;
+    margin: .25rem 0 !important;
     @include mat.typography-level($custom-body-typography, caption);
-
   }
 }
 
@@ -63,6 +76,13 @@
   margin-bottom: 2rem;
   overflow: hidden;
 }
+
+/** allows mat-card-image photos to scale smaller than their native pixel width */
+img.mdc-card__media {
+  max-width: 100%;
+  height: auto;
+}
+
 mat-icon.mat-card-avatar {
   width: 96px;
   height: 96px;
@@ -76,6 +96,7 @@ mat-icon.mat-card-avatar {
   background-size: cover;
   z-index: 10;
   box-shadow: 0 .25rem 1.25rem 0 #777777;
+  margin-bottom: -1.0rem;
 }
 .mcard-header-img-48 {
   width: 48px;
@@ -88,64 +109,63 @@ mat-icon.mat-card-avatar {
   margin-bottom: 2.5rem;
 }
 
-.mat-card-header {
+.mat-mdc-card-header {
   margin-bottom: -1.0rem;
 }
-.mat-card-image {
-  @extend .mat-card-image;
+.mat-mdc-card-image {
+  @extend .mat-mdc-card-image;
   margin-bottom: 0rem;
 }
-.mat-card-image:first-child {
+.mat-mdc-card-image:first-child {
   margin-top: 0;
 }
-.mat-card-image:last-child {
+.mat-mdc-card-image:last-child {
   margin-bottom: 0;
 }
 
 // img captions
 
-  .caption-wrap {  
-    position: relative;
-    width: calc(100% + 0px);
-    margin: -0.25rem 0rem;
-    padding: 0px;
-    .caption {        
-      @include mat.typography-level($custom-body-typography, caption); 
-      position: absolute;
-      width: calc(100% + 32px);
-      margin: .25rem -1rem; 
-      padding: 0.25rem 0.5rem;
-      //font-size: $primary-fs;  
-      //font-weight: $light;
-      text-align: center;
-      background-color: rgba(0, 0, 0, 0.45);
-      z-index: 2;
-    }
-    .caption-btm { 
-      @extend .caption;
-      bottom: 0rem;
-    }
-    .caption-btm-zero {
-      @extend .caption;
-      bottom: -1.75rem;
-    }
-    .caption-top {
-      @extend .caption;
-      top: 0rem;
-    }
-    .caption-top-zero {
-      @extend .caption;
-      top: -2rem;
-    }
-    // when captioning a non mat-img divs
-    .caption-btm-div { 
-      @extend .caption;
-      bottom: 1rem;
-      width: calc(100% + 0px);
-      margin: 0 -16px -16px -16px; 
-    }
+.caption-wrap { 
+  position: relative;
+  width: calc(100% + 0px);
+  margin: 0rem;
+  padding: 0px;
+  .caption { 
+    @include mat.typography-level($custom-body-typography, caption); 
+    position: absolute;
+    width: 100%;
+    //width: calc(100% + 32px); //sizing for old angular.material card widths
+    margin: 0rem; 
+    padding: .25rem 0.5rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 2;
   }
-
+  .caption-btm { 
+    @extend .caption;
+    bottom: 0rem;
+    //transform: translate(0rem, -4rem);
+  }
+  .caption-btm-zero {
+    @extend .caption;
+    bottom: -1.75rem;
+  }
+  .caption-top {
+    @extend .caption;
+    top: 0rem;
+  }
+  .caption-top-zero {
+    @extend .caption;
+    top: -2rem;
+  }
+  // when captioning a non mat-img divs
+  .caption-btm-div { 
+    @extend .caption;
+    bottom: 1rem;
+    width: calc(100% + 0px);
+    margin: 0 -16px -16px -16px; 
+  }
+}
 
 // Footer Styles
 footer {
@@ -165,6 +185,7 @@ footer mat-toolbar-row.mat-toolbar-row {
   background-color: transparent;
   height: auto;
 }
+/* TODO(mdc-migration): The following rule targets internal classes of list that may no longer apply for the MDC version.*/
 footer .mat-list-item-content {
   font-size: $primary-fs;
   padding: 0 1.5*$pad;
@@ -204,6 +225,19 @@ footer mat-toolbar p {
 }
 .npb {
   padding-bottom: 0 !important;
+}
+// // // HALF-PADDING (0.5*1REM)
+.hpt {
+  padding-top: 0.5 * $pad;
+}
+.hpb {
+  padding-bottom: 0.5 * $pad;
+}
+.hpl {
+  padding-left: 0.5 * $pad;
+}
+.hpr {
+  padding-right: 0.5 * $pad;
 }
 // // // PADDING
 .pt {
@@ -290,4 +324,11 @@ footer mat-toolbar p {
 }
 .lr {
   border-right: solid;
+}
+// LINE Helpers, f=fine (looks like <mat-divider>)
+.lbf {
+  border-bottom: 1px solid rgba($white, 0.12); 
+}
+.ltf {
+  border-top: 1px solid rgba($white, 0.12); 
 }

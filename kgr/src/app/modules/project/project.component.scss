@@ -13,9 +13,11 @@
   //background-color: $blu2;
   margin: -1rem -1rem 0rem -1rem;
   padding: 1rem 1rem 0 1rem;
+  /*TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
   mat-card-title {
     @include mat.typography-level($custom-heading-typography, display-1);
   }
+  /*TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
   mat-card-subtitle {
     @include mat.typography-level($custom-heading-typography, title);
     font-style: oblique;
@@ -60,6 +62,7 @@
 .mat-card-content {
   margin-bottom: 0rem;
 }
+/*TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
 mat-card #inspection{
   margin:2rem 0;
 }

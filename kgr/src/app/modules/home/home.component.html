@@ -1,5 +1,4 @@
 <!-- mat carousel info: https://gsr.dev/material2-carousel/ -->
-
 <mat-carousel
 	timings="400ms ease-in"
 	[autoplay]="true"
@@ -21,8 +20,11 @@
 		overlayColor="#00000040"
 		[hideOverlay]="false"
 		image="./../../assets/img/home-carousel/kyle_grell_kg_roofing_autumn_grell_family.jpg"
-		><div class="carousel-slide-overlay" fxLayout="column" fxLayoutAlign="end center">
-			<p class="pl pr">Owners Kyle and Autumn, training tomorrow's roofers.</p>
+	>
+		<div class="carousel-caption-container">
+			<div class="carousel-caption-bg">
+				<p>Owners Kyle and Autumn, training tomorrow's roofers.</p>
+			</div>
 		</div>
 	</mat-carousel-slide>
 	<mat-carousel-slide
@@ -30,8 +32,11 @@
 		overlayColor="#00000040"
 		[hideOverlay]="false"
 		image="./../../assets/img/home-carousel/kg_roofing_flat_roof_before.jpg"
-		><div class="carousel-slide-overlay" fxLayout="column" fxLayoutAlign="end center">
-			<p class="pl pr">Flat Roof Owners: Find out your roof's condition.</p>
+	>
+		<div class="carousel-caption-container">
+			<div class="carousel-caption-bg">
+				<p>Flat Roof Owners: Find out your roof's condition.</p>
+			</div>
 		</div>
 	</mat-carousel-slide>
 	<mat-carousel-slide
@@ -39,8 +44,11 @@
 		overlayColor="#00000040"
 		[hideOverlay]="false"
 		image="./../../assets/img/home-carousel/kg_roofing_flat_roof_after.jpg"
-		><div class="carousel-slide-overlay" fxLayout="column" fxLayoutAlign="end center">
-			<p class="pl pr">...the satisfaction of having a good roof over your assets.</p>
+	>
+		<div class="carousel-caption-container">
+			<div class="carousel-caption-bg">
+				<p>...the satisfaction of having a good roof over your assets.</p>
+			</div>
 		</div>
 	</mat-carousel-slide>
 	<mat-carousel-slide
@@ -48,8 +56,11 @@
 		overlayColor="#00000040"
 		[hideOverlay]="false"
 		image="./../../assets/img/home-carousel/kg_roofing_residential_shingles_before.jpg"
-		><div class="carousel-slide-overlay" fxLayout="column" fxLayoutAlign="end center">
-			<p class="pl pr">Call for a free inspection by a helpful professional.</p>
+	>
+		<div class="carousel-caption-container">
+			<div class="carousel-caption-bg">
+				<p>Call for a free inspection by a helpful professional.</p>
+			</div>
 		</div>
 	</mat-carousel-slide>
 	<mat-carousel-slide
@@ -57,10 +68,13 @@
 		overlayColor="#00000040"
 		[hideOverlay]="false"
 		image="./../../assets/img/home-carousel/kg_roofing_residential_shingles_after.jpg"
-		><div class="carousel-slide-overlay" fxLayout="column" fxLayoutAlign="end center">
-			<p class="pl pr">
-				Residential re-roof: Add value and peace of mind to your property.
-			</p>
+	>
+		<div class="carousel-caption-container">
+			<div class="carousel-caption-bg">
+				<p>
+					Residential re-roof: Add value and peace of mind to your property.
+				</p>
+			</div>
 		</div>
 	</mat-carousel-slide>
 	<mat-carousel-slide
@@ -68,8 +82,11 @@
 		overlayColor="#00000040"
 		[hideOverlay]="false"
 		image="./../../assets/img/home-carousel/kg-roofing-staging-safe-and-clean-work-area.jpg"
-		><div class="carousel-slide-overlay" fxLayout="column" fxLayoutAlign="end center">
-			<p class="pl pr">KG Roofing: staging a safe and clean work area.</p>
+	>
+		<div class="carousel-caption-container">
+			<div class="carousel-caption-bg">
+				<p>KG Roofing: staging a safe and clean work area.</p>
+			</div>
 		</div>
 	</mat-carousel-slide>
 	<mat-carousel-slide
@@ -77,39 +94,42 @@
 		overlayColor="#00000040"
 		[hideOverlay]="false"
 		image="./../../assets/img/contact/kg_roofing_iowa_service_area.png"
-		><div class="carousel-slide-overlay" fxLayout="column" fxLayoutAlign="end center">
-			<p class="pl pr">KG Roofing's Service Area</p>
+	>
+		<div class="carousel-caption-container">
+			<div class="carousel-caption-bg">
+				<p>KG Roofing's Service Area</p>
+			</div>
 		</div>
 	</mat-carousel-slide>
 </mat-carousel>
 
-<!--card: Roof Inspection-->
+<!-- card: Roof Inspection -->
 <mat-card id="inspect" class="mcard">
 	<mat-card-header>
 		<i mat-card-avatar class="mcard-header-img-48"></i>
 		<mat-card-title>Protect Your Home or Business</mat-card-title>
 		<mat-card-subtitle>
-			PUTTING A ROOF OVER YOUR HEAD IS THE MOST IMPORTANT THING YOUR HOME DOES
+			Putting a roof over your head is the most important thing your home does
 		</mat-card-subtitle>
 	</mat-card-header>
+	<img
+		mat-card-image
+		src="/assets/img/home/KG_Roofing_homeowner_residential_roof_repair_before.jpg"
+		alt="KG Roofing photo of a homeowner's residential roof in need of repair: before"
+	/>
 	<div class="caption-wrap">
-		<img
-			mat-card-image
-			src="/assets/img/home/KG_Roofing_homeowner_residential_roof_repair_before.jpg"
-			alt="KG Roofing photo of a homeowner's residential roof in need of repair: before"
-		/>
 		<div class="caption-btm">
 			Residential shingle roof - call to know your roof's condition.
 		</div>
 	</div>
+
 	<div
-		class="flex-container pb pt2"
+		class="flex-container"
 		fxLayout="row"
 		fxLayout.lt-sm="column"
-		fxLayoutGap="32px"
 		fxLayoutAlign="space-between"
 	>
-		<div fxFlex.gt-xs="50%" fxLayoutAlign="stretch">
+		<div fxFlex.sm="55%" fxFlex.gt-sm="45%" fxLayoutAlign="stretch">
 			<mat-card-content>
 				<p>
 					Knowing if your roof is sound is a homeowner's responsibility, yet many
@@ -122,60 +142,61 @@
 				</p>
 			</mat-card-content>
 		</div>
-		<div fxflex.gt-xs="50%">
+		<div class="ml mr" fxFlex.sm="45%" fxflex.gt-sm="55%" fxLayoutAlign="center center">
 			<mat-card
 				id="inspection"
 				fxLayout="row"
 				fxLayoutAlign="start center"
 				fxLayoutGap="16px"
 			>
-				<mat-card-content id="inspectIcons" fxFlexAlign="center space-around">
+				<div id="inspectIcons" fxFlexAlign="center space-around">
 					<img src="/assets/bg/bg-icons/vert6pk.svg" />
-				</mat-card-content>
-				<mat-card-content fxFlex>
+				</div>
+				<div fxFlex>
 					<p id="inspectQuote">
 						If you haven't had your roof inspected recently, we're here to help.
 					</p>
-				</mat-card-content>
+				</div>
 			</mat-card>
 		</div>
 	</div>
+
+	<img
+		mat-card-image
+		src="/assets/img/home/KG_Roofing_commercial_flat_roof_EPDM_in_need_of_inspection.jpg"
+		alt="KG Roofing photo of a commercial business' flat roof in need of inspection and repair: before"
+	/>
 	<div class="caption-wrap">
-		<img
-			mat-card-image
-			src="/assets/img/home/KG_Roofing_commercial_flat_roof_EPDM_in_need_of_inspection.jpg"
-			alt="KG Roofing photo of a commercial business' flat roof in need of inspection and repair: before"
-		/>
 		<div class="caption-btm">
 			Commercial flat roof in need of inspection and repair
 		</div>
 	</div>
 	<div
-		class="pt2 pb"
+		class="pt pb"
 		fxLayout.gt-xs="row"
 		fxLayout.xs="column"
 		fxLayoutAlign="space-between center"
 		fxLayoutGap.sm="16px"
 		fxLayoutGap.gt-sm="48px"
 	>
-		<div fxFlex.sm="45%" fxFlex.gt-sm="35%" fxFlexAlign="start">
+		<mat-card-content fxFlex.sm="40%" fxFlex.gt-sm="50%" fxFlexAlign="start">
 			<mat-card-subtitle id="inspectSubTitle" fxFlexFill>
 				MAKE THE BEST FINANCIAL DECISION
 			</mat-card-subtitle>
-			<mat-card-content>
-				<p>
-					Since your home or business' buildings may be your most valuable investment,
-					it's important to know what condition your roofs are in before an expensive
-					failure occurs.
-				</p>
-				<p id="inspectP">
-					Call us today if you'd like a free, professional inspection.
-				</p>
-			</mat-card-content>
-		</div>
+
+			<p>
+				Since your home or business' buildings may be your most valuable investment, it's
+				important to know what condition your roofs are in before an expensive failure
+				occurs.
+			</p>
+			<p id="inspectP">
+				Call us today if you'd like a free, professional inspection.
+			</p>
+		</mat-card-content>
+
 		<div
 			[ngClass.xs]="['investprotectxs']"
-			class="investprotect"
+			class="investprotect ml mr mt"
 			fxFlex.gt-sm="50%"
 			fxFlexAlign="stretch"
 		>
@@ -184,7 +205,7 @@
 			</div>
 		</div>
 	</div>
-	<!--experiment with service / interface-->
+	<!-- experiment with service / interface -->
 	<!-- 	<mat-card-content>
 		<usertable></usertable>
 	</mat-card-content> -->
@@ -216,7 +237,7 @@
 </mat-card>
 
 <!--card: Products & Services List-->
-<mat-card id="productServiceList" class="mcard">
+<mat-card appearance="outlined" id="productServiceList" class="mcard">
 	<mat-card-header>
 		<i mat-card-avatar id="productServiceAvatar" class="mcard-header-img"></i>
 		<mat-card-title class="orange">Products & Services</mat-card-title>
@@ -224,48 +245,51 @@
 			WE'VE GOT ALL YOUR ROOFING NEEDS COVERED
 		</mat-card-subtitle>
 	</mat-card-header>
+
+	<img
+		mat-card-image
+		src="/assets/img/home/kg-roofing-staging-safe-and-clean-work-area.jpg"
+		alt="KG Roofing worksite: clean, safe, organized; Build materials are staged, safety perimeter is set"
+	/>
 	<div class="caption-wrap">
-		<img
-			mat-card-image
-			src="/assets/img/home/kg-roofing-staging-safe-and-clean-work-area.jpg"
-			alt="KG Roofing worksite: clean, safe, organized; Build materials are staged, safety perimeter is set"
-		/>
 		<div class="caption-btm">
 			KGR worksite: clean, safe, organized; Build materials are staged, safety perimeter
 			is set.
 		</div>
 	</div>
-	<mat-card-content class="pt2 pb">
+	<mat-card-content class="pt2 pb2">
 		<mat-list>
+			<mat-divider></mat-divider>
 			<mat-list-item
-				*ngFor="let productService of productServices"
+				class="lbf"
+				*ngFor="let productService of productServices; last as isLast"
 				[ngClass.xs]="['mat-list-pad-xs']"
 			>
-				<mat-divider></mat-divider>
-				<mat-icon class="orange" matListIcon>stars</mat-icon>
-				<p matLine>
+				<mat-icon class="orange" matListItemIcon>stars</mat-icon>
+				<p class="nmt nmb hpt hpb" matListItemTitle>
 					<span> {{ productService.name }} </span>
 					<span class="orange"> {{ productService.acronym }} </span>
 				</p>
 			</mat-list-item>
 		</mat-list>
 	</mat-card-content>
+
+	<img
+		mat-card-image
+		src="/assets/img/home/kg_roofing_safety_perimeter.jpg"
+		alt="KG Roofing worksite with safety provisions on the roof"
+	/>
 	<div class="caption-wrap">
-		<img
-			mat-card-image
-			src="/assets/img/home/kg_roofing_safety_perimeter.jpg"
-			alt="KG Roofing worksite with safety provisions on the roof"
-		/>
 		<div class="caption-btm">
 			Worksite with safety perimeter on the roof
 		</div>
 	</div>
 	<mat-card-footer id="safeCleanFooter">
-		<mat-card id="safeCleanCard" [class.mat-elevation-z8]>
-			<mat-card-title class="obl" id="safeCleanTitle">SAFE and CLEAN</mat-card-title>
-			<mat-divider></mat-divider>
+		<mat-card appearance="outlined" id="safeCleanCard" [class.mat-elevation-z8]>
 			<mat-card-content>
-				<span>&nbsp;</span>
+				<mat-card-title class="obl" id="safeCleanTitle">SAFE and CLEAN</mat-card-title>
+				<mat-divider></mat-divider>
+
 				<p class="obl">
 					<span class="goldBold">We take <u>job site safety</u> seriously: </span>
 					&nbsp; for our crew and yours.
@@ -294,15 +318,21 @@
 	<mat-card-content>
 		<div id="why-bgimg">
 			<div id="why-overlay" class="caption-wrap">
-				<mat-list>
-					<mat-list-item *ngFor="let whyKG of whyKGs" [ngClass.xs]="['mat-list-pad-xs']">
-						<mat-divider></mat-divider>
-						<mat-icon matListIcon>stars</mat-icon>
-						<p matLine>
+				<mat-list class="mt2">
+					<mat-divider></mat-divider>
+					<mat-list-item
+						class="lbf"
+						*ngFor="let whyKG of whyKGs"
+						[ngClass.xs]="['mat-list-pad-xs']"
+					>
+						<mat-icon class="white" matListItemIcon>stars</mat-icon>
+						<p matListItemTitle>
 							<span class="goldBold"> {{ whyKG.why }} </span>
 							<span> {{ whyKG.description }} </span>
 						</p>
+						<mat-divider></mat-divider>
 					</mat-list-item>
+					<mat-divider></mat-divider>
 				</mat-list>
 				<div class="caption-btm-div">
 					Background image: Roofing a large church with proper safety gear and
@@ -314,26 +344,29 @@
 	<mat-card-footer>
 		<mat-divider></mat-divider>
 		<mat-card-content id="why-footer">
-			<div>
-				<h2>
-					Learn more
-					<a class="nodec" [routerLink]="['/about']">
-						<span class="neonAqua">ABOUT </span>
-					</a>
-					KG Roofing
-				</h2>
-			</div>
+			<span class="spacer">&nbsp;</span>
 		</mat-card-content>
-		<mat-card-actions fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="16px">
-			<div fxLayout="row">
-				<span class="spacer">&nbsp;</span>
+		<mat-divider></mat-divider>
+		<mat-card-actions
+			fxLayout="row"
+			fxLayoutAlign="space-between center"
+			fxLayoutGap="32px"
+		>
+			<h2 class="ml mr2 nmt nmb" fxFlexAlign="start center">
+				Learn more
+				<a class="nodec" [routerLink]="['/about']">
+					<span class="neonAqua">ABOUT </span>
+				</a>
+				KG Roofing &nbsp;&rarr;
+			</h2>
+			<div fxFlexAlign="end center">
 				<a
-					fxFlexAlign="end space-around"
+					class="pl2 pr2"
 					routerLinkActive="active"
 					[routerLink]="['/about']"
 					id="inspectBtn"
 					mat-stroked-button
-					>&nbsp;&nbsp; ABOUT US &nbsp;&nbsp;
+					>ABOUT&nbsp;US
 				</a>
 			</div>
 		</mat-card-actions>

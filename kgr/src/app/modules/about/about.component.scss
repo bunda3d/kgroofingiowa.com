@@ -16,6 +16,7 @@
   background-image: url("/assets/bg/bg-gr-rbl-blk.svg");
   background-size: cover;
   // background-color: #212131;
+  /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
   mat-card-title {
     padding-left: 1rem;
   }
@@ -24,6 +25,7 @@
   padding-top: 1rem;
   background-color: transparent;
   border: solid $neon-aqua;
+  /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
   mat-card-subtitle {
     color: $neon-aqua;
   }
@@ -74,9 +76,11 @@
   background-position: center;
   margin: -1rem -1rem 0rem -1rem;
   padding: 1rem 1rem 0 1rem;
+  /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
   mat-card-title {
     @include mat.typography-level($custom-heading-typography, display-1);
   }
+  /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
   mat-card-subtitle {
     @include mat.typography-level($custom-heading-typography, title);
     color: whitesmoke;

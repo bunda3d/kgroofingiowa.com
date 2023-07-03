@@ -9,20 +9,27 @@
 //  If you specify typography styles for the components you use elsewhere, you should delete this line.
 //  If you don't need the default component typographies but still want the hierarchy styles,
 //  you can delete this line and instead use:
-//    `@include mat.legacy-typography-hierarchy(mat.define-legacy-typography-config());`
-//@include mat.all-legacy-component-typographies();
-@include mat.legacy-core();
+//    `@include mat.legacy-typography-hierarchy(mat.define-typography-config());`
+@include mat.all-component-typographies();
+@include mat.core();
 // Material Design palettes available in palette.scss
 // https://material.io/design/color/
 $primary: mat.define-palette(mat.$indigo-palette);
 $accent: mat.define-palette(mat.$orange-palette, A100, A200, A400);
 $warn: mat.define-palette(mat.$pink-palette);
 // Create the theme object (Sass map containing all palettes).
-$theme: mat.define-dark-theme($primary, $accent, $warn);
+$theme: mat.define-dark-theme((
+	color: (
+		primary: $primary, 
+		accent: $accent, 
+		warn: $warn
+		),
+		typography: mat.define-typography-config(),
+	));
 // Include theme styles for core and each component used in your app.
 // Alternatively, import and @include mixins for each component.
 
-@include mat.all-legacy-component-themes($theme);
+@include mat.all-component-themes($theme);
 // @mixin for "mat-color" hue shifts, like "color: mat-color($primary, lighter);
 @mixin theme($theme) {
 	$primary: map-get($theme, primary);
@@ -38,7 +45,7 @@ $light-accent: mat.define-palette(mat.$amber-palette, A200, A100, A400);
 $light-warn: mat.define-palette(mat.$red-palette);
 $light-theme: mat.define-light-theme($light-primary, $light-accent, $light-warn);
 
-	@include mat.all-legacy-component-themes($light-theme);
+	@include mat.all-component-themes($light-theme);
 }
 // for more on dark mode switch
 // https://github.com/eTallang/theme-demo
@@ -49,5 +56,5 @@ $special-accent: mat.define-palette(mat.$orange-palette, 700, 100, 800);
 $special-theme: mat.define-dark-theme($special-primary, $special-accent);
 
 .theme-special {
-	@include mat.all-legacy-component-themes($special-theme);
+	@include mat.all-component-themes($special-theme);
 }

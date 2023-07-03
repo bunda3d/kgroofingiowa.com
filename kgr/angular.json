@@ -24,6 +24,9 @@
 						"tsConfig": "tsconfig.app.json",
 						"assets": ["src/favicon.ico", "src/assets", "src/manifest.webmanifest"],
 						"styles": ["src/styles/imports/themes.scss", "src/styles/styles.scss"],
+						"stylePreprocessorOptions": {
+							"includePaths": ["node_modules"]
+						},
 						"scripts": [],
 						"vendorChunk": true,
 						"extractLicenses": false,
@@ -114,7 +117,7 @@
 				}
 			}
 		}
-  },
+	},
 	"cli": {
 		"analytics": "a7af84fa-87c3-40de-9aad-9c24faf52d8d"
 	}
