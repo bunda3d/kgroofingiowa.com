@@ -1,41 +1,30 @@
 // TYPOGRAPHY
 @use '@angular/material' as mat;
-
-/* extending Material theme and typography thru Custom Configs 
-to make title fonts (h1, display-4, etc.) use Roboto Condensed, 
-and body fonts (body-1, buttons, etc.) use Roboto */
-// https://material.angular.io/guide/typography 
-
 @import '@angular/material/theming';
 
 // Define a custom typography config that overrides the font-family as well as the other `headlines` and `body-1` levels. 
-$custom-heading-typography: mat.define-typography-config(
-  $font-family: $title-font,
-  $headline-1: mat.define-typography-level($d4, $disp-line-ht, $light),
-  $headline-2: mat.define-typography-level($d3, $disp-line-ht, $regular),
-  $headline-3: mat.define-typography-level($d2, $title-line-ht, $regular),
-  $headline-4: mat.define-typography-level($d1, $title-line-ht, $regular),
-  $headline-5: mat.define-typography-level($h1, $title-line-ht, $regular),
-  $headline-6: mat.define-typography-level($h2, $title-line-ht, $regular),
-  $subtitle-1: mat.define-typography-level($h3, $title-line-ht $regular),
-  $body-1: mat.define-typography-level($h4, $title-line-ht, $light),
-);
-$custom-body-typography: mat.define-typography-config(
-  $font-family: $primary-font,
-  $body-2: mat.define-typography-level($primary-fs, $primary-line-ht, $regular),
-  $subtitle-2: mat.define-typography-level($primary-fs, $primary-line-ht, $medium),
-  $caption: mat.define-typography-level($primary-fs, $caption-line-ht, $light),
-  $button: mat.define-typography-level($primary-fs, $disp-line-ht, $medium),
-  $body-1: mat.define-typography-level(inherit, $input-line-ht, $regular),
-);
-// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
-// @include mat-base-typography($custom-heading-typography);
-// Override typography for all Angular Material, including mat-base-typography and all components.
-@include mat.all-component-typographies($custom-heading-typography and $custom-body-typography); 
-// Override the typography in the core CSS.
-// @include mat-core($custom-body-typography);
+$custom-typography: mat.define-typography-config(
+/*example custom level */
+/*$headline-1: mat.define-typography-level(font-size, line-height, font-weight, font-family, letter-spacing), */
+  $headline-1: mat.define-typography-level($d4, $disp-line-ht, $light, $title-font),
+  $headline-2: mat.define-typography-level($d3, $disp-line-ht, $regular, $title-font),
+  $headline-3: mat.define-typography-level($d2, $title-line-ht, $regular, $title-font),
+  $headline-4: mat.define-typography-level($d1, $title-line-ht, $regular, $title-font),
+  $headline-5: mat.define-typography-level($h1, $title-line-ht, $regular, $title-font),
+  $headline-6: mat.define-typography-level($h2, $title-line-ht, $regular, $title-font),
+  $subtitle-1: mat.define-typography-level($h3, $title-line-ht, $regular, $title-font),
+  $subtitle-2: mat.define-typography-level($h4, $primary-line-ht, $light, $title-font),
 
-// font stacks
+  $body-1: mat.define-typography-level($primary-fs, $primary-line-ht, $regular, $primary-font),
+  $body-2: mat.define-typography-level($primary-fs, $primary-line-ht, $regular, $primary-font), 
+  $caption: mat.define-typography-level($primary-fs, $caption-line-ht, $light, $primary-font),
+  $button: mat.define-typography-level($font-button, $disp-line-ht, $medium, $primary-font) 
+); 
+
+// Post-V15 way for Material Typography Customization
+@include mat.typography-hierarchy($custom-typography);
+
+/** font stacks, for default font styling of elements (below) */
 %primary-font-fam {
   font-family: $primary-font, "Helvetica Neue", sans-serif;
 }
@@ -43,11 +32,10 @@ $custom-body-typography: mat.define-typography-config(
   font-family: $title-font, "Franklin Gothic Bold", sans-serif;
 }
 
-// font styles for main elements
+/** font styles for main elements */
+// Body Styles
 body {
   @extend %primary-font-fam;
-
-  font-size: $primary-fs;
   font-weight: $regular;
 }
 
@@ -75,8 +63,10 @@ h6 {
   }
 }
 
-h5 { font-size: $h5;}
-h6 { font-size: $h6;}
+h3 { font-size: $h3; }
+h4 { font-size: $h4; }
+h5 { font-size: $h5; }
+h6 { font-size: $h6; }
 
 // Text Styles
 em { font-style: italic; }
@@ -94,6 +84,15 @@ strong { font-weight: bold; }
     white-space: normal !important;
   }
 }
+
+// Some MAT-specific element typographies
+// .mat-mdc-card-title {
+//   @include mat.typography-level($custom-typography, 'headline-5');
+// }
+.mat-mdc-card-subtitle {
+  @include mat.typography-level($custom-typography, 'subtitle-1');
+}
+
 // 
 // JUSTIFY CONTENT
 // 
@@ -169,19 +168,11 @@ strong { font-weight: bold; }
   text-align: right;
 }
 
-/** html {
-  font-family: $sansSerif, sans-serif;
-  font-weight: normal;
-  color: $black;
-  line-height: $baseLineHeight;
-  font-size: 14px;
 
-  @media only screen and (min-width: $smallBreakpoint) {
-    font-size: 15px;
-  }
-
-  @media only screen and (min-width: $largeBreakpoint) {
-    font-size: $baseFontSize;
-  }
-}
-*/
+/** PRE-VSN 15 SETUP: */
+// Override typography CSS classes (e.g., mat-h1, mat-display-1, mat-typography, etc.).
+//@include mat-base-typography($custom-typography);
+// Override typography for all Angular Material, including mat-base-typography and all components.
+//@include mat.all-component-typographies($custom-typography); 
+// Override the typography in the core CSS.
+//@include mat-core();

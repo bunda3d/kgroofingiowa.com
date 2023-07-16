@@ -1,29 +1,22 @@
-/**
-**** VARIABLES ****
-*/
+/***** VARIABLES *****/
 
-// font-style
-$norm: normal;
-$ital: italic;
-$obli: oblique;
+// font-sizes
+// Heading size
+$d4:6em;
+$d3:3.5em;
+$d2:2.875em;
+$d1:2.5em;
+$h1:1.5em;
+$h2:1.25em;
+$h3:1em;
+$h4:0.875em;
+$h5:0.75em;
+$h6:0.625em;
 
-// font-variant
-$title-case: titling-caps;
-$sm-caps: small-caps;
-$ligs: common-ligatures;
-$zero: slashed-zero;
-
-// font-weight
-$thin:100;
-$light:300;
-$regular:400;
-$medium:500;
-$bold:700;
-$black:900;
-
-// font-size
+// Body size
 $font-xs: 0.5em;
 $font-sm: 0.75em;
+$font-button: 0.875em;
 $primary-fs: 1em;
 $font-md: 1.25em;
 $font-lg: 1.5em;
@@ -37,21 +30,28 @@ $disp-line-ht: 1;
 $input-line-ht: 1.125;
 $caption-line-ht: 1.25;
 
+// font-weight
+$thin:100;
+$light:300;
+$regular:400;
+$medium:500;
+$bold:700;
+$black:900;
+
 // font-family
 $primary-font: 'Roboto';
 $title-font: 'Roboto Condensed';
 
-// Heading size
-$d4:7em;
-$d3:3.5em;
-$d2:2.875em;
-$d1:2.5em;
-$h1:2.25em;
-$h2:2em;
-$h3:1.5em;
-$h4:1.25em;
-$h5:0.875em;
-$h6:0.625em;
+// font-style
+$norm: normal;
+$ital: italic;
+$obli: oblique;
+
+// font-variant
+$title-case: titling-caps;
+$sm-caps: small-caps;
+$ligs: common-ligatures;
+$zero: slashed-zero;
 
 // Spacing
 $pad:1rem;
@@ -68,15 +68,8 @@ $gold: #f2c94c;
 $neon-aqua: #00ffff;
 $orange: #f2994a;
 
-// No Decoration
+// No Decoration (for hyperlinks)
 .nodec {
   text-decoration: none !important;
   color: inherit !important;
 }
-
-
-// Breakpoints
-// $smallBreakpoint : 600px;
-// $largeBreakpoint : 1080px;
-
-

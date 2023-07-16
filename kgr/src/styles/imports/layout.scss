@@ -50,7 +50,7 @@
   p {
     padding: 0 1rem;
     margin: 0 !important;
-    @include mat.typography-level($custom-body-typography, caption);
+    @include mat.typography-level($custom-typography, caption);
     line-height: 2.5rem;
     font-size: 1.25rem;
   }
@@ -66,7 +66,7 @@
 .carouselxs {
   p {
     margin: .25rem 0 !important;
-    @include mat.typography-level($custom-body-typography, caption);
+    @include mat.typography-level($custom-typography, caption);
   }
 }
 
@@ -77,8 +77,9 @@
   overflow: hidden;
 }
 
-/** allows mat-card-image photos to scale smaller than their native pixel width */
+/** allows mat-card-image photos to scale smaller or larger than their native pixel width */
 img.mdc-card__media {
+  width: 100%;
   max-width: 100%;
   height: auto;
 }
@@ -131,7 +132,7 @@ mat-icon.mat-card-avatar {
   margin: 0rem;
   padding: 0px;
   .caption { 
-    @include mat.typography-level($custom-body-typography, caption); 
+    @include mat.typography-level($custom-typography, caption); 
     position: absolute;
     width: 100%;
     //width: calc(100% + 32px); //sizing for old angular.material card widths
@@ -178,14 +179,12 @@ footer {
 footer mat-toolbar {
   background-color: transparent;  
   font-size: 16px;
-
 }
 footer mat-toolbar-row.mat-toolbar-row {
   background: none;
   background-color: transparent;
   height: auto;
 }
-/* TODO(mdc-migration): The following rule targets internal classes of list that may no longer apply for the MDC version.*/
 footer .mat-list-item-content {
   font-size: $primary-fs;
   padding: 0 1.5*$pad;
@@ -200,12 +199,12 @@ footer p {
   margin-top: 0;
 }
 footer mat-toolbar p {
-  @include mat.typography-level($custom-body-typography, body-1);
+  @include mat.typography-level($custom-typography, body-1);
 }
 
 .xsp { 
   mat-toolbar p {
-    @include mat.typography-level($custom-body-typography, caption);
+    @include mat.typography-level($custom-typography, caption);
   }
 }
 
@@ -280,6 +279,19 @@ footer mat-toolbar p {
 }
 .nmb {
   margin-bottom: 0 !important;
+}
+// // // HALF-MARGIN (0.5*1REM)
+.hmt {
+  margin-top: 0.5 * $pad;
+}
+.hmb {
+  margin-bottom: 0.5 * $pad;
+}
+.hml {
+  margin-left: 0.5 * $pad;
+}
+.hmr {
+  margin-right: 0.5 * $pad;
 }
 // // // MARGIN
 .mr {

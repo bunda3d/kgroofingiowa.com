@@ -24,20 +24,20 @@
     border-bottom: solid;
     /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
     mat-card-title {
-      @include mat.typography-level($custom-heading-typography, display-1);
+      @include mat.typography-level($custom-typography, 'headline-4');
       padding: 1rem 1rem 0rem 1.5rem; 
       color: $gold; 
     }
   }
   /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
   mat-card-title.subtwo {
-    @include mat.typography-level($custom-heading-typography, headline);
+    @include mat.typography-level($custom-typography, 'headline-5');
     padding: 1rem 0rem 0rem 1.5rem; 
     color: $blu3; 
   }
   /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
   mat-card-subtitle.subthree {
-    @include mat.typography-level($custom-heading-typography, headline);
+    @include mat.typography-level($custom-typography, 'headline-5');
     padding: 0.5rem 1rem 0rem 1.5rem;
     color: white;
   }

@@ -1,22 +1,14 @@
 // https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
 @import '@angular/material/theming';
-// Be sure that you only ever include this mixin once!
-// TODO(v15): As of v15 mat.legacy-core no longer includes default typography styles.
-//  The following line adds:
-//    1. Default typography styles for all components
-//    2. Styles for typography hierarchy classes (e.g. .mat-headline-1)
-//  If you specify typography styles for the components you use elsewhere, you should delete this line.
-//  If you don't need the default component typographies but still want the hierarchy styles,
-//  you can delete this line and instead use:
-//    `@include mat.legacy-typography-hierarchy(mat.define-typography-config());`
-@include mat.all-component-typographies();
+
 @include mat.core();
 // Material Design palettes available in palette.scss
 // https://material.io/design/color/
 $primary: mat.define-palette(mat.$indigo-palette);
 $accent: mat.define-palette(mat.$orange-palette, A100, A200, A400);
 $warn: mat.define-palette(mat.$pink-palette);
+$typography: mat.define-typography-config();
 // Create the theme object (Sass map containing all palettes).
 $theme: mat.define-dark-theme((
 	color: (
@@ -24,7 +16,7 @@ $theme: mat.define-dark-theme((
 		accent: $accent, 
 		warn: $warn
 		),
-		typography: mat.define-typography-config(),
+		typography: $typography,
 	));
 // Include theme styles for core and each component used in your app.
 // Alternatively, import and @include mixins for each component.

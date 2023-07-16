@@ -1,6 +1,6 @@
 html,
 body {
-	font-size: 16px;
+	font-size: $primary-fs !important;
 	margin: 0;
 	padding: 0;
 	height: 100vh;
@@ -79,7 +79,18 @@ app-routing {
 
 // mat-list spacing
 mat-list.mat-mdc-list {
-	margin-bottom: 2rem;
+	margin-bottom: 1rem !important;
+}
+
+.mat-mdc-list-item-icon {
+	margin-right: 1rem !important;
+}
+
+.list-low-vert-pad {
+	p.mat-mdc-list-item-title, p.mat-mdc-list-item-line, {
+		margin-top: 0 !important;
+		margin-bottom: 0 !important;
+	} 
 }
 
 /** if breakpoint x-small, reduce line's horiz white-space */
@@ -88,7 +99,6 @@ mat-list.mat-mdc-list {
 	padding-right: 0 !important;
 	.mat-mdc-list-item-icon {
 		margin-left: 0 !important;
-		margin-right: 1rem !important;
 	}
 /* 	p.mat-mdc-list-item-title, p.mat-mdc-list-item-line, {
 		margin-top: 0 !important;

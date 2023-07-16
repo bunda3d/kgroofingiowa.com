@@ -1,19 +1,19 @@
 <!--card: About-->
 <div>
-	<mat-card appearance="outlined" id="aboutKGR" class="mcard">
+	<mat-card id="aboutKGR" class="mcard">
 		<mat-card-header>
 			<i mat-card-avatar id="aboutKGRAvatar" class="mcard-header-img"></i>
-			<mat-card-title class="display-3">About KG Roofing</mat-card-title>
-			<mat-card-subtitle>
-				<h3 class="obl goldBold">Professional, Trustworthy, Competent.</h3>
+			<mat-card-title class="display-6">About KG Roofing</mat-card-title>
+			<mat-card-subtitle class="obl goldBold">
+				Professional, Trustworthy, Competent.
 			</mat-card-subtitle>
 		</mat-card-header>
-		<div class="caption-wrap mt">
-			<img
-				mat-card-image
-				src="/assets/img/about/kg_roofing_kyle_grell_ppe_safe_worksite_3541.jpg"
-				alt="KG Roofing worksite with owner Kyle Grell foreground, roofing crew on building background."
-			/>
+		<img
+			mat-card-image
+			src="/assets/img/about/kg_roofing_kyle_grell_ppe_safe_worksite_3541.jpg"
+			alt="KG Roofing worksite with owner Kyle Grell foreground, roofing crew on building background."
+		/>
+		<div class="caption-wrap">
 			<div class="caption-btm">
 				KG Roofing worksite with owner Kyle Grell foreground, roofing crew on building
 				background.
@@ -28,72 +28,69 @@
 				fxLayoutGap="16px"
 				fxLayoutAlign="space-between"
 			>
-				<div fxFlex.gt-xs="60%" fxLayoutAlign="stretch">
-					<mat-card appearance="outlined" id="aboutKGRstory">
+				<mat-card id="aboutKGRstory" fxFlex.gt-xs="60%" fxLayoutAlign="stretch">
+					<mat-card-content>
 						<mat-card-title>
 							Origins
 						</mat-card-title>
 						<mat-card-subtitle>
 							Raised On Roofing
 						</mat-card-subtitle>
-						<mat-card-content>
-							<p>
-								KG Roofing is named after owner Kyle Grell. Kyle spent years learning the
-								roofing trades while working for a family business, eventually deciding to
-								start his own venture.
-							</p>
-							<mat-card-subtitle>
-								Experience
-							</mat-card-subtitle>
-							<p>
-								KG Roofing has the expertise to seam-weld membranes on an enormous factory
-								roof one day, then turn around a single-family tear off & re-shingle the
-								next. This versatility comes with professionalism; meaning KG works hard,
-								safely, and runs a tidy worksite with cleanup.
-							</p>
-							<mat-card-subtitle>
-								Professionalism
-							</mat-card-subtitle>
-							<p>
-								This professionalism extends to working with customers: from understanding
-								what the job requires, to ensuring it's all done to satisfaction.
-								<a
-									class="goldBold nodec"
-									title="Go to Contact page"
-									[routerLink]="['/contact']"
-									><span>Call KG</span> </a
-								>, we're easy and honest to deal with.
-							</p>
-						</mat-card-content>
-					</mat-card>
-				</div>
-				<div fxFlex.gt-xs="40%">
-					<mat-card appearance="outlined" id="aboutKGRCard" [class.mat-elevation-z8]>
-						<div class="caption-wrap">
-							<img
-								mat-card-image
-								src="/assets/img/personnel/that_is_kyle_grell.jpg"
-								alt="KG Roofing owner Kyle Grell with wife, Autumn, getting ready for a parade"
-							/>
-							<div class="caption-btm-zero">
-								Kyle and crew preparing for a parade.
-							</div>
+						<p>
+							KG Roofing is named after owner Kyle Grell. Kyle spent years learning the
+							roofing trades while working for a family business, eventually deciding to
+							start his own venture.
+						</p>
+						<mat-card-subtitle>
+							Experience
+						</mat-card-subtitle>
+						<p>
+							KG Roofing has the expertise to seam-weld membranes on an enormous factory
+							roof one day, then turn around a single-family tear off & re-shingle the
+							next. This versatility comes with professionalism; meaning KG works hard,
+							safely, and runs a tidy worksite with cleanup.
+						</p>
+						<mat-card-subtitle>
+							Professionalism
+						</mat-card-subtitle>
+						<p>
+							This professionalism extends to working with customers: from understanding
+							what the job requires, to ensuring it's all done to satisfaction.
+							<a
+								class="goldBold nodec"
+								title="Go to Contact page"
+								[routerLink]="['/contact']"
+								><span>Call KG</span> </a
+							>, we're easy and honest to deal with.
+						</p>
+					</mat-card-content>
+				</mat-card>
+
+				<mat-card id="aboutKGRCard" fxFlex.gt-xs="40%" [class.mat-elevation-z8]>
+					<img
+						mat-card-image
+						src="/assets/img/personnel/that_is_kyle_grell.jpg"
+						alt="KG Roofing owner Kyle Grell with wife, Autumn, getting ready for a parade"
+					/>
+					<div class="caption-wrap">
+						<div class="caption-btm-zero">
+							Kyle and crew preparing for a parade.
 						</div>
-						<mat-card-content class="pt">
-							<mat-card-title class="obl display-3 pt2 pb">KG Roofing</mat-card-title>
-							<mat-divider></mat-divider>
-							<mat-card-title class="obl display-3 goldBold pt2 pb"
-								>Professional,</mat-card-title
-							>
-							<mat-card-title class="obl display-3 goldBold pt pb"
-								>Trustworthy,</mat-card-title
-							>
-							<mat-card-title class="obl display-3 goldBold pt pb2"
-								>Competent.</mat-card-title
-							>
-						</mat-card-content>
-					</mat-card>
-				</div>
+					</div>
+					<mat-card-content class="pt mt">
+						<mat-card-title class="obl display-3 pt pb">KG Roofing</mat-card-title>
+						<mat-divider></mat-divider>
+						<mat-card-title class="obl display-3 goldBold pt2 pb"
+							>Professional,</mat-card-title
+						>
+						<mat-card-title class="obl display-3 goldBold pt pb"
+							>Trustworthy,</mat-card-title
+						>
+						<mat-card-title class="obl display-3 goldBold pt pb2"
+							>Competent.</mat-card-title
+						>
+					</mat-card-content>
+				</mat-card>
 			</div>
 		</mat-card-content>
 		<!--footer-->
@@ -112,8 +109,9 @@
 >
 	<!--Brands & Licenses List-->
 	<div fxLayout="column" fxLayoutAlign="center start" fxFlex.gt-xs="50">
-		<mat-card appearance="outlined" class="mcard lt lr lb ll" id="#mcardBorder">
+		<mat-card class="mcard lt lr lb ll" id="#mcardBorder">
 			<mat-card-header
+				class="pb2"
 				fxLayout="column"
 				fxLayoutAlign="center start"
 				id="brandsLicensesHeader"
@@ -124,28 +122,27 @@
 						Brands & Licenses
 					</mat-card-title>
 				</div>
-				<div class="pl">
+				<div>
 					<mat-card-subtitle>
 						Quality products and manufacturers we are proud to carry and/or have exclusive
 						license contracts with
 					</mat-card-subtitle>
 				</div>
 			</mat-card-header>
-			<mat-card-content *ngFor="let vendorHeader of vendorHeaders">
+			<mat-card-content class="npl npr" *ngFor="let vendorHeader of vendorHeaders">
 				<mat-toolbar
 					class="mb2 lt"
 					id="vendorToolbar"
 					[style.background-image]="'url(' + vendorHeader.titlebgimg + ')'"
 				>
 					<mat-toolbar-row id="vendorToolbarRow" class="bgclr">
-						<mat-icon matListIcon>stars</mat-icon>
+						<mat-icon class="ml" matListIcon>stars</mat-icon>
 						<p matLine>
 							<span class="mat-headline-5">&nbsp; {{ vendorHeader.name }} </span>
 						</p>
 					</mat-toolbar-row>
 				</mat-toolbar>
 				<img
-					id="vendorAboutImg"
 					mat-card-image
 					[style.background]="vendorHeader.logobgcolor"
 					[src]="vendorHeader.logoimg"
@@ -181,10 +178,10 @@
 				</mat-card-header>
 				<mat-card-content>
 					<mat-list>
-						<mat-list-item *ngFor="let service of services">
-							<mat-divider></mat-divider>
-							<mat-icon matListIcon>stars</mat-icon>
-							<p matLine>
+						<mat-divider></mat-divider>
+						<mat-list-item class="lbf list-low-vert-pad" *ngFor="let service of services">
+							<mat-icon class="white" matListItemIcon>stars</mat-icon>
+							<p matListItemTitle>
 								<span> {{ service.name }} </span>
 								<span class="orange"> {{ service.acronym }} </span>
 							</p>
@@ -222,10 +219,13 @@
 				</mat-card-header>
 				<mat-card-content>
 					<mat-list>
-						<mat-list-item *ngFor="let roofType of roofTypes">
-							<mat-divider></mat-divider>
-							<mat-icon matListIcon>stars</mat-icon>
-							<p matLine>
+						<mat-divider></mat-divider>
+						<mat-list-item
+							class="lbf list-low-vert-pad"
+							*ngFor="let roofType of roofTypes"
+						>
+							<mat-icon class="white" matListItemIcon>stars</mat-icon>
+							<p matListItemTitle>
 								<span> {{ roofType.name }} </span>
 								<span class="orange"> {{ roofType.description }} </span>
 							</p>
@@ -248,11 +248,11 @@
 					</mat-card-subtitle>
 				</mat-card-header>
 				<mat-card-content>
-					<mat-list>
-						<mat-list-item *ngFor="let product of products">
-							<mat-divider></mat-divider>
-							<mat-icon matListIcon>stars</mat-icon>
-							<p matLine>
+					<mat-list
+						><mat-divider></mat-divider>
+						<mat-list-item class="lbf list-low-vert-pad" *ngFor="let product of products">
+							<mat-icon class="white" matListItemIcon>stars</mat-icon>
+							<p matListItemTitle>
 								<span> {{ product.name }} </span>
 								<span class="orange"> {{ product.description }} </span>
 							</p>

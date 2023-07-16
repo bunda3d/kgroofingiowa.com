@@ -10,22 +10,15 @@
   margin-right: 1rem;
 }
 #aboutKGRCard {
-  // margin:2rem 1rem;
-  // padding:1rem 2rem;
-  padding: 0 16px 16px 16px;
   background-image: url("/assets/bg/bg-gr-rbl-blk.svg");
   background-size: cover;
-  // background-color: #212131;
-  /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
   mat-card-title {
     padding-left: 1rem;
   }
 }
 #aboutKGRstory {
-  padding-top: 1rem;
   background-color: transparent;
   border: solid $neon-aqua;
-  /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
   mat-card-subtitle {
     color: $neon-aqua;
   }
@@ -36,8 +29,8 @@
 #servicesListHeader {
   background-image: url("/assets/bg/bg-gr-blk-ltr.svg");
   background-size: cover;
-  margin: -1rem -1rem 2rem -1rem;
   padding: 1rem 1rem 0 1rem;
+  margin-bottom: 1rem;
 }
 .mcard-header-img-48#servicesAvatar {
   background-image: url("/assets/bg/bg-icons/bg-icons-service.svg");
@@ -74,15 +67,14 @@
   background-image: url("/assets/bg/bg-gr-blk-ltr.svg");
   background-size: cover;
   background-position: center;
-  margin: -1rem -1rem 0rem -1rem;
-  padding: 1rem 1rem 0 1rem;
-  /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
+  // margin: -1rem -1rem 0rem -1rem;
+  // padding: 1rem 1rem 0 1rem;
+
   mat-card-title {
-    @include mat.typography-level($custom-heading-typography, display-1);
+    @include mat.typography-level($custom-typography, 'headline-3');
   }
-  /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version.*/
   mat-card-subtitle {
-    @include mat.typography-level($custom-heading-typography, title);
+    @include mat.typography-level($custom-typography, 'headline-5');
     color: whitesmoke;
     font-style: $obli;
   }
