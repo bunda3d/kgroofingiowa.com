@@ -14,13 +14,15 @@ export class SidenavComponent implements OnInit {
 	isDarkTheme: Observable<boolean>;
 
 	//for mat-nav-list in drawer
-	/* 	selectedNavItem = '';
+	selectedNavItem = '';
 	navItems = [
 		{ title: 'Home', icon: 'home', path: '/home' },
 		{ title: 'About Us', icon: 'assignment', path: '/about' },
+		//{ title: 'View Our Work', icon: 'business', path: '/project' }
 		{ title: 'Contact Us', icon: 'call', path: '/contact' }
-	]; */
-	//end for mat-nav-list in drawer
+		//{ title: 'Blog', icon: 'art_track', path: '/blogs' }
+	];
+	//END for mat-nav-list in drawer
 
 	isExtraSmall$: Observable<boolean> = this.breakpointObserver
 		.observe(Breakpoints.XSmall)
