@@ -1,35 +1,35 @@
-<!--card: About-->
+<!-- card: Contact -->
 <div>
-	<mat-card appearance="outlined" id="contactKGR" class="mcard">
+	<mat-card id="contactKGR" class="mcard">
 		<mat-card-header>
 			<i mat-card-avatar id="contactKGRAvatar" class="mcard-header-img"></i>
-			<mat-card-title class="display-3">Contact KG Roofing</mat-card-title>
-			<mat-card-subtitle>
-				<h3 class="obl">Serving Your Commercial & Residential Roofing Needs</h3>
+			<mat-card-title>Contact KG Roofing</mat-card-title>
+			<mat-card-subtitle class="obl">
+				Serving Your Commercial & Residential Roofing Needs
 			</mat-card-subtitle>
 		</mat-card-header>
-		<div class="caption-wrap mt">
-			<img
-				mat-card-image
-				src="/assets/img/contact/kg_roofing_iowa_safe_roof_inspection_ladders.jpg"
-				alt="KG Roofing's safe and free rooftop inspection worksite with work truck in foreground and commercial building 2-tier roof and ladders in background with safety markers around roof perimeter."
-			/>
+		<img
+			mat-card-image
+			src="/assets/img/contact/kg_roofing_iowa_safe_roof_inspection_ladders.jpg"
+			alt="KG Roofing's safe and free rooftop inspection worksite with work truck in foreground and commercial building 2-tier roof and ladders in background with safety markers around roof perimeter."
+		/>
+		<div class="caption-wrap">
 			<div class="caption-btm-zero">
 				Call for safe, free rooftop inspections.
 			</div>
 		</div>
-		<!--contact info group-->
+		<!-- contact info group -->
 		<mat-card-content id="contactKGRCard">
 			<div
-				class="flex-container pt2 mt2"
+				class="flex-container pt2"
 				fxLayout="column"
 				fxLayoutGap="16px"
 				fxFlexAlign="start"
 			>
-				<!--contact info-->
+				<!-- contact info -->
 				<div fxFlex="100" class="pt">
 					<mat-card appearance="outlined" id="contactKGRstory">
-						<!--contact info1-->
+						<!-- contact info1 -->
 						<div id="sub">
 							<mat-card-title>
 								Phone
@@ -59,7 +59,7 @@
 
 				<div fxFlex="100">
 					<mat-card appearance="outlined" id="contactKGRstory">
-						<!--contact info1-->
+						<!-- contact info2 -->
 						<div id="sub">
 							<mat-card-title>
 								Email
@@ -71,14 +71,12 @@
 						<div fxLayout.xs="column" fxLayoutAlign="start center" fxLayoutGap="16px">
 							<div class="mra" fxFlex.gt-sm="50">
 								<mat-card-subtitle class="subthree">
-									<a class="nodec" href="mailto:kgroofing@yahoo.com"
-										>kgroofing @ yahoo.com</a
-									>
+									<a class="nodec" [href]="mailtoObject">kgroofing @ yahoo.com</a>
 								</mat-card-subtitle>
 							</div>
 
 							<div class="mla mr2" fxFlex.xs="100">
-								<a button mat-fab color="warn" href="mailto:kgroofing@yahoo.com">
+								<a button mat-fab color="warn" [href]="mailtoObject">
 									<mat-icon>email</mat-icon>
 								</a>
 							</div>
@@ -89,7 +87,7 @@
 
 				<div fxFlex="100">
 					<mat-card appearance="outlined" id="contactKGRstory">
-						<!--contact info3-->
+						<!-- contact info3 -->
 						<div id="sub">
 							<mat-card-title>
 								Location
@@ -161,11 +159,11 @@
 				</div>			-->
 			</div>
 
-			<!--map-->
+			<!-- map -->
 			<div fxFlexLayout="column" class="mt">
 				<div fxFlex="100">
 					<mat-card appearance="outlined" id="contactKGRstory">
-						<!--contact info3-->
+						<!-- contact info4 -->
 						<div id="sub">
 							<mat-card-title>
 								Service Area:
@@ -174,20 +172,16 @@
 						<mat-card-title class="subtwo">
 							Greater Iowa
 						</mat-card-title>
-						<div class="pb2"></div>
-						<!--form-->
-						<div class="mat-card-btm-img-nm">
-							<div class="caption-wrap">
-								<img
-									mat-card-image
-									src="/assets/img/contact/kg_roofing_iowa_service_area_graphic.png"
-									alt="KG Roofing territory and preferred service area, with epicenter in Fort Dodge, Iowa. Call us if you are wondering if your building is in our area."
-								/>
-								<div class="caption-top-zero">
-									KGR approx. service area
-								</div>
+						<div class="caption-wrap mt2">
+							<div class="caption-top-zero">
+								KGR approx. service area
 							</div>
 						</div>
+						<img
+							mat-card-image
+							src="/assets/img/contact/kg_roofing_iowa_service_area_graphic.png"
+							alt="KG Roofing territory and preferred service area, with epicenter in Fort Dodge, Iowa. Call us if you are wondering if your building is in our area."
+						/>
 					</mat-card>
 				</div>
 			</div>
