@@ -78,9 +78,10 @@ app-routing {
 } 
 
 // mat-list spacing
-mat-list.mat-mdc-list {
-	margin-bottom: 1rem !important;
-}
+/* mat-list.mat-mdc-list {
+	margin-top: 0rem;
+	margin-bottom: 1rem;
+} */
 
 .mat-mdc-list-item-icon {
 	margin-right: 1rem !important;
@@ -100,10 +101,6 @@ mat-list.mat-mdc-list {
 	.mat-mdc-list-item-icon {
 		margin-left: 0 !important;
 	}
-/* 	p.mat-mdc-list-item-title, p.mat-mdc-list-item-line, {
-		margin-top: 0 !important;
-		margin-bottom: 0 !important;
-	} */
 } 
 
 // END MAT-LIST

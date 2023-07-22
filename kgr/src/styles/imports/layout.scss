@@ -313,16 +313,16 @@ footer mat-toolbar p {
   margin-left: auto !important;
 }
 .mt {
-  margin-top: $pad;
+  margin-top: $pad !important;
 }
 .mt2 {
-  margin-top: 2 * $pad;
+  margin-top: 2 * $pad !important;
 }
 .mb {
-  margin-bottom: $pad;
+  margin-bottom: $pad !important;
 }
 .mb2 {
-  margin-bottom: 2 * $pad;
+  margin-bottom: 2 * $pad !important;
 }
 // LINE Helpers
 .lb {

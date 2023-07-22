@@ -131,7 +131,7 @@
 			</mat-card-header>
 			<mat-card-content class="npl npr" *ngFor="let vendorHeader of vendorHeaders">
 				<mat-toolbar
-					class="mb2 lt"
+					class="lt"
 					id="vendorToolbar"
 					[style.background-image]="'url(' + vendorHeader.titlebgimg + ')'"
 				>
@@ -147,8 +147,7 @@
 					[style.background]="vendorHeader.logobgcolor"
 					[src]="vendorHeader.logoimg"
 				/>
-
-				<mat-card-content class="mb2">
+				<mat-card-content>
 					<p *ngFor="let content of vendorHeader.content">
 						{{ content.paragraph }}
 					</p>
@@ -177,13 +176,13 @@
 					</mat-card-subtitle>
 				</mat-card-header>
 				<mat-card-content>
-					<mat-list>
+					<mat-list class="mb">
 						<mat-divider></mat-divider>
 						<mat-list-item class="lbf list-low-vert-pad" *ngFor="let service of services">
 							<mat-icon class="white" matListItemIcon>stars</mat-icon>
-							<p matListItemTitle>
-								<span> {{ service.name }} </span>
-								<span class="orange"> {{ service.acronym }} </span>
+							<p matListItemTitle class="nmt nmb hpt hpb">
+								<span>{{ service.name }} </span>
+								<span class="orange"> {{ service.acronym }}</span>
 							</p>
 						</mat-list-item>
 					</mat-list>
@@ -218,16 +217,16 @@
 					</mat-card-subtitle>
 				</mat-card-header>
 				<mat-card-content>
-					<mat-list>
+					<mat-list class="mb">
 						<mat-divider></mat-divider>
 						<mat-list-item
 							class="lbf list-low-vert-pad"
 							*ngFor="let roofType of roofTypes"
 						>
 							<mat-icon class="white" matListItemIcon>stars</mat-icon>
-							<p matListItemTitle>
-								<span> {{ roofType.name }} </span>
-								<span class="orange"> {{ roofType.description }} </span>
+							<p matListItemTitle class="nmt nmb hpt hpb">
+								<span>{{ roofType.name }} </span>
+								<span class="orange"> {{ roofType.description }}</span>
 							</p>
 						</mat-list-item>
 					</mat-list>
@@ -248,13 +247,13 @@
 					</mat-card-subtitle>
 				</mat-card-header>
 				<mat-card-content>
-					<mat-list
-						><mat-divider></mat-divider>
+					<mat-list class="mb">
+						<mat-divider></mat-divider>
 						<mat-list-item class="lbf list-low-vert-pad" *ngFor="let product of products">
 							<mat-icon class="white" matListItemIcon>stars</mat-icon>
-							<p matListItemTitle>
-								<span> {{ product.name }} </span>
-								<span class="orange"> {{ product.description }} </span>
+							<p matListItemTitle class="nmt nmb hpt hpb">
+								<span>{{ product.name }} </span>
+								<span class="orange"> {{ product.description }}</span>
 							</p>
 						</mat-list-item>
 					</mat-list>

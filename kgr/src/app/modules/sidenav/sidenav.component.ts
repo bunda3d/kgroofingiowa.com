@@ -1,6 +1,7 @@
 import { Component, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map, shareReplay } from 'rxjs/operators';
+import { ContactService } from 'src/app/core/services/contact.service';
 import { ThemeService } from './../../core/services/theme.service';
 import { Observable } from 'rxjs';
 
@@ -12,6 +13,7 @@ import { Observable } from 'rxjs';
 export class SidenavComponent implements OnInit {
 	Page = 'KG Roofing';
 	isDarkTheme: Observable<boolean>;
+	mailtoObject: string = '';
 
 	//for mat-nav-list in drawer
 	selectedNavItem = '';
@@ -51,11 +53,13 @@ export class SidenavComponent implements OnInit {
 
 	constructor(
 		private breakpointObserver: BreakpointObserver,
-		private themeService: ThemeService
+		private themeService: ThemeService,
+		public contactService: ContactService
 	) {}
 
 	ngOnInit() {
 		this.isDarkTheme = this.themeService.isDarkTheme;
+		this.mailtoObject = this.contactService.mailtoObject;
 	}
 
 	toggleDarkTheme(checked: boolean) {

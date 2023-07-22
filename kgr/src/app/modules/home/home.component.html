@@ -245,7 +245,6 @@
 			WE'VE GOT ALL YOUR ROOFING NEEDS COVERED
 		</mat-card-subtitle>
 	</mat-card-header>
-
 	<img
 		mat-card-image
 		src="/assets/img/home/kg-roofing-staging-safe-and-clean-work-area.jpg"
@@ -318,7 +317,7 @@
 	<mat-card-content>
 		<div id="why-bgimg">
 			<div id="why-overlay" class="caption-wrap">
-				<mat-list class="mt2">
+				<mat-list [ngClass.gt-xs]="['why-list-margins']">
 					<mat-divider></mat-divider>
 					<mat-list-item
 						class="lbf"
@@ -330,9 +329,7 @@
 							<span class="goldBold"> {{ whyKG.why }} </span>
 							<span> {{ whyKG.description }} </span>
 						</p>
-						<mat-divider></mat-divider>
 					</mat-list-item>
-					<mat-divider></mat-divider>
 				</mat-list>
 				<div class="caption-btm-div">
 					Background image: Roofing a large church with proper safety gear and
